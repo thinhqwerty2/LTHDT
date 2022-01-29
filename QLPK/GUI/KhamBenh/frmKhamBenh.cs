@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK
+namespace QLPK.GUI.KhamBenh
 {
-    public partial class Form1 : Form
+    public partial class frmKhamBenh : Form
     {
-        public Form1()
+        public frmKhamBenh()
         {
             InitializeComponent();
         }

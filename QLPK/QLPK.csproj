@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,41 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinLoaiDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinLoaiDichVu.Designer.cs">
-      <DependentUpon>frmCapNhatThongTinLoaiDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinDichVu.Designer.cs">
-      <DependentUpon>frmCapNhatThongTinDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinBacSy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinBacSy.Designer.cs">
-      <DependentUpon>frmCapNhatThongTinBacSy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinNhanVien.Designer.cs">
-      <DependentUpon>frmCapNhatThongTinNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinBenhNhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatThongTinBenhNhan.Designer.cs">
-      <DependentUpon>frmCapNhatThongTinBenhNhan.cs</DependentUpon>
+    <Compile Include="frmChinh.Designer.cs">
+      <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -88,28 +65,67 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmBaoCaoThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmBaoCaoThongKe.Designer.cs">
+      <DependentUpon>frmBaoCaoThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChuaBenh\frmChuaBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChuaBenh\frmChuaBenh.Designer.cs">
+      <DependentUpon>frmChuaBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhamBenh\frmKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh\frmKhamBenh.Designer.cs">
+      <DependentUpon>frmKhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.Designer.cs">
+      <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmQuanTriHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmQuanTriHeThong.Designer.cs">
+      <DependentUpon>frmQuanTriHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThanhToan\frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhToan\frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatThongTinLoaiDichVu.resx">
-      <DependentUpon>frmCapNhatThongTinLoaiDichVu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatThongTinDichVu.resx">
-      <DependentUpon>frmCapNhatThongTinDichVu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatThongTinBacSy.resx">
-      <DependentUpon>frmCapNhatThongTinBacSy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatThongTinBenhNhan.resx">
-      <DependentUpon>frmCapNhatThongTinBenhNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatThongTinNhanVien.resx">
-      <DependentUpon>frmCapNhatThongTinNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmChinh.resx">
+      <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe\frmBaoCaoThongKe.resx">
+      <DependentUpon>frmBaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChuaBenh\frmChuaBenh.resx">
+      <DependentUpon>frmChuaBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh\frmKhamBenh.resx">
+      <DependentUpon>frmKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.resx">
+      <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriHeThong\frmQuanTriHeThong.resx">
+      <DependentUpon>frmQuanTriHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThanhToan\frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

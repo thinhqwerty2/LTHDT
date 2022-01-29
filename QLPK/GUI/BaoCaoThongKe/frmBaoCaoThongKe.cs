@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK
+namespace QLPK.GUI.BaoCaoThongKe
 {
-    public partial class frmCapNhatThongTinLoaiDichVu : Form
+    public partial class frmBaoCaoThongKe : Form
     {
-        public frmCapNhatThongTinLoaiDichVu()
+        public frmBaoCaoThongKe()
         {
             InitializeComponent();
+        }
+
+        private void btnBenhNhan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

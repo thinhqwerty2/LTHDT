@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK
+namespace QLPK.GUI.ThanhToan
 {
-    public partial class frmCapNhatThongTinBenhNhan : Form
+    public partial class frmThanhToan : Form
     {
-        public frmCapNhatThongTinBenhNhan()
+        public frmThanhToan()
         {
             InitializeComponent();
-        }
-
-        private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

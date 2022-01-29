@@ -29,78 +29,77 @@ namespace QLPK
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.lblTenDangNhap = new System.Windows.Forms.Label();
+            this.lblMatKhau = new System.Windows.Forms.Label();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtUsername
+            // txtTenDangNhap
             // 
-            this.txtUsername.Location = new System.Drawing.Point(168, 52);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtUsername.TabIndex = 0;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(168, 52);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(100, 20);
+            this.txtTenDangNhap.TabIndex = 0;
             // 
-            // txtPassword
+            // txtMatKhau
             // 
-            this.txtPassword.Location = new System.Drawing.Point(168, 127);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 0;
+            this.txtMatKhau.Location = new System.Drawing.Point(168, 127);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(100, 20);
+            this.txtMatKhau.TabIndex = 0;
             // 
-            // lblUsername
+            // lblTenDangNhap
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(60, 59);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(35, 13);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "label1";
+            this.lblTenDangNhap.AutoSize = true;
+            this.lblTenDangNhap.Location = new System.Drawing.Point(60, 59);
+            this.lblTenDangNhap.Name = "lblTenDangNhap";
+            this.lblTenDangNhap.Size = new System.Drawing.Size(81, 13);
+            this.lblTenDangNhap.TabIndex = 1;
+            this.lblTenDangNhap.Text = "Tên đăng nhập";
             // 
-            // lblPassword
+            // lblMatKhau
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(60, 134);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(35, 13);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "label1";
+            this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.Location = new System.Drawing.Point(60, 134);
+            this.lblMatKhau.Name = "lblMatKhau";
+            this.lblMatKhau.Size = new System.Drawing.Size(52, 13);
+            this.lblMatKhau.TabIndex = 1;
+            this.lblMatKhau.Text = "Mật khẩu";
             // 
-            // button1
+            // btnDangNhap
             // 
-            this.button1.Location = new System.Drawing.Point(63, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(63, 176);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.TabIndex = 2;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
             // 
-            // btn
+            // btnThoat
             // 
-            this.btn.Location = new System.Drawing.Point(207, 176);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(75, 23);
-            this.btn.TabIndex = 2;
-            this.btn.Text = "button1";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.button2_Click);
+            this.btnThoat.Location = new System.Drawing.Point(207, 176);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 240);
-            this.Controls.Add(this.btn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.lblMatKhau);
+            this.Controls.Add(this.lblTenDangNhap);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.txtTenDangNhap);
+            this.Name = "frmDangNhap";
+            this.Text = "Đăng nhập hệ thống";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,12 +107,12 @@ namespace QLPK
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Label lblTenDangNhap;
+        private System.Windows.Forms.Label lblMatKhau;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
 

@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK
+namespace QLPK.GUI.QuanTriHeThong
 {
-    public partial class frmCapNhatThongTinBacSy : Form
+    //public static NhanVienDTO NhanVien
+    public partial class frmQuanTriHeThong : Form
     {
-        public frmCapNhatThongTinBacSy()
+        public frmQuanTriHeThong()
         {
             InitializeComponent();
         }

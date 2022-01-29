@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK
+namespace QLPK.GUI.QuanLyDanhMuc
 {
-    public partial class frmCapNhatThongTinDichVu : Form
+    public partial class frmQuanLyDanhMuc : Form
     {
-        public frmCapNhatThongTinDichVu()
+        public frmQuanLyDanhMuc()
         {
             InitializeComponent();
         }
