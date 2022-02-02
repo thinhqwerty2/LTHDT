@@ -57,6 +57,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnNhanVien.TabIndex = 3;
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnDichVu
             // 
@@ -66,6 +67,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnDichVu.TabIndex = 2;
             this.btnDichVu.Text = "Dịch vụ";
             this.btnDichVu.UseVisualStyleBackColor = true;
+            this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
             // 
             // btnBacSi
             // 
