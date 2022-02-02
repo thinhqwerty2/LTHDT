@@ -84,18 +84,6 @@
     <Compile Include="GUI\KhamBenh\frmKhamBenh.Designer.cs">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.Designer.cs">
-      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.Designer.cs">
-      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +96,47 @@
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucNhanVien.Designer.cs">
       <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.Designer.cs">
+      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.Designer.cs">
+      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.Designer.cs">
       <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmDangKyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmDangKyTaiKhoan.Designer.cs">
+      <DependentUpon>frmDangKyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmPhanQuyen.Designer.cs">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriHeThong\frmThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanTriHeThong\frmQuanTriHeThong.cs">
       <SubType>Form</SubType>
@@ -143,20 +167,32 @@
     <EmbeddedResource Include="GUI\KhamBenh\frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.resx">
-      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.resx">
-      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.resx">
       <DependentUpon>frmDanhMucDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucNhanVien.resx">
       <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.resx">
+      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.resx">
+      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.resx">
       <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriHeThong\frmDangKyTaiKhoan.resx">
+      <DependentUpon>frmDangKyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriHeThong\frmPhanQuyen.resx">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriHeThong\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriHeThong\frmThongTinTaiKhoan.resx">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanTriHeThong\frmQuanTriHeThong.resx">
       <DependentUpon>frmQuanTriHeThong.cs</DependentUpon>

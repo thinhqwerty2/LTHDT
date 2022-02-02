@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK.GUI.QuanLyDanhMuc
+namespace QLPK.GUI.QuanTriHeThong
 {
-    public partial class Form1 : Form
+    public partial class frmDoiMatKhau : Form
     {
-        public Form1()
+        public frmDoiMatKhau()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
