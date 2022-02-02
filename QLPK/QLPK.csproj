@@ -83,18 +83,6 @@
     <Compile Include="GUI\KhamBenh\frmKhamBenh.Designer.cs">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.Designer.cs">
-      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.Designer.cs">
-      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +94,18 @@
     </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucNhanVien.Designer.cs">
       <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.Designer.cs">
+      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.Designer.cs">
+      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.cs">
       <SubType>Form</SubType>
@@ -142,17 +142,17 @@
     <EmbeddedResource Include="GUI\KhamBenh\frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.resx">
-      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.resx">
-      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.resx">
       <DependentUpon>frmDanhMucDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucNhanVien.resx">
       <DependentUpon>frmDanhMucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBenhNhan.resx">
+      <DependentUpon>frmDanhMucBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBacSi.resx">
+      <DependentUpon>frmDanhMucBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.resx">
       <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
-    public partial class frmDanhMucBacSi : Form
+    public partial class frmDanhMucBenhNhan : Form
     {
-        public frmDanhMucBacSi()
+        public frmDanhMucBenhNhan()
         {
             InitializeComponent();
         }
