@@ -31,7 +31,7 @@ namespace QLPK.GUI.ThanhToan
         {
             this.pnlNutThanhToan = new System.Windows.Forms.Panel();
             this.btnTongHopChiPhi = new System.Windows.Forms.Button();
-            this.btnThongTinPhieuThuTienTamUng = new System.Windows.Forms.Button();
+            this.btnLapPhieuThuTienTamUng = new System.Windows.Forms.Button();
             this.btnThongTinBanKe = new System.Windows.Forms.Button();
             this.pnlXemThanhToan = new System.Windows.Forms.Panel();
             this.pnlNutThanhToan.SuspendLayout();
@@ -40,7 +40,7 @@ namespace QLPK.GUI.ThanhToan
             // pnlNutThanhToan
             // 
             this.pnlNutThanhToan.Controls.Add(this.btnTongHopChiPhi);
-            this.pnlNutThanhToan.Controls.Add(this.btnThongTinPhieuThuTienTamUng);
+            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuThuTienTamUng);
             this.pnlNutThanhToan.Controls.Add(this.btnThongTinBanKe);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(2, 3);
             this.pnlNutThanhToan.Name = "pnlNutThanhToan";
@@ -56,14 +56,14 @@ namespace QLPK.GUI.ThanhToan
             this.btnTongHopChiPhi.Text = "Bảng tổng hợp chi phí";
             this.btnTongHopChiPhi.UseVisualStyleBackColor = true;
             // 
-            // btnThongTinPhieuThuTienTamUng
+            // btnLapPhieuThuTienTamUng
             // 
-            this.btnThongTinPhieuThuTienTamUng.Location = new System.Drawing.Point(10, 77);
-            this.btnThongTinPhieuThuTienTamUng.Name = "btnThongTinPhieuThuTienTamUng";
-            this.btnThongTinPhieuThuTienTamUng.Size = new System.Drawing.Size(212, 50);
-            this.btnThongTinPhieuThuTienTamUng.TabIndex = 1;
-            this.btnThongTinPhieuThuTienTamUng.Text = "Thông tin phiếu thu tiền tạm ứng";
-            this.btnThongTinPhieuThuTienTamUng.UseVisualStyleBackColor = true;
+            this.btnLapPhieuThuTienTamUng.Location = new System.Drawing.Point(10, 77);
+            this.btnLapPhieuThuTienTamUng.Name = "btnLapPhieuThuTienTamUng";
+            this.btnLapPhieuThuTienTamUng.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuThuTienTamUng.TabIndex = 1;
+            this.btnLapPhieuThuTienTamUng.Text = "Lập phiếu thu tiền tạm ứng";
+            this.btnLapPhieuThuTienTamUng.UseVisualStyleBackColor = true;
             // 
             // btnThongTinBanKe
             // 
@@ -100,7 +100,7 @@ namespace QLPK.GUI.ThanhToan
 
         private System.Windows.Forms.Panel pnlNutThanhToan;
         private System.Windows.Forms.Button btnTongHopChiPhi;
-        private System.Windows.Forms.Button btnThongTinPhieuThuTienTamUng;
+        private System.Windows.Forms.Button btnLapPhieuThuTienTamUng;
         private System.Windows.Forms.Button btnThongTinBanKe;
         private System.Windows.Forms.Panel pnlXemThanhToan;
     }

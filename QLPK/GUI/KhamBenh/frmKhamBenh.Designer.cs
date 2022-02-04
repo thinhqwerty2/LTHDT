@@ -31,10 +31,10 @@ namespace QLPK.GUI.KhamBenh
         {
             this.pnlXemThanhToan = new System.Windows.Forms.Panel();
             this.pnlNutThanhToan = new System.Windows.Forms.Panel();
-            this.btnLapPhieuKetQuaXetNghiem = new System.Windows.Forms.Button();
-            this.btnLapPhieuSuDungXetNghiem = new System.Windows.Forms.Button();
-            this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
             this.btnChanDoan = new System.Windows.Forms.Button();
+            this.btnLapPhieuKetQuaXetNghiem = new System.Windows.Forms.Button();
+            this.btnLapPhieuDangKyXetNghiem = new System.Windows.Forms.Button();
+            this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
             this.pnlNutThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,12 +49,21 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.pnlNutThanhToan.Controls.Add(this.btnChanDoan);
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungXetNghiem);
+            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuDangKiKhamBenh);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(3, 2);
             this.pnlNutThanhToan.Name = "pnlNutThanhToan";
             this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
             this.pnlNutThanhToan.TabIndex = 4;
+            // 
+            // btnChanDoan
+            // 
+            this.btnChanDoan.Location = new System.Drawing.Point(9, 215);
+            this.btnChanDoan.Name = "btnChanDoan";
+            this.btnChanDoan.Size = new System.Drawing.Size(212, 50);
+            this.btnChanDoan.TabIndex = 2;
+            this.btnChanDoan.Text = "Phiếu chẩn đoán";
+            this.btnChanDoan.UseVisualStyleBackColor = true;
             // 
             // btnLapPhieuKetQuaXetNghiem
             // 
@@ -65,14 +74,14 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuKetQuaXetNghiem.Text = "Lập phiếu kết quả xét nghiệm";
             this.btnLapPhieuKetQuaXetNghiem.UseVisualStyleBackColor = true;
             // 
-            // btnLapPhieuSuDungXetNghiem
+            // btnLapPhieuDangKyXetNghiem
             // 
-            this.btnLapPhieuSuDungXetNghiem.Location = new System.Drawing.Point(9, 79);
-            this.btnLapPhieuSuDungXetNghiem.Name = "btnLapPhieuSuDungXetNghiem";
-            this.btnLapPhieuSuDungXetNghiem.Size = new System.Drawing.Size(212, 50);
-            this.btnLapPhieuSuDungXetNghiem.TabIndex = 1;
-            this.btnLapPhieuSuDungXetNghiem.Text = "Lập phiếu sử dụng xét nghiệm";
-            this.btnLapPhieuSuDungXetNghiem.UseVisualStyleBackColor = true;
+            this.btnLapPhieuDangKyXetNghiem.Location = new System.Drawing.Point(9, 79);
+            this.btnLapPhieuDangKyXetNghiem.Name = "btnLapPhieuDangKyXetNghiem";
+            this.btnLapPhieuDangKyXetNghiem.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuDangKyXetNghiem.TabIndex = 1;
+            this.btnLapPhieuDangKyXetNghiem.Text = "Lập phiếu đăng ký xét nghiệm";
+            this.btnLapPhieuDangKyXetNghiem.UseVisualStyleBackColor = true;
             // 
             // btnLapPhieuDangKiKhamBenh
             // 
@@ -82,15 +91,6 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKiKhamBenh.TabIndex = 0;
             this.btnLapPhieuDangKiKhamBenh.Text = "Lập phiếu đăng kí khám bệnh";
             this.btnLapPhieuDangKiKhamBenh.UseVisualStyleBackColor = true;
-            // 
-            // btnChanDoan
-            // 
-            this.btnChanDoan.Location = new System.Drawing.Point(9, 205);
-            this.btnChanDoan.Name = "btnChanDoan";
-            this.btnChanDoan.Size = new System.Drawing.Size(212, 50);
-            this.btnChanDoan.TabIndex = 2;
-            this.btnChanDoan.Text = "Phiếu chẩn đoán";
-            this.btnChanDoan.UseVisualStyleBackColor = true;
             // 
             // frmKhamBenh
             // 
@@ -111,7 +111,7 @@ namespace QLPK.GUI.KhamBenh
 
         private System.Windows.Forms.Panel pnlXemThanhToan;
         private System.Windows.Forms.Panel pnlNutThanhToan;
-        private System.Windows.Forms.Button btnLapPhieuSuDungXetNghiem;
+        private System.Windows.Forms.Button btnLapPhieuDangKyXetNghiem;
         private System.Windows.Forms.Button btnLapPhieuDangKiKhamBenh;
         private System.Windows.Forms.Button btnLapPhieuKetQuaXetNghiem;
         private System.Windows.Forms.Button btnChanDoan;

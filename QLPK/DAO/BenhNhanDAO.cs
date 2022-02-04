@@ -24,7 +24,8 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSBenhNhan()
         {
-            return DataProvider.Instance.ExecuteQuery("select MaBenhNhan from BenhNhan");
+            string query = "select * from BenhNhan";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
 
     }

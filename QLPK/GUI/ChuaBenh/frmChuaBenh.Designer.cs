@@ -33,7 +33,6 @@ namespace QLPK.GUI.ChuaBenh
             this.pnlNutThanhToan = new System.Windows.Forms.Panel();
             this.btnLapPhieuSuDungDichVu = new System.Windows.Forms.Button();
             this.btnBangDichVuChuaBenh = new System.Windows.Forms.Button();
-            this.btnLapPhieuThuTamUng = new System.Windows.Forms.Button();
             this.pnlNutThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@ namespace QLPK.GUI.ChuaBenh
             // 
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungDichVu);
             this.pnlNutThanhToan.Controls.Add(this.btnBangDichVuChuaBenh);
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuThuTamUng);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(3, 2);
             this.pnlNutThanhToan.Name = "pnlNutThanhToan";
             this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
@@ -73,15 +71,6 @@ namespace QLPK.GUI.ChuaBenh
             this.btnBangDichVuChuaBenh.Text = "Bảng dịch vụ chữa bệnh";
             this.btnBangDichVuChuaBenh.UseVisualStyleBackColor = true;
             // 
-            // btnLapPhieuThuTamUng
-            // 
-            this.btnLapPhieuThuTamUng.Location = new System.Drawing.Point(9, 197);
-            this.btnLapPhieuThuTamUng.Name = "btnLapPhieuThuTamUng";
-            this.btnLapPhieuThuTamUng.Size = new System.Drawing.Size(212, 50);
-            this.btnLapPhieuThuTamUng.TabIndex = 0;
-            this.btnLapPhieuThuTamUng.Text = "Lập phiếu thu tạm ứng";
-            this.btnLapPhieuThuTamUng.UseVisualStyleBackColor = true;
-            // 
             // frmChuaBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +91,6 @@ namespace QLPK.GUI.ChuaBenh
         private System.Windows.Forms.Panel pnlXemThanhToan;
         private System.Windows.Forms.Panel pnlNutThanhToan;
         private System.Windows.Forms.Button btnBangDichVuChuaBenh;
-        private System.Windows.Forms.Button btnLapPhieuThuTamUng;
         private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
     }
 }
