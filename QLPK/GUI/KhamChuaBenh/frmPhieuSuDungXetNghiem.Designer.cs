@@ -148,7 +148,7 @@ namespace QLPK.GUI.KhamBenh
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 53;
-            this.button5.Text = "Đồng ý";
+            this.button5.Text = "Đồng ý (hiển thị ra form tạm ứng)";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button4_Click);
             // 

@@ -35,6 +35,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuKetQuaXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKyXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
+            this.btnLapPhieuSuDungDichVu = new System.Windows.Forms.Button();
             this.pnlNutThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // pnlNutThanhToan
             // 
+            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungDichVu);
             this.pnlNutThanhToan.Controls.Add(this.btnChanDoan);
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
@@ -92,6 +94,15 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKiKhamBenh.Text = "Lập phiếu đăng kí khám bệnh";
             this.btnLapPhieuDangKiKhamBenh.UseVisualStyleBackColor = true;
             // 
+            // btnLapPhieuSuDungDichVu
+            // 
+            this.btnLapPhieuSuDungDichVu.Location = new System.Drawing.Point(9, 282);
+            this.btnLapPhieuSuDungDichVu.Name = "btnLapPhieuSuDungDichVu";
+            this.btnLapPhieuSuDungDichVu.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuSuDungDichVu.TabIndex = 3;
+            this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ chữa bệnh";
+            this.btnLapPhieuSuDungDichVu.UseVisualStyleBackColor = true;
+            // 
             // frmKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,5 +126,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Button btnLapPhieuDangKiKhamBenh;
         private System.Windows.Forms.Button btnLapPhieuKetQuaXetNghiem;
         private System.Windows.Forms.Button btnChanDoan;
+        private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
     }
 }

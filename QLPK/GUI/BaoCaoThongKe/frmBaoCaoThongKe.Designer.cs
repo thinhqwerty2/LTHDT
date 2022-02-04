@@ -30,63 +30,61 @@ namespace QLPK.GUI.BaoCaoThongKe
         private void InitializeComponent()
         {
             this.pnlNutQuanTriHeThong = new System.Windows.Forms.Panel();
-            this.btnDoanhThuThuoc = new System.Windows.Forms.Button();
-            this.btnDoanhThuDichVu = new System.Windows.Forms.Button();
-            this.btnKhamBenh = new System.Windows.Forms.Button();
-            this.btnBenhNhan = new System.Windows.Forms.Button();
+            this.btnHoSoBenhAn = new System.Windows.Forms.Button();
+            this.btnThongKeTheoDichVu = new System.Windows.Forms.Button();
+            this.btnThongKeLoaiBenhPhoBien = new System.Windows.Forms.Button();
+            this.btnThongKeTheoBenhNhan = new System.Windows.Forms.Button();
             this.pnlXemQuanTriHeThong = new System.Windows.Forms.Panel();
-            this.btnChuaBenh = new System.Windows.Forms.Button();
             this.pnlNutQuanTriHeThong.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlNutQuanTriHeThong
             // 
-            this.pnlNutQuanTriHeThong.Controls.Add(this.btnChuaBenh);
-            this.pnlNutQuanTriHeThong.Controls.Add(this.btnDoanhThuThuoc);
-            this.pnlNutQuanTriHeThong.Controls.Add(this.btnDoanhThuDichVu);
-            this.pnlNutQuanTriHeThong.Controls.Add(this.btnKhamBenh);
-            this.pnlNutQuanTriHeThong.Controls.Add(this.btnBenhNhan);
+            this.pnlNutQuanTriHeThong.Controls.Add(this.btnHoSoBenhAn);
+            this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongKeTheoDichVu);
+            this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongKeLoaiBenhPhoBien);
+            this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongKeTheoBenhNhan);
             this.pnlNutQuanTriHeThong.Location = new System.Drawing.Point(3, 2);
             this.pnlNutQuanTriHeThong.Name = "pnlNutQuanTriHeThong";
             this.pnlNutQuanTriHeThong.Size = new System.Drawing.Size(225, 446);
             this.pnlNutQuanTriHeThong.TabIndex = 2;
             // 
-            // btnDoanhThuThuoc
+            // btnHoSoBenhAn
             // 
-            this.btnDoanhThuThuoc.Location = new System.Drawing.Point(10, 141);
-            this.btnDoanhThuThuoc.Name = "btnDoanhThuThuoc";
-            this.btnDoanhThuThuoc.Size = new System.Drawing.Size(212, 50);
-            this.btnDoanhThuThuoc.TabIndex = 3;
-            this.btnDoanhThuThuoc.Text = "Doanh thu thuốc";
-            this.btnDoanhThuThuoc.UseVisualStyleBackColor = true;
+            this.btnHoSoBenhAn.Location = new System.Drawing.Point(10, 141);
+            this.btnHoSoBenhAn.Name = "btnHoSoBenhAn";
+            this.btnHoSoBenhAn.Size = new System.Drawing.Size(212, 50);
+            this.btnHoSoBenhAn.TabIndex = 3;
+            this.btnHoSoBenhAn.Text = "Hồ sơ bệnh án";
+            this.btnHoSoBenhAn.UseVisualStyleBackColor = true;
             // 
-            // btnDoanhThuDichVu
+            // btnThongKeTheoDichVu
             // 
-            this.btnDoanhThuDichVu.Location = new System.Drawing.Point(10, 74);
-            this.btnDoanhThuDichVu.Name = "btnDoanhThuDichVu";
-            this.btnDoanhThuDichVu.Size = new System.Drawing.Size(212, 50);
-            this.btnDoanhThuDichVu.TabIndex = 2;
-            this.btnDoanhThuDichVu.Text = "Doanh thu dịch vụ";
-            this.btnDoanhThuDichVu.UseVisualStyleBackColor = true;
+            this.btnThongKeTheoDichVu.Location = new System.Drawing.Point(10, 74);
+            this.btnThongKeTheoDichVu.Name = "btnThongKeTheoDichVu";
+            this.btnThongKeTheoDichVu.Size = new System.Drawing.Size(212, 50);
+            this.btnThongKeTheoDichVu.TabIndex = 2;
+            this.btnThongKeTheoDichVu.Text = "Thống kê dịch vụ";
+            this.btnThongKeTheoDichVu.UseVisualStyleBackColor = true;
             // 
-            // btnKhamBenh
+            // btnThongKeLoaiBenhPhoBien
             // 
-            this.btnKhamBenh.Location = new System.Drawing.Point(10, 208);
-            this.btnKhamBenh.Name = "btnKhamBenh";
-            this.btnKhamBenh.Size = new System.Drawing.Size(212, 50);
-            this.btnKhamBenh.TabIndex = 1;
-            this.btnKhamBenh.Text = "Khám bệnh";
-            this.btnKhamBenh.UseVisualStyleBackColor = true;
+            this.btnThongKeLoaiBenhPhoBien.Location = new System.Drawing.Point(10, 208);
+            this.btnThongKeLoaiBenhPhoBien.Name = "btnThongKeLoaiBenhPhoBien";
+            this.btnThongKeLoaiBenhPhoBien.Size = new System.Drawing.Size(212, 50);
+            this.btnThongKeLoaiBenhPhoBien.TabIndex = 1;
+            this.btnThongKeLoaiBenhPhoBien.Text = "Thống kê theo loại bệnh";
+            this.btnThongKeLoaiBenhPhoBien.UseVisualStyleBackColor = true;
             // 
-            // btnBenhNhan
+            // btnThongKeTheoBenhNhan
             // 
-            this.btnBenhNhan.Location = new System.Drawing.Point(10, 9);
-            this.btnBenhNhan.Name = "btnBenhNhan";
-            this.btnBenhNhan.Size = new System.Drawing.Size(212, 50);
-            this.btnBenhNhan.TabIndex = 0;
-            this.btnBenhNhan.Text = "Bệnh nhân";
-            this.btnBenhNhan.UseVisualStyleBackColor = true;
-            this.btnBenhNhan.Click += new System.EventHandler(this.btnBenhNhan_Click);
+            this.btnThongKeTheoBenhNhan.Location = new System.Drawing.Point(10, 9);
+            this.btnThongKeTheoBenhNhan.Name = "btnThongKeTheoBenhNhan";
+            this.btnThongKeTheoBenhNhan.Size = new System.Drawing.Size(212, 50);
+            this.btnThongKeTheoBenhNhan.TabIndex = 0;
+            this.btnThongKeTheoBenhNhan.Text = "Thống kê theo bệnh nhân";
+            this.btnThongKeTheoBenhNhan.UseVisualStyleBackColor = true;
+            this.btnThongKeTheoBenhNhan.Click += new System.EventHandler(this.btnBenhNhan_Click);
             // 
             // pnlXemQuanTriHeThong
             // 
@@ -94,15 +92,6 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.pnlXemQuanTriHeThong.Name = "pnlXemQuanTriHeThong";
             this.pnlXemQuanTriHeThong.Size = new System.Drawing.Size(564, 446);
             this.pnlXemQuanTriHeThong.TabIndex = 3;
-            // 
-            // btnChuaBenh
-            // 
-            this.btnChuaBenh.Location = new System.Drawing.Point(13, 275);
-            this.btnChuaBenh.Name = "btnChuaBenh";
-            this.btnChuaBenh.Size = new System.Drawing.Size(212, 50);
-            this.btnChuaBenh.TabIndex = 4;
-            this.btnChuaBenh.Text = "Chữa bệnh";
-            this.btnChuaBenh.UseVisualStyleBackColor = true;
             // 
             // frmBaoCaoThongKe
             // 
@@ -122,11 +111,10 @@ namespace QLPK.GUI.BaoCaoThongKe
         #endregion
 
         private System.Windows.Forms.Panel pnlNutQuanTriHeThong;
-        private System.Windows.Forms.Button btnDoanhThuThuoc;
-        private System.Windows.Forms.Button btnDoanhThuDichVu;
-        private System.Windows.Forms.Button btnKhamBenh;
-        private System.Windows.Forms.Button btnBenhNhan;
+        private System.Windows.Forms.Button btnHoSoBenhAn;
+        private System.Windows.Forms.Button btnThongKeTheoDichVu;
+        private System.Windows.Forms.Button btnThongKeLoaiBenhPhoBien;
+        private System.Windows.Forms.Button btnThongKeTheoBenhNhan;
         private System.Windows.Forms.Panel pnlXemQuanTriHeThong;
-        private System.Windows.Forms.Button btnChuaBenh;
     }
 }

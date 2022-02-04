@@ -32,7 +32,6 @@ namespace QLPK.GUI.ChuaBenh
             this.pnlXemThanhToan = new System.Windows.Forms.Panel();
             this.pnlNutThanhToan = new System.Windows.Forms.Panel();
             this.btnLapPhieuSuDungDichVu = new System.Windows.Forms.Button();
-            this.btnBangDichVuChuaBenh = new System.Windows.Forms.Button();
             this.pnlNutThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +45,6 @@ namespace QLPK.GUI.ChuaBenh
             // pnlNutThanhToan
             // 
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungDichVu);
-            this.pnlNutThanhToan.Controls.Add(this.btnBangDichVuChuaBenh);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(3, 2);
             this.pnlNutThanhToan.Name = "pnlNutThanhToan";
             this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
@@ -54,22 +52,13 @@ namespace QLPK.GUI.ChuaBenh
             // 
             // btnLapPhieuSuDungDichVu
             // 
-            this.btnLapPhieuSuDungDichVu.Location = new System.Drawing.Point(10, 133);
+            this.btnLapPhieuSuDungDichVu.Location = new System.Drawing.Point(9, 10);
             this.btnLapPhieuSuDungDichVu.Name = "btnLapPhieuSuDungDichVu";
             this.btnLapPhieuSuDungDichVu.Size = new System.Drawing.Size(212, 50);
             this.btnLapPhieuSuDungDichVu.TabIndex = 1;
-            this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ";
+            this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ chữa bệnh";
             this.btnLapPhieuSuDungDichVu.UseVisualStyleBackColor = true;
             this.btnLapPhieuSuDungDichVu.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // btnBangDichVuChuaBenh
-            // 
-            this.btnBangDichVuChuaBenh.Location = new System.Drawing.Point(9, 253);
-            this.btnBangDichVuChuaBenh.Name = "btnBangDichVuChuaBenh";
-            this.btnBangDichVuChuaBenh.Size = new System.Drawing.Size(212, 50);
-            this.btnBangDichVuChuaBenh.TabIndex = 1;
-            this.btnBangDichVuChuaBenh.Text = "Bảng dịch vụ chữa bệnh";
-            this.btnBangDichVuChuaBenh.UseVisualStyleBackColor = true;
             // 
             // frmChuaBenh
             // 
@@ -90,7 +79,6 @@ namespace QLPK.GUI.ChuaBenh
 
         private System.Windows.Forms.Panel pnlXemThanhToan;
         private System.Windows.Forms.Panel pnlNutThanhToan;
-        private System.Windows.Forms.Button btnBangDichVuChuaBenh;
         private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
     }
 }

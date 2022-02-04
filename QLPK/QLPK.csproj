@@ -42,6 +42,7 @@
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\BenhNhanDAO.cs" />
+    <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
@@ -73,40 +75,70 @@
     <Compile Include="GUI\BaoCaoThongKe\frmBaoCaoThongKe.Designer.cs">
       <DependentUpon>frmBaoCaoThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeBenh.Designer.cs">
+      <DependentUpon>frmThongKeBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeBenhNhan.Designer.cs">
+      <DependentUpon>frmThongKeBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeTheoDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeTheoDichVu.Designer.cs">
+      <DependentUpon>frmThongKeTheoDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeTheoLoaiBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCaoThongKe\frmThongKeTheoLoaiBenh.Designer.cs">
+      <DependentUpon>frmThongKeTheoLoaiBenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ChuaBenh\frmChuaBenh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ChuaBenh\frmChuaBenh.Designer.cs">
       <DependentUpon>frmChuaBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmKhamBenh.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmKhamBenh.Designer.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmKhamBenh.Designer.cs">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmLapPhieuKetQuaXetNghiem.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmLapPhieuKetQuaXetNghiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmLapPhieuKetQuaXetNghiem.Designer.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmLapPhieuKetQuaXetNghiem.Designer.cs">
       <DependentUpon>frmLapPhieuKetQuaXetNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuChanDoan.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuChanDoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuChanDoan.Designer.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuChanDoan.Designer.cs">
       <DependentUpon>frmPhieuChanDoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuDangKyKhamBenh.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuDangKyKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuDangKyKhamBenh.Designer.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuDangKyKhamBenh.Designer.cs">
       <DependentUpon>frmPhieuDangKyKhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuSuDungXetNghiem.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuSuDungDichVuChuaBenh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhamBenh\frmPhieuSuDungXetNghiem.Designer.cs">
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuSuDungDichVuChuaBenh.Designer.cs">
+      <DependentUpon>frmPhieuSuDungDichVuChuaBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuSuDungXetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamChuaBenh\frmPhieuSuDungXetNghiem.Designer.cs">
       <DependentUpon>frmPhieuSuDungXetNghiem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.cs">
@@ -198,22 +230,37 @@
     <EmbeddedResource Include="GUI\BaoCaoThongKe\frmBaoCaoThongKe.resx">
       <DependentUpon>frmBaoCaoThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe\frmThongKeBenh.resx">
+      <DependentUpon>frmThongKeBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe\frmThongKeBenhNhan.resx">
+      <DependentUpon>frmThongKeBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe\frmThongKeTheoDichVu.resx">
+      <DependentUpon>frmThongKeTheoDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCaoThongKe\frmThongKeTheoLoaiBenh.resx">
+      <DependentUpon>frmThongKeTheoLoaiBenh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ChuaBenh\frmChuaBenh.resx">
       <DependentUpon>frmChuaBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh\frmKhamBenh.resx">
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh\frmLapPhieuKetQuaXetNghiem.resx">
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmLapPhieuKetQuaXetNghiem.resx">
       <DependentUpon>frmLapPhieuKetQuaXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh\frmPhieuChanDoan.resx">
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmPhieuChanDoan.resx">
       <DependentUpon>frmPhieuChanDoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh\frmPhieuDangKyKhamBenh.resx">
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmPhieuDangKyKhamBenh.resx">
       <DependentUpon>frmPhieuDangKyKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhamBenh\frmPhieuSuDungXetNghiem.resx">
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmPhieuSuDungDichVuChuaBenh.resx">
+      <DependentUpon>frmPhieuSuDungDichVuChuaBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamChuaBenh\frmPhieuSuDungXetNghiem.resx">
       <DependentUpon>frmPhieuSuDungXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.resx">
