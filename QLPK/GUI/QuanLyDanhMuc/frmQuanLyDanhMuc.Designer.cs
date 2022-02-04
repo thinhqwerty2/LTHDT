@@ -77,6 +77,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnBacSi.TabIndex = 1;
             this.btnBacSi.Text = "Bác sĩ";
             this.btnBacSi.UseVisualStyleBackColor = true;
+            this.btnBacSi.Click += new System.EventHandler(this.btnBacSi_Click);
             // 
             // btnBenhNhan
             // 
@@ -86,6 +87,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnBenhNhan.TabIndex = 0;
             this.btnBenhNhan.Text = "Bệnh nhân";
             this.btnBenhNhan.UseVisualStyleBackColor = true;
+            this.btnBenhNhan.Click += new System.EventHandler(this.btnBenhNhan_Click);
             // 
             // pnlXemQuanLyDanhMuc
             // 

@@ -31,6 +31,7 @@ namespace QLPK.GUI.ChuaBenh
         {
             this.pnlXemThanhToan = new System.Windows.Forms.Panel();
             this.pnlNutThanhToan = new System.Windows.Forms.Panel();
+            this.btnLapPhieuSuDungDichVu = new System.Windows.Forms.Button();
             this.btnBangDichVuChuaBenh = new System.Windows.Forms.Button();
             this.btnLapPhieuThuTamUng = new System.Windows.Forms.Button();
             this.pnlNutThanhToan.SuspendLayout();
@@ -45,6 +46,7 @@ namespace QLPK.GUI.ChuaBenh
             // 
             // pnlNutThanhToan
             // 
+            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungDichVu);
             this.pnlNutThanhToan.Controls.Add(this.btnBangDichVuChuaBenh);
             this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuThuTamUng);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(3, 2);
@@ -52,9 +54,19 @@ namespace QLPK.GUI.ChuaBenh
             this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
             this.pnlNutThanhToan.TabIndex = 2;
             // 
+            // btnLapPhieuSuDungDichVu
+            // 
+            this.btnLapPhieuSuDungDichVu.Location = new System.Drawing.Point(10, 133);
+            this.btnLapPhieuSuDungDichVu.Name = "btnLapPhieuSuDungDichVu";
+            this.btnLapPhieuSuDungDichVu.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuSuDungDichVu.TabIndex = 1;
+            this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ";
+            this.btnLapPhieuSuDungDichVu.UseVisualStyleBackColor = true;
+            this.btnLapPhieuSuDungDichVu.Click += new System.EventHandler(this.btn_Click);
+            // 
             // btnBangDichVuChuaBenh
             // 
-            this.btnBangDichVuChuaBenh.Location = new System.Drawing.Point(10, 77);
+            this.btnBangDichVuChuaBenh.Location = new System.Drawing.Point(9, 253);
             this.btnBangDichVuChuaBenh.Name = "btnBangDichVuChuaBenh";
             this.btnBangDichVuChuaBenh.Size = new System.Drawing.Size(212, 50);
             this.btnBangDichVuChuaBenh.TabIndex = 1;
@@ -63,7 +75,7 @@ namespace QLPK.GUI.ChuaBenh
             // 
             // btnLapPhieuThuTamUng
             // 
-            this.btnLapPhieuThuTamUng.Location = new System.Drawing.Point(10, 9);
+            this.btnLapPhieuThuTamUng.Location = new System.Drawing.Point(9, 197);
             this.btnLapPhieuThuTamUng.Name = "btnLapPhieuThuTamUng";
             this.btnLapPhieuThuTamUng.Size = new System.Drawing.Size(212, 50);
             this.btnLapPhieuThuTamUng.TabIndex = 0;
@@ -91,5 +103,6 @@ namespace QLPK.GUI.ChuaBenh
         private System.Windows.Forms.Panel pnlNutThanhToan;
         private System.Windows.Forms.Button btnBangDichVuChuaBenh;
         private System.Windows.Forms.Button btnLapPhieuThuTamUng;
+        private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
     }
 }

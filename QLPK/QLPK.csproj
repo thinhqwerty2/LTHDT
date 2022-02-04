@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BenhNhanDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>

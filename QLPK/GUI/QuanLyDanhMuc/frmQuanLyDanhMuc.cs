@@ -34,5 +34,23 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucDichVu);
             fDanhMucDichVu.Show();
         }
+
+        private void btnBacSi_Click(object sender, EventArgs e)
+        {
+            this.pnlXemQuanLyDanhMuc.Controls.Clear();
+            frmDanhMucBacSi fDanhMucBacSi = new frmDanhMucBacSi();
+            fDanhMucBacSi.TopLevel = false;
+            this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBacSi);
+            fDanhMucBacSi.Show();
+        }
+
+        private void btnBenhNhan_Click(object sender, EventArgs e)
+        {
+            this.pnlXemQuanLyDanhMuc.Controls.Clear();
+            frmDanhMucBenhNhan fDanhMucBenhNhan = new frmDanhMucBenhNhan();
+            fDanhMucBenhNhan.TopLevel = false;
+            this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBenhNhan);
+            fDanhMucBenhNhan.Show();
+        }
     }
 }

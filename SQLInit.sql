@@ -1,0 +1,124 @@
+
+CREATE TABLE BenhNhan
+(
+  MaBenhNhan CHAR(7) NOT NULL,
+  HoTen VARCHAR(255) NOT NULL,
+  GioiTinh INT NOT NULL,
+  NgaySinh DATE NOT NULL,
+  DiaChi VARCHAR(1000) NOT NULL,
+  SDT CHAR(10) NOT NULL,
+  PRIMARY KEY (MaBenhNhan)
+);
+
+CREATE TABLE DichVu
+(
+  MaDichVu CHAR(7) NOT NULL,
+  TenDichVu VARCHAR(255) NOT NULL,
+  DonGia FLOAT NOT NULL,
+  DonViTinh VARCHAR(10) NOT NULL,
+  GhiChu VARCHAR(255) NOT NULL,
+  PRIMARY KEY (MaDichVu)
+);
+
+CREATE TABLE TaiKhoan
+(
+  TenDangNhap VARCHAR(255) NOT NULL,
+  MatKhau VARCHAR(255) NOT NULL,
+  QuyenTruyCap INT NOT NULL,
+  UserID INT NOT NULL,
+  PRIMARY KEY (UserID)
+);
+
+CREATE TABLE HoSoBenhAn
+(
+  Ngay DATE NOT NULL,
+  ChanDoan VARCHAR(1000) NOT NULL,
+  SoBenhAn VARCHAR(10) NOT NULL,
+  MaBenhNhan CHAR(7) NOT NULL,
+  PRIMARY KEY (SoBenhAn),
+  FOREIGN KEY (MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan)
+);
+
+CREATE TABLE NhanVien
+(
+  MaNhanVien CHAR(10) NOT NULL,
+  HoTen VARCHAR(255) NOT NULL,
+  ChucVu VARCHAR(20) NOT NULL,
+  DiaChi VARCHAR(1000) NOT NULL,
+  GioiTinh INT NOT NULL,
+  SDT CHAR(10) NOT NULL,
+  UserID INT NOT NULL,
+  PRIMARY KEY (MaNhanVien),
+  FOREIGN KEY (UserID) REFERENCES TaiKhoan(UserID)
+);
+
+CREATE TABLE BacSi
+(
+  MaBacSi CHAR(7) NOT NULL,
+  HoTen VARCHAR(255) NOT NULL,
+  TrinhDo VARCHAR(20) NOT NULL,
+  ChucVu VARCHAR(20) NOT NULL,
+  DiaChi VARCHAR(1000) NOT NULL,
+  SDT CHAR(10) NOT NULL,
+  GioiTinh INT NOT NULL,
+  UserID INT NOT NULL,
+  PRIMARY KEY (MaBacSi),
+  FOREIGN KEY (UserID) REFERENCES TaiKhoan(UserID)
+);
+
+CREATE TABLE BanKe
+(
+  MaBanKe CHAR(100) NOT NULL,
+  NgayLapBanKe DATE NOT NULL,
+  MaBenhNhan CHAR(7) NOT NULL,
+  MaNhanVien CHAR(10) NOT NULL,
+  PRIMARY KEY (MaBanKe),
+  FOREIGN KEY (MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan),
+  FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
+);
+
+CREATE TABLE ChiTietBanKe
+(
+  SoLuong INT NOT NULL,
+  MaBanKe CHAR(100) NOT NULL,
+  MaDichVu CHAR(7) NOT NULL,
+  PRIMARY KEY (MaBanKe, MaDichVu),
+  FOREIGN KEY (MaBanKe) REFERENCES BanKe(MaBanKe),
+  FOREIGN KEY (MaDichVu) REFERENCES DichVu(MaDichVu)
+);
+
+CREATE TABLE PhieuThuTienTamUng
+(
+  MaPhieuThuTienTamUng CHAR(10) NOT NULL,
+  SoTienThuTamUng FLOAT NOT NULL,
+  NgayThuTienTamUng DATE NOT NULL,
+  MaNhanVien CHAR(10) NOT NULL,
+  MaBanKe CHAR(100) NOT NULL,
+  PRIMARY KEY (MaPhieuThuTienTamUng),
+  FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
+  FOREIGN KEY (MaBanKe) REFERENCES BanKe(MaBanKe)
+);
+
+CREATE TABLE KetQuaXetNghiem
+(
+  NgayThongBao DATE NOT NULL,
+  KetQua VARCHAR(1000) NOT NULL,
+  MaBacSi CHAR(7) NOT NULL,
+  MaBanKe CHAR(100) NOT NULL,
+  MaDichVu CHAR(7) NOT NULL,
+  PRIMARY KEY (MaBacSi, MaBanKe, MaDichVu),
+  FOREIGN KEY (MaBacSi) REFERENCES BacSi(MaBacSi),
+  FOREIGN KEY (MaBanKe, MaDichVu) REFERENCES ChiTietBanKe(MaBanKe, MaDichVu)
+);
+
+CREATE TABLE TongHopChiPhi
+(
+  ThanhTien FLOAT NOT NULL,
+  NgayThanhToan DATE NOT NULL,
+  MaHoaDon VARCHAR(100) NOT NULL,
+  MaNhanVien CHAR(10) NOT NULL,
+  MaPhieuThuTienTamUng CHAR(10) NOT NULL,
+  PRIMARY KEY (MaHoaDon),
+  FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
+  FOREIGN KEY (MaPhieuThuTienTamUng) REFERENCES PhieuThuTienTamUng(MaPhieuThuTienTamUng)
+);

@@ -57,6 +57,7 @@ namespace QLPK.GUI.QuanTriHeThong
             this.btnPhanQuyen.TabIndex = 3;
             this.btnPhanQuyen.Text = "Phân quyền";
             this.btnPhanQuyen.UseVisualStyleBackColor = true;
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
             // 
             // btnTaoTaiKhoan
             // 
@@ -66,6 +67,7 @@ namespace QLPK.GUI.QuanTriHeThong
             this.btnTaoTaiKhoan.TabIndex = 2;
             this.btnTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnTaoTaiKhoan.Click += new System.EventHandler(this.btnTaoTaiKhoan_Click);
             // 
             // btnDoiMatKhau
             // 
@@ -75,6 +77,7 @@ namespace QLPK.GUI.QuanTriHeThong
             this.btnDoiMatKhau.TabIndex = 1;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // btnThongTinTaiKhoan
             // 
@@ -84,6 +87,7 @@ namespace QLPK.GUI.QuanTriHeThong
             this.btnThongTinTaiKhoan.TabIndex = 0;
             this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
             this.btnThongTinTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnThongTinTaiKhoan.Click += new System.EventHandler(this.btnThongTinTaiKhoan_Click);
             // 
             // pnlXemQuanTriHeThong
             // 

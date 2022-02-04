@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPK.DAO;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
-    public partial class Form1 : Form
+    public partial class frmDanhMucBenhNhan : Form
     {
-        public Form1()
+        public frmDanhMucBenhNhan()
         {
             InitializeComponent();
+        }
+        void loadData()
+        {
+           this.dgvDanhMucBenhNhan.DataSource = BenhNhanDAO.Instance.hienThiDSBenhNhan();
+
+        }
+
+        private void frmDanhMucBenhNhan_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }
