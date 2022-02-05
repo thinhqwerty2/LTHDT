@@ -107,7 +107,7 @@ namespace QLPK
             // 
             this.pnlChinh.Location = new System.Drawing.Point(23, 125);
             this.pnlChinh.Name = "pnlChinh";
-            this.pnlChinh.Size = new System.Drawing.Size(930, 397);
+            this.pnlChinh.Size = new System.Drawing.Size(930, 554);
             this.pnlChinh.TabIndex = 2;
             // 
             // pnlMenu
@@ -144,7 +144,7 @@ namespace QLPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 543);
+            this.ClientSize = new System.Drawing.Size(966, 691);
             this.Controls.Add(this.pnlXinChao);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlChinh);
