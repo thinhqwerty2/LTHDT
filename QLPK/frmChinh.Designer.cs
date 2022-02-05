@@ -32,13 +32,13 @@ namespace QLPK
             this.btnHeThong = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnDanhMuc = new System.Windows.Forms.Button();
-            this.btnKhamBenh = new System.Windows.Forms.Button();
-            this.btnChuaBenh = new System.Windows.Forms.Button();
+            this.btnKhamChuaBenh = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.pnlChinh = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlXinChao = new System.Windows.Forms.Panel();
             this.lblXinChao = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlXinChao.SuspendLayout();
             this.SuspendLayout();
@@ -73,25 +73,15 @@ namespace QLPK
             this.btnDanhMuc.UseVisualStyleBackColor = true;
             this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
             // 
-            // btnKhamBenh
+            // btnKhamChuaBenh
             // 
-            this.btnKhamBenh.Location = new System.Drawing.Point(318, 11);
-            this.btnKhamBenh.Name = "btnKhamBenh";
-            this.btnKhamBenh.Size = new System.Drawing.Size(126, 44);
-            this.btnKhamBenh.TabIndex = 0;
-            this.btnKhamBenh.Text = "Khám bệnh";
-            this.btnKhamBenh.UseVisualStyleBackColor = true;
-            this.btnKhamBenh.Click += new System.EventHandler(this.btnKhamBenh_Click);
-            // 
-            // btnChuaBenh
-            // 
-            this.btnChuaBenh.Location = new System.Drawing.Point(473, 11);
-            this.btnChuaBenh.Name = "btnChuaBenh";
-            this.btnChuaBenh.Size = new System.Drawing.Size(126, 44);
-            this.btnChuaBenh.TabIndex = 0;
-            this.btnChuaBenh.Text = "Chữa bệnh";
-            this.btnChuaBenh.UseVisualStyleBackColor = true;
-            this.btnChuaBenh.Click += new System.EventHandler(this.btnChuaBenh_Click);
+            this.btnKhamChuaBenh.Location = new System.Drawing.Point(318, 11);
+            this.btnKhamChuaBenh.Name = "btnKhamChuaBenh";
+            this.btnKhamChuaBenh.Size = new System.Drawing.Size(126, 44);
+            this.btnKhamChuaBenh.TabIndex = 0;
+            this.btnKhamChuaBenh.Text = "Khám chữa bệnh";
+            this.btnKhamChuaBenh.UseVisualStyleBackColor = true;
+            this.btnKhamChuaBenh.Click += new System.EventHandler(this.btnKhamBenh_Click);
             // 
             // btnThanhToan
             // 
@@ -115,9 +105,8 @@ namespace QLPK
             this.pnlMenu.Controls.Add(this.btnBaoCao);
             this.pnlMenu.Controls.Add(this.btnHeThong);
             this.pnlMenu.Controls.Add(this.btnThanhToan);
-            this.pnlMenu.Controls.Add(this.btnKhamBenh);
+            this.pnlMenu.Controls.Add(this.btnKhamChuaBenh);
             this.pnlMenu.Controls.Add(this.btnDanhMuc);
-            this.pnlMenu.Controls.Add(this.btnChuaBenh);
             this.pnlMenu.Location = new System.Drawing.Point(23, 12);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(931, 69);
@@ -125,6 +114,7 @@ namespace QLPK
             // 
             // pnlXinChao
             // 
+            this.pnlXinChao.Controls.Add(this.lblName);
             this.pnlXinChao.Controls.Add(this.lblXinChao);
             this.pnlXinChao.Location = new System.Drawing.Point(23, 87);
             this.pnlXinChao.Name = "pnlXinChao";
@@ -139,6 +129,15 @@ namespace QLPK
             this.lblXinChao.Size = new System.Drawing.Size(52, 13);
             this.lblXinChao.TabIndex = 0;
             this.lblXinChao.Text = "Xin chào:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(201, 4);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "label1";
             // 
             // frmChinh
             // 
@@ -159,14 +158,14 @@ namespace QLPK
 
         #endregion
         private System.Windows.Forms.Button btnHeThong;
-        private System.Windows.Forms.Button btnKhamBenh;
+        private System.Windows.Forms.Button btnKhamChuaBenh;
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnDanhMuc;
-        private System.Windows.Forms.Button btnChuaBenh;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Panel pnlChinh;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlXinChao;
         private System.Windows.Forms.Label lblXinChao;
+        private System.Windows.Forms.Label lblName;
     }
 }

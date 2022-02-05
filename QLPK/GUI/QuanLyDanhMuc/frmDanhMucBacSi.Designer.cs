@@ -53,6 +53,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.label2 = new System.Windows.Forms.Label();
             this.pnlDanhMucBacSi = new System.Windows.Forms.Panel();
             this.btnNhapLai = new System.Windows.Forms.Button();
+            this.txtTrangThai = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBacSi)).BeginInit();
             this.pnlDanhMucBacSi.SuspendLayout();
             this.SuspendLayout();
@@ -288,11 +290,31 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnNhapLai.UseVisualStyleBackColor = true;
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.Location = new System.Drawing.Point(136, 92);
+            this.txtTrangThai.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(76, 20);
+            this.txtTrangThai.TabIndex = 58;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Trạng thái";
+            // 
             // frmDanhMucBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 478);
+            this.Controls.Add(this.txtTrangThai);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pnlDanhMucBacSi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkHienThiTatCa);
@@ -350,5 +372,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlDanhMucBacSi;
         private System.Windows.Forms.Button btnNhapLai;
+        private System.Windows.Forms.TextBox txtTrangThai;
+        private System.Windows.Forms.Label label3;
     }
 }

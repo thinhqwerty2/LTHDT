@@ -59,7 +59,8 @@
     <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DTO\NguoiDungDTO.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +102,6 @@
     </Compile>
     <Compile Include="GUI\BaoCaoThongKe\frmThongKeTheoLoaiBenh.Designer.cs">
       <DependentUpon>frmThongKeTheoLoaiBenh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ChuaBenh\frmChuaBenh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ChuaBenh\frmChuaBenh.Designer.cs">
-      <DependentUpon>frmChuaBenh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhamChuaBenh\frmKhamBenh.cs">
       <SubType>Form</SubType>
@@ -244,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BaoCaoThongKe\frmThongKeTheoLoaiBenh.resx">
       <DependentUpon>frmThongKeTheoLoaiBenh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ChuaBenh\frmChuaBenh.resx">
-      <DependentUpon>frmChuaBenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamChuaBenh\frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>

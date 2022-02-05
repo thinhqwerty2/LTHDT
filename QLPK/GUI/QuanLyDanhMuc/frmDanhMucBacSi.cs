@@ -10,10 +10,11 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             InitializeComponent();
             btnSua.Enabled = false;
+            
         }
         bool batLoi()
         {
-            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
+            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == ""||txtTrangThai.Text=="")
             {
                 return false;
             }
@@ -39,6 +40,15 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void frmDanhMucBacSi_Load(object sender, EventArgs e)
         {
             hienThiDS();
+            dgvDanhMucBacSi.Columns["MaBacSi"].HeaderText = "Mã bác sĩ";
+            dgvDanhMucBacSi.Columns["HoTen"].HeaderText = "Họ và tên";
+            dgvDanhMucBacSi.Columns["GioiTinh"].HeaderText = "Giới tính";
+            dgvDanhMucBacSi.Columns["TrinhDo"].HeaderText = "Trình độ";
+            dgvDanhMucBacSi.Columns["ChucVu"].HeaderText = "Chức vụ";
+            dgvDanhMucBacSi.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dgvDanhMucBacSi.Columns["SDT"].HeaderText = "Số điện thoại";
+            dgvDanhMucBacSi.Columns["TrangThai"].HeaderText = "Trạng thái";
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -93,6 +103,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 txtChucVu.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtDiaChi.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtSDT.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTrangThai.Text= dgvDanhMucBacSi.Rows[e.RowIndex].Cells[7].Value.ToString();
 
             }
             catch (Exception ex)
@@ -110,6 +121,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtChucVu.Text = "";
             txtDiaChi.Text = "";
             txtSDT.Text = "";
+            txtTrangThai.Text = "";
         }
 
         private void chkHienThiTatCa_CheckedChanged(object sender, EventArgs e)

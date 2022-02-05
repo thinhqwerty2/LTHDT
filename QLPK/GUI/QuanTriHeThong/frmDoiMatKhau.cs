@@ -21,5 +21,10 @@ namespace QLPK.GUI.QuanTriHeThong
         {
 
         }
+
+        private void lblNhapLai_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
