@@ -50,10 +50,19 @@ namespace QLPK.DAO
         {
             return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai=0 where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
         }
-        public DataTable timKiemBacSi(string key)
+        public DataTable timKiemBacSi(string key, bool checkTatCa)
         {
             key = $"%{key}%";
-            string query = "select * from BacSi where MaBacSi like @Key or HoTen like @Key or SDT like @Key";
+            string query;
+            if(checkTatCa)
+            {
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+
+            }
+            else
+            {
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+            }
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
