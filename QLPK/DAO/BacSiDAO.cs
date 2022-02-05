@@ -52,8 +52,8 @@ namespace QLPK.DAO
         }
         public DataTable timKiemBacSi(string key)
         {
-            key = $"%{key}%";
-            string query = "select * from BacSi where MaBacSi like @Key or HoTen like @Key or SDT like @Key";
+            key = '%'+key+'%';
+            string query = "select * from BacSi where MaBacSi like @Keystr1 or HoTen like @Keystr2 or SDT like @Keystr3";
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
