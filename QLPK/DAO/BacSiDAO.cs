@@ -25,7 +25,12 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSBacSi()
         {
-            string query = "select * from BacSi, TaiKhoan where BacSi.MaBacSi = TaiKhoan.TenDangNhap and TrangThai=1";
+            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable hienThiDSTatCaBacSi()
+        {
+            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public bool suaBacSi( string diaChi, string sdt, string trinhDo, string chucVu, string maBacSi)
@@ -44,6 +49,13 @@ namespace QLPK.DAO
         public bool xoaBacSi(string maBacSi)
         {
             return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai=0 where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
+        }
+        public DataTable timKiemBacSi(string key)
+        {
+            key = $"%{key}%";
+            string query = "select * from BacSi where MaBacSi like @Key or HoTen like @Key or SDT like @Key";
+            object[] parameter = { key, key, key };
+            return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnBenhNhan);
             this.pnlNutQuanLyDanhMuc.Location = new System.Drawing.Point(2, 3);
             this.pnlNutQuanLyDanhMuc.Name = "pnlNutQuanLyDanhMuc";
-            this.pnlNutQuanLyDanhMuc.Size = new System.Drawing.Size(225, 446);
+            this.pnlNutQuanLyDanhMuc.Size = new System.Drawing.Size(225, 580);
             this.pnlNutQuanLyDanhMuc.TabIndex = 0;
             // 
             // btnNhanVien
@@ -93,14 +93,14 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             this.pnlXemQuanLyDanhMuc.Location = new System.Drawing.Point(233, 3);
             this.pnlXemQuanLyDanhMuc.Name = "pnlXemQuanLyDanhMuc";
-            this.pnlXemQuanLyDanhMuc.Size = new System.Drawing.Size(564, 446);
+            this.pnlXemQuanLyDanhMuc.Size = new System.Drawing.Size(564, 580);
             this.pnlXemQuanLyDanhMuc.TabIndex = 1;
             // 
             // frmQuanLyDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 595);
             this.Controls.Add(this.pnlXemQuanLyDanhMuc);
             this.Controls.Add(this.pnlNutQuanLyDanhMuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

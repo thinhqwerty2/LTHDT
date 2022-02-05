@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QLPK.DAO;
+using System;
 using System.Windows.Forms;
-using QLPK.DAO;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
@@ -16,12 +9,31 @@ namespace QLPK.GUI.QuanLyDanhMuc
         public frmDanhMucBacSi()
         {
             InitializeComponent();
-            dgvDanhMucBacSi.ReadOnly = true;
+            btnSua.Enabled = false;
         }
-
+        bool batLoi()
+        {
+            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         void hienThiDS()
         {
-            this.dgvDanhMucBacSi.DataSource = BacSiDAO.Instance.hienThiDSBacSi();
+            switch (chkHienThiTatCa.Checked)
+            {
+                case false:
+                    this.dgvDanhMucBacSi.DataSource = BacSiDAO.Instance.hienThiDSBacSi();
+                    break;
+                case true:
+                    this.dgvDanhMucBacSi.DataSource = BacSiDAO.Instance.hienThiDSTatCaBacSi();
+                    break;
+            }
+
         }
 
         private void frmDanhMucBacSi_Load(object sender, EventArgs e)
@@ -31,42 +43,49 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
-            hienThiDS();
+            if (batLoi())
+            {
+                BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
+                hienThiDS();
+            }
+            else
+            {
+                MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
-            var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel);
+            var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (kq == DialogResult.OK)
             {
                 BacSiDAO.Instance.suaBacSi(txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text, txtMaBacSi.Text);
             }
-            else
-            {
-                this.btnSua.Text = "Sửa";
-                this.txtMaBacSi.Enabled = true;
-                this.txtHoTen.Enabled = true;
-                this.cmbGioiTinh.Enabled = true;
-            }
             hienThiDS();
+
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            BacSiDAO.Instance.xoaBacSi(txtMaBacSi.Text);
+
+            var kq = MessageBox.Show("Xác nhận xoá", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (kq == DialogResult.OK)
+            {
+                BacSiDAO.Instance.xoaBacSi(txtMaBacSi.Text);
+            }
             hienThiDS();
+
         }
 
+        int indexRow = -1;
         private void dgvDanhMucBacSi_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
+                btnSua.Enabled = false;
                 dgvDanhMucBacSi.Rows[e.RowIndex].Selected = true;
-                txtMaBacSi.ReadOnly = true;
-                txtHoTen.ReadOnly = true;
-                cmbGioiTinh.Enabled = false;
+                indexRow = e.RowIndex;
                 txtMaBacSi.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtHoTen.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cmbGioiTinh.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -74,11 +93,40 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 txtChucVu.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtDiaChi.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtSDT.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[6].Value.ToString();
+
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            txtMaBacSi.Text = "";
+            txtHoTen.Text = "";
+            cmbGioiTinh.Text = "";
+            txtTrinhDo.Text = "";
+            txtChucVu.Text = "";
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+        }
+
+        private void chkHienThiTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            hienThiDS();
+        }
+
+        private void txtDiaChi_Validated(object sender, EventArgs e)
+        {
+            this.btnSua.Enabled = true;
+        }
+
+        private void txtTimKiemBacSi_TextChanged(object sender, EventArgs e)
+        {
+            dgvDanhMucBacSi.DataSource= BacSiDAO.Instance.timKiemBacSi(txtTimKiemBacSi.Text);
+        }
+
+ 
     }
 }
