@@ -23,8 +23,8 @@ namespace QLPK.DAO
         }
         public bool DangNhap(string tenDangNhap, string matKhau)
         {
-            string query = "insert into TaiKhoan values ( @TenDangNhap , @MatKhau , 0 , 1 )";
-            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { tenDangNhap, matKhau }) > 0;
+            string query = "select * from TaiKhoan where TenDangNhap= @TenDangNhap and MatKhau= @MatKhau";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { tenDangNhap, matKhau }).Rows.Count > 0;
         }
     }
 }

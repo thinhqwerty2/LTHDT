@@ -30,16 +30,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void InitializeComponent()
         {
             this.txtChucVu = new System.Windows.Forms.TextBox();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.lblChucVu = new System.Windows.Forms.Label();
-            this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.btnNhapLai = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtTrinhDo = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -51,24 +47,17 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblMaBacSi = new System.Windows.Forms.Label();
             this.dgvDanhMucBacSi = new System.Windows.Forms.DataGridView();
+            this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBacSi)).BeginInit();
             this.SuspendLayout();
             // 
             // txtChucVu
             // 
             this.txtChucVu.Location = new System.Drawing.Point(397, 63);
-            this.txtChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(76, 20);
             this.txtChucVu.TabIndex = 49;
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(136, 63);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(76, 20);
-            this.txtTenDangNhap.TabIndex = 48;
             // 
             // lblChucVu
             // 
@@ -80,94 +69,69 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblChucVu.TabIndex = 47;
             this.lblChucVu.Text = "Chức vụ:";
             // 
-            // lblTenDangNhap
-            // 
-            this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Location = new System.Drawing.Point(48, 63);
-            this.lblTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(87, 13);
-            this.lblTenDangNhap.TabIndex = 46;
-            this.lblTenDangNhap.Text = "Tên đăng nhập: ";
-            // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(464, 176);
-            this.btnNhapLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNhapLai.Location = new System.Drawing.Point(452, 162);
+            this.btnNhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapLai.Name = "btnNhapLai";
             this.btnNhapLai.Size = new System.Drawing.Size(62, 28);
             this.btnNhapLai.TabIndex = 43;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(372, 176);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(62, 28);
-            this.btnLuu.TabIndex = 42;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(275, 176);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(198, 162);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(62, 28);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(183, 176);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(325, 162);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(62, 28);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(87, 176);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(75, 162);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(62, 28);
             this.btnThem.TabIndex = 44;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(398, 119);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(76, 20);
             this.txtDiaChi.TabIndex = 39;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(136, 119);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 38;
-            // 
             // txtTrinhDo
             // 
             this.txtTrinhDo.Location = new System.Drawing.Point(398, 89);
-            this.txtTrinhDo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTrinhDo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTrinhDo.Name = "txtTrinhDo";
             this.txtTrinhDo.Size = new System.Drawing.Size(76, 20);
             this.txtTrinhDo.TabIndex = 37;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(136, 89);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoTen.Location = new System.Drawing.Point(136, 63);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(76, 20);
             this.txtHoTen.TabIndex = 36;
@@ -175,7 +139,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(397, 36);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(76, 20);
             this.txtSDT.TabIndex = 35;
@@ -183,7 +147,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // txtMaBacSi
             // 
             this.txtMaBacSi.Location = new System.Drawing.Point(136, 36);
-            this.txtMaBacSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaBacSi.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaBacSi.Name = "txtMaBacSi";
             this.txtMaBacSi.Size = new System.Drawing.Size(76, 20);
             this.txtMaBacSi.TabIndex = 34;
@@ -201,7 +165,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // lblGioiTinh
             // 
             this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.Location = new System.Drawing.Point(50, 124);
+            this.lblGioiTinh.Location = new System.Drawing.Point(50, 120);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
             this.lblGioiTinh.Size = new System.Drawing.Size(50, 13);
@@ -231,7 +195,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // lblHoTen
             // 
             this.lblHoTen.AutoSize = true;
-            this.lblHoTen.Location = new System.Drawing.Point(50, 93);
+            this.lblHoTen.Location = new System.Drawing.Point(50, 67);
             this.lblHoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(42, 13);
@@ -251,28 +215,34 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // dgvDanhMucBacSi
             // 
             this.dgvDanhMucBacSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMucBacSi.Location = new System.Drawing.Point(23, 209);
+            this.dgvDanhMucBacSi.Location = new System.Drawing.Point(23, 206);
             this.dgvDanhMucBacSi.Name = "dgvDanhMucBacSi";
-            this.dgvDanhMucBacSi.Size = new System.Drawing.Size(565, 132);
+            this.dgvDanhMucBacSi.Size = new System.Drawing.Size(565, 135);
             this.dgvDanhMucBacSi.TabIndex = 50;
+            this.dgvDanhMucBacSi.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhMucBacSi_CellMouseClick);
+            // 
+            // cmbGioiTinh
+            // 
+            this.cmbGioiTinh.FormattingEnabled = true;
+            this.cmbGioiTinh.Location = new System.Drawing.Point(123, 114);
+            this.cmbGioiTinh.Name = "cmbGioiTinh";
+            this.cmbGioiTinh.Size = new System.Drawing.Size(121, 21);
+            this.cmbGioiTinh.TabIndex = 51;
             // 
             // frmDanhMucBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.cmbGioiTinh);
             this.Controls.Add(this.dgvDanhMucBacSi);
             this.Controls.Add(this.txtChucVu);
-            this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.lblChucVu);
-            this.Controls.Add(this.lblTenDangNhap);
             this.Controls.Add(this.btnNhapLai);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtTrinhDo);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtSDT);
@@ -284,9 +254,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.lblMaBacSi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDanhMucBacSi";
             this.Text = "Cập nhật thông tin bác sĩ";
+            this.Load += new System.EventHandler(this.frmDanhMucBacSi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBacSi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,16 +266,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         #endregion
         private System.Windows.Forms.TextBox txtChucVu;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label lblChucVu;
-        private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.Button btnNhapLai;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtTrinhDo;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtSDT;
@@ -316,5 +283,6 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblMaBacSi;
         private System.Windows.Forms.DataGridView dgvDanhMucBacSi;
+        private System.Windows.Forms.ComboBox cmbGioiTinh;
     }
 }

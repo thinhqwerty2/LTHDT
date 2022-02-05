@@ -54,9 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BacSiDAO.cs" />
     <Compile Include="DAO\BenhNhanDAO.cs" />
     <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,8 +327,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
