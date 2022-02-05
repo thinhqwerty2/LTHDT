@@ -114,7 +114,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void chkHienThiTatCa_CheckedChanged(object sender, EventArgs e)
         {
-            hienThiDS();
+            if (txtTimKiemBacSi.Text == "")
+            {
+
+                hienThiDS();
+            }
+            else
+            {
+                dgvDanhMucBacSi.DataSource = BacSiDAO.Instance.timKiemBacSi(txtTimKiemBacSi.Text, chkHienThiTatCa.Checked);
+
+            }
         }
 
         private void txtDiaChi_Validated(object sender, EventArgs e)
@@ -124,9 +133,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void txtTimKiemBacSi_TextChanged(object sender, EventArgs e)
         {
-            dgvDanhMucBacSi.DataSource= BacSiDAO.Instance.timKiemBacSi(txtTimKiemBacSi.Text);
+
+            dgvDanhMucBacSi.DataSource = BacSiDAO.Instance.timKiemBacSi(txtTimKiemBacSi.Text, chkHienThiTatCa.Checked);
+
         }
 
- 
+
+
     }
 }
