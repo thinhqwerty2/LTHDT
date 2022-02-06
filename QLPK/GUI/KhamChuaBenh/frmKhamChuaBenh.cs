@@ -20,5 +20,16 @@ namespace QLPK.GUI.KhamBenh
             InitializeComponent();
             NguoiDung = nguoiDung;
         }
+
+        private void btnLapPhieuDangKiKhamBenh_Click(object sender, EventArgs e)
+        {
+            
+                this.pnlXemKhamChuaBenh.Controls.Clear();
+                frmPhieuDangKyKhamBenh fPhieuDangKyKhamBenh = new frmPhieuDangKyKhamBenh();
+                fPhieuDangKyKhamBenh.TopLevel = false;
+                this.pnlXemKhamChuaBenh.Controls.Add(fPhieuDangKyKhamBenh);
+                fPhieuDangKyKhamBenh.Show();
+            
+        }
     }
 }

@@ -29,34 +29,34 @@ namespace QLPK.GUI.KhamBenh
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlXemThanhToan = new System.Windows.Forms.Panel();
-            this.pnlNutThanhToan = new System.Windows.Forms.Panel();
+            this.pnlXemKhamChuaBenh = new System.Windows.Forms.Panel();
+            this.pnlNutKhamChuaBenh = new System.Windows.Forms.Panel();
             this.btnLapPhieuSuDungDichVu = new System.Windows.Forms.Button();
             this.btnChanDoan = new System.Windows.Forms.Button();
             this.btnLapPhieuKetQuaXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKyXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
-            this.pnlNutThanhToan.SuspendLayout();
+            this.pnlNutKhamChuaBenh.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlXemThanhToan
+            // pnlXemKhamChuaBenh
             // 
-            this.pnlXemThanhToan.Location = new System.Drawing.Point(234, 2);
-            this.pnlXemThanhToan.Name = "pnlXemThanhToan";
-            this.pnlXemThanhToan.Size = new System.Drawing.Size(564, 446);
-            this.pnlXemThanhToan.TabIndex = 5;
+            this.pnlXemKhamChuaBenh.Location = new System.Drawing.Point(234, 2);
+            this.pnlXemKhamChuaBenh.Name = "pnlXemKhamChuaBenh";
+            this.pnlXemKhamChuaBenh.Size = new System.Drawing.Size(564, 446);
+            this.pnlXemKhamChuaBenh.TabIndex = 5;
             // 
-            // pnlNutThanhToan
+            // pnlNutKhamChuaBenh
             // 
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuSuDungDichVu);
-            this.pnlNutThanhToan.Controls.Add(this.btnChanDoan);
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
-            this.pnlNutThanhToan.Controls.Add(this.btnLapPhieuDangKiKhamBenh);
-            this.pnlNutThanhToan.Location = new System.Drawing.Point(3, 2);
-            this.pnlNutThanhToan.Name = "pnlNutThanhToan";
-            this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
-            this.pnlNutThanhToan.TabIndex = 4;
+            this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuSuDungDichVu);
+            this.pnlNutKhamChuaBenh.Controls.Add(this.btnChanDoan);
+            this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
+            this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
+            this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKiKhamBenh);
+            this.pnlNutKhamChuaBenh.Location = new System.Drawing.Point(3, 2);
+            this.pnlNutKhamChuaBenh.Name = "pnlNutKhamChuaBenh";
+            this.pnlNutKhamChuaBenh.Size = new System.Drawing.Size(225, 446);
+            this.pnlNutKhamChuaBenh.TabIndex = 4;
             // 
             // btnLapPhieuSuDungDichVu
             // 
@@ -102,26 +102,27 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKiKhamBenh.TabIndex = 0;
             this.btnLapPhieuDangKiKhamBenh.Text = "Lập phiếu đăng kí khám bệnh";
             this.btnLapPhieuDangKiKhamBenh.UseVisualStyleBackColor = true;
+            this.btnLapPhieuDangKiKhamBenh.Click += new System.EventHandler(this.btnLapPhieuDangKiKhamBenh_Click);
             // 
             // frmKhamChuaBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlXemThanhToan);
-            this.Controls.Add(this.pnlNutThanhToan);
+            this.Controls.Add(this.pnlXemKhamChuaBenh);
+            this.Controls.Add(this.pnlNutKhamChuaBenh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKhamChuaBenh";
             this.Text = "frmKhamBenh";
-            this.pnlNutThanhToan.ResumeLayout(false);
+            this.pnlNutKhamChuaBenh.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlXemThanhToan;
-        private System.Windows.Forms.Panel pnlNutThanhToan;
+        private System.Windows.Forms.Panel pnlXemKhamChuaBenh;
+        private System.Windows.Forms.Panel pnlNutKhamChuaBenh;
         private System.Windows.Forms.Button btnLapPhieuDangKyXetNghiem;
         private System.Windows.Forms.Button btnLapPhieuDangKiKhamBenh;
         private System.Windows.Forms.Button btnLapPhieuKetQuaXetNghiem;

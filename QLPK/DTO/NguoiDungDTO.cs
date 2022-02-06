@@ -28,12 +28,25 @@ namespace QLPK.DTO
             get { return quyenTruyCap; }
             set { quyenTruyCap = value; }
         }
-  
+        private string chucVu;
+        public string ChucVu
+        {
+            get { return chucVu; }
+            set { chucVu = value; }
+        }
+
         public NguoiDungDTO(DataRow row)
         {
             this.TenDangNhap = row["TenDangNhap"].ToString();
             this.HoTen = row["HoTen"].ToString();
             this.QuyenTruyCap = Convert.ToInt32(row["QuyenTruyCap"].ToString());
+            try
+            {
+                this.ChucVu = row["ChucVu"].ToString();
+            }
+            catch 
+            { 
+            }
         }
     }
 }

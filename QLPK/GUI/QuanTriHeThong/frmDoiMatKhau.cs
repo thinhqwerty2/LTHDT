@@ -20,11 +20,23 @@ namespace QLPK.GUI.QuanTriHeThong
             txtHoVaTen.Text = NguoiDung.HoTen;
         }
 
+        bool batLoi()
+        {
+            if (txtMatKhauCu.Text == "" || txtMatKhauMoi.Text=="" || txtNhapLaiMatKhau.Text =="")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void txtNhapLaiMatKhau_TextChanged(object sender, EventArgs e)
         {
             if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text)
             {
-                errorProvider1.SetError(txtNhapLaiMatKhau, "Không trùng khớp mật khẩu");
+                errorProvider1.SetError(txtNhapLaiMatKhau, "Không trùng khớp mật khẩu!");
             }
             else
             {
@@ -36,18 +48,19 @@ namespace QLPK.GUI.QuanTriHeThong
         {
             if (!TaiKhoanDAO.Instance.kiemTraMatKhauTrungKhop(NguoiDung.TenDangNhap, txtMatKhauCu.Text))
             {
-                MessageBox.Show("Mật khẩu cũ không chính xác");
+                MessageBox.Show("Mật khẩu cũ không chính xác!");
             }
-            else if (txtNhapLaiMatKhau.Text == txtMatKhauMoi.Text)
+            else if (batLoi()==false)
+            {
+                MessageBox.Show("Không được để trống!");
+            }
+            else if (txtNhapLaiMatKhau.Text == txtMatKhauMoi.Text && batLoi()==true)
             {
                 if (MessageBox.Show("Xác nhận thay đổi mật khẩu?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     TaiKhoanDAO.Instance.capNhatMatKhauMoi(NguoiDung.TenDangNhap, txtMatKhauMoi.Text);
                 }
             }
-
-
-
         }
     }
 }

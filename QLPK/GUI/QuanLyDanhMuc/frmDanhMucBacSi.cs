@@ -57,6 +57,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
                 hienThiDS();
+                MessageBox.Show("Thêm bác sĩ mới thành công!");
             }
             else
             {
@@ -70,6 +71,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             if (kq == DialogResult.OK)
             {
                 BacSiDAO.Instance.suaBacSi(txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text, txtMaBacSi.Text);
+                MessageBox.Show("Thay đổi thông tin mới thành công!");
             }
             hienThiDS();
 
@@ -82,6 +84,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             if (kq == DialogResult.OK)
             {
                 BacSiDAO.Instance.xoaBacSi(txtMaBacSi.Text);
+                MessageBox.Show("Xoá thành công!");
             }
             hienThiDS();
 
