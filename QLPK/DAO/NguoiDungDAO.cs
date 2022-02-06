@@ -22,8 +22,8 @@ namespace QLPK.DAO
         }
         public NguoiDungDTO layThongTinNguoiDung(string tenDangNhap)
         {
-            string query = "select TenDangNhap,HoTen,QuyenTruyCap from TaiKhoan,NhanVien,BacSi where @TenDangNhap = MaBacSi or @TenDangNhap1 = MaNhanVien";
-            object[] parameter = { tenDangNhap};
+            string query = "(select TenDangNhap,HoTen,QuyenTruyCap from TaiKhoan,Bacsi where TaiKhoan.TenDangNhap=BacSi.MaBacSi and  MaBacSi = @TenDangNhap1 )union(select TenDangNhap,HoTen,QuyenTruyCap from TaiKhoan,NhanVien where TaiKhoan.TenDangNhap=NhanVien.MaNhanVien and  MaNhanVien= @TenDangNhap2 )";
+            object[] parameter = { tenDangNhap,tenDangNhap};
             return new NguoiDungDTO( DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
         }
     }

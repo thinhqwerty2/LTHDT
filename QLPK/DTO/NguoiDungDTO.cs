@@ -13,8 +13,8 @@ namespace QLPK.DTO
         private string tenDangNhap;
         public string TenDangNhap
         {
-            get { return TenDangNhap; }
-            set { TenDangNhap= value; }
+            get { return tenDangNhap; }
+            set { tenDangNhap= value; }
         }
         private string hoTen;
         public string HoTen

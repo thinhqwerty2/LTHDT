@@ -11,17 +11,18 @@ namespace QLPK
 {
     public partial class frmChinh : Form
     {
-        private static NguoiDungDTO nguoiDung;
+        private static NguoiDungDTO NguoiDung;
         public frmChinh(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
             this.lblName.Text = nguoiDung.HoTen;
 
         }
         private void btnHeThong_Click(object sender, EventArgs e)
         {
             this.pnlChinh.Controls.Clear();
-            frmQuanTriHeThong fQuanTriHeThong = new frmQuanTriHeThong();
+            frmQuanTriHeThong fQuanTriHeThong = new frmQuanTriHeThong(NguoiDung);
             fQuanTriHeThong.TopLevel = false;
             this.pnlChinh.Controls.Add(fQuanTriHeThong);
             fQuanTriHeThong.Show();
@@ -30,7 +31,7 @@ namespace QLPK
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
             this.pnlChinh.Controls.Clear();
-            frmQuanLyDanhMuc fQuanLyDanhMuc = new frmQuanLyDanhMuc();
+            frmQuanLyDanhMuc fQuanLyDanhMuc = new frmQuanLyDanhMuc(NguoiDung);
             fQuanLyDanhMuc.TopLevel = false;
             this.pnlChinh.Controls.Add(fQuanLyDanhMuc);
             fQuanLyDanhMuc.Show();
@@ -39,7 +40,7 @@ namespace QLPK
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             this.pnlChinh.Controls.Clear();
-            frmBaoCaoThongKe fBaoCaoThongKe = new frmBaoCaoThongKe();
+            frmBaoCaoThongKe fBaoCaoThongKe = new frmBaoCaoThongKe(NguoiDung);
             fBaoCaoThongKe.TopLevel = false;
             this.pnlChinh.Controls.Add(fBaoCaoThongKe);
             fBaoCaoThongKe.Show();
@@ -48,7 +49,7 @@ namespace QLPK
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             this.pnlChinh.Controls.Clear();
-            frmThanhToan fThanhToan = new frmThanhToan();
+            frmThanhToan fThanhToan = new frmThanhToan(NguoiDung);
             fThanhToan.TopLevel = false;
             this.pnlChinh.Controls.Add(fThanhToan);
             fThanhToan.Show();
@@ -58,7 +59,7 @@ namespace QLPK
         private void btnKhamBenh_Click(object sender, EventArgs e)
         {
             this.pnlChinh.Controls.Clear();
-            frmKhamBenh fKhamBenh = new frmKhamBenh();
+            frmKhamChuaBenh fKhamBenh = new frmKhamChuaBenh(NguoiDung);
             fKhamBenh.TopLevel = false;
             this.pnlChinh.Controls.Add(fKhamBenh);
             fKhamBenh.Show();

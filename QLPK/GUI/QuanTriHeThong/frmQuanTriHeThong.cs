@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPK.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace QLPK.GUI.QuanTriHeThong
     //public static NhanVienDTO NhanVien
     public partial class frmQuanTriHeThong : Form
     {
-        public frmQuanTriHeThong()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmQuanTriHeThong(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
 
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
@@ -30,7 +34,7 @@ namespace QLPK.GUI.QuanTriHeThong
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanTriHeThong.Controls.Clear();
-            frmDoiMatKhau fDoiMatKhau = new frmDoiMatKhau();
+            frmDoiMatKhau fDoiMatKhau = new frmDoiMatKhau(NguoiDung);
             fDoiMatKhau.TopLevel = false;
             this.pnlXemQuanTriHeThong.Controls.Add(fDoiMatKhau);
             fDoiMatKhau.Show();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPK.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmQuanLyDanhMuc : Form
     {
-        public frmQuanLyDanhMuc()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmQuanLyDanhMuc(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)

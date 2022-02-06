@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPK.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace QLPK.GUI.ThanhToan
 {
     public partial class frmThanhToan : Form
     {
-        public frmThanhToan()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmThanhToan(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
     }
 }

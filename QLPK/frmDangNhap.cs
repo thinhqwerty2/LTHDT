@@ -24,8 +24,8 @@ namespace QLPK
         {
             if (DangNhapDAO.Instance.DangNhap(txtTenDangNhap.Text, txtMatKhau.Text))
             {
-                NguoiDungDTO user = NguoiDungDAO.Instance.layThongTinNguoiDung(this.txtTenDangNhap.Text);
-                frmChinh fChinh = new frmChinh(user);
+                NguoiDungDTO nguoiDung = NguoiDungDAO.Instance.layThongTinNguoiDung(this.txtTenDangNhap.Text);
+                frmChinh fChinh = new frmChinh(nguoiDung);
                 this.Hide();
                 fChinh.ShowDialog();
                 txtTenDangNhap.Text = txtMatKhau.Text = "";
@@ -35,6 +35,14 @@ namespace QLPK
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn thực sự muốn thoát?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
+            {
+                Application.Exit();
+            }   
         }
     }
 }
