@@ -61,8 +61,8 @@
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
-    <Compile Include="DTO\BacSiDTO.cs" />
     <Compile Include="DTO\BacSiNhanVienDTO.cs" />
+    <Compile Include="DTO\a.cs" />
     <Compile Include="DTO\NguoiDungDTO.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
@@ -172,6 +172,12 @@
     <Compile Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.Designer.cs">
       <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmTimKiemBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmTimKiemBenhNhan.Designer.cs">
+      <DependentUpon>frmTimKiemBenhNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanTriHeThong\frmDangKyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmQuanLyDanhMuc.resx">
       <DependentUpon>frmQuanLyDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmTimKiemBenhNhan.resx">
+      <DependentUpon>frmTimKiemBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanTriHeThong\frmDangKyTaiKhoan.resx">
       <DependentUpon>frmDangKyTaiKhoan.cs</DependentUpon>

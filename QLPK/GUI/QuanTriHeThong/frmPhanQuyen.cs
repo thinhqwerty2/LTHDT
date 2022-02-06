@@ -16,5 +16,10 @@ namespace QLPK.GUI.QuanTriHeThong
         {
             InitializeComponent();
         }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
