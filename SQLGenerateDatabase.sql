@@ -1,4 +1,6 @@
-﻿CREATE TABLE BenhNhan
+﻿
+use QLPK
+CREATE TABLE BenhNhan
 (
   MaBenhNhan VARCHAR(7) NOT NULL,
   HoTen NVARCHAR(255) NOT NULL,
@@ -173,7 +175,7 @@ INSERT INTO NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT)
 VALUES ('NV003',N'Phạm Nhật Quang',N'Nam',N'Thu ngân',N'Hưng Yên','21394874')
 
 INSERT INTO BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT)
-VALUES ('BN001',N'Vũ Hoài Nam',N'Nam','2001-10-10',N'KTX Mỹ Đình', 'Hà Nội','01929404')
+VALUES ('BN001',N'Vũ Hoài Nam',N'Nam','2001-10-10',N'KTX Mỹ Đình Hà Nội','01929404')
 
 INSERT INTO BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT)
 VALUES ('BN002',N'Bùi Tiến Thành',N'Nam','2005-10-12',N'KTX Bách khoa, Hà Nội','0638404')

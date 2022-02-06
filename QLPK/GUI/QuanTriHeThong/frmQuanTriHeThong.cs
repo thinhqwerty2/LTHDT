@@ -25,7 +25,7 @@ namespace QLPK.GUI.QuanTriHeThong
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanTriHeThong.Controls.Clear();
-            frmThongTinTaiKhoan fThongTinTaiKhoan = new frmThongTinTaiKhoan();
+            frmThongTinTaiKhoan fThongTinTaiKhoan = new frmThongTinTaiKhoan(NguoiDung);
             fThongTinTaiKhoan.TopLevel = false;
             this.pnlXemQuanTriHeThong.Controls.Add(fThongTinTaiKhoan);
             fThongTinTaiKhoan.Show();

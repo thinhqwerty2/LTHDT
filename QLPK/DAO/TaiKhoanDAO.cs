@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLPK.DTO;
 
 namespace QLPK.DAO
 {
@@ -19,11 +20,11 @@ namespace QLPK.DAO
             }
             private set { instance = value; }
         }
-        public DataTable layThongTinNguoiDung(string tenDangNhap,int quyenTruyCap)
+        public BacSiNhanVienDTO layThongTinBacSiNhanVien(string tenDangNhap,int quyenDangNhap)
         {
             string bang;
             string nguoiDung;
-            switch (quyenTruyCap)
+            switch (quyenDangNhap)
             {
                 case 1:
                     bang = "BacSi";
@@ -38,10 +39,12 @@ namespace QLPK.DAO
                     nguoiDung = "MaNhanVien";
                     break;
             }
-            string query = "select @NguoiDung ,HoTen,GioiTinh,SDT,ChucVu,DiaChi from @Bang where @NguoiDung1 =@TenDangNhap";
+
+            string query = "select @NguoiDung ,HoTen,GioiTinh,SDT,ChucVu,DiaChi from @bang where @TenDangNhap = @NguoiDung1 ";
             object[] parameter = { nguoiDung,nguoiDung,tenDangNhap };
-            return DataProvider.Instance.ExecuteQuery(query, parameter);
+            return new BacSiNhanVienDTO(DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
         }
+        
         public bool themTaiKhoan(string tenDangNhap, string matKhau, int quyenTruyCap, string trangThai)
         {
             string query = "insert into TaiKhoan (TenDangNhap,MatKhau,QuyenTruyCap,TrangThai) values ( @TenDangNhap , @MatKhau , @QuyenTruyCap , @TrangThai )";

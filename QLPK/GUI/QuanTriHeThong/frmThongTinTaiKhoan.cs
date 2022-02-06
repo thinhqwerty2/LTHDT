@@ -14,19 +14,22 @@ namespace QLPK.GUI.QuanTriHeThong
 {
     public partial class frmThongTinTaiKhoan : Form
     {
-        private static NguoiDungDTO NguoiDung;
+        private static BacSiNhanVienDTO NguoiDung;
         public frmThongTinTaiKhoan(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
-            TaiKhoanDAO.Instance.layThongTinNguoiDung(nguoiDung.TenDangNhap,nguoiDung.QuyenTruyCap)
-
+            NguoiDung=TaiKhoanDAO.Instance.layThongTinBacSiNhanVien(nguoiDung.TenDangNhap, nguoiDung.QuyenTruyCap);
+            
         }
 
         private void frmThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
-            txtTenDangNhap.Text = NguoiDung.TenDangNhap;
+            txtTenDangNhap.Text = NguoiDung.MaBacSiNhanVien;
             txtHoTen.Text = NguoiDung.HoTen;
-
+            txtGioiTinh.Text = NguoiDung.GioiTinh;
+            txtSDT.Text = NguoiDung.SDT;
+            txtChucVu.Text = NguoiDung.ChucVu;
+            txtDiaChi.Text = NguoiDung.DiaChi;
         }
     }
 }

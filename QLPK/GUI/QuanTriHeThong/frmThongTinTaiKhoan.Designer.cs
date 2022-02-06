@@ -33,7 +33,7 @@
             this.lblChucVu = new System.Windows.Forms.Label();
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.btnLuuThayDoi = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lblGioiTinh = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             // txtChucVu
             // 
             this.txtChucVu.Location = new System.Drawing.Point(397, 91);
-            this.txtChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.ReadOnly = true;
             this.txtChucVu.Size = new System.Drawing.Size(76, 20);
@@ -55,7 +55,7 @@
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(136, 63);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.ReadOnly = true;
             this.txtTenDangNhap.Size = new System.Drawing.Size(76, 20);
@@ -84,26 +84,26 @@
             // btnLuuThayDoi
             // 
             this.btnLuuThayDoi.Location = new System.Drawing.Point(212, 182);
-            this.btnLuuThayDoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuuThayDoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuThayDoi.Name = "btnLuuThayDoi";
             this.btnLuuThayDoi.Size = new System.Drawing.Size(110, 28);
             this.btnLuuThayDoi.TabIndex = 64;
             this.btnLuuThayDoi.Text = "Lưu thay đổi";
             this.btnLuuThayDoi.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtGioiTinh
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 119);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 60;
+            this.txtGioiTinh.Location = new System.Drawing.Point(136, 119);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.ReadOnly = true;
+            this.txtGioiTinh.Size = new System.Drawing.Size(76, 20);
+            this.txtGioiTinh.TabIndex = 60;
             // 
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(136, 89);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(76, 20);
@@ -112,7 +112,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(397, 63);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(76, 20);
             this.txtSDT.TabIndex = 57;
@@ -150,7 +150,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(398, 119);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(76, 20);
             this.txtDiaChi.TabIndex = 61;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.lblTenDangNhap);
             this.Controls.Add(this.btnLuuThayDoi);
             this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.lblDiaChi);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.lblHoTen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThongTinTaiKhoan";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmThongTinTaiKhoan_Load);
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Label lblChucVu;
         private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.Button btnLuuThayDoi;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label lblGioiTinh;

@@ -62,7 +62,7 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="DTO\BacSiDTO.cs" />
-    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\BacSiNhanVienDTO.cs" />
     <Compile Include="DTO\NguoiDungDTO.cs" />
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>

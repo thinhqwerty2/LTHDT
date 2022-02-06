@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace QLPK.DTO
 {
-    public class BacSiDTO
+    public class BacSiNhanVienDTO
     {
-        private string maBacSi;
-        public string MaBacSi
+        private string maBacSiNhanVien;
+        public string MaBacSiNhanVien
         {
-            get { return maBacSi; }
-            set { maBacSi = value; }
+            get { return maBacSiNhanVien; }
+            set { maBacSiNhanVien = value; }
         }
         private string hoTen;
         public string HoTen
@@ -26,12 +26,6 @@ namespace QLPK.DTO
         {
             get { return gioiTinh; }
             set { gioiTinh = value; }
-        }
-        private string trinhDo;
-        public string TrinhDo
-        {
-            get { return trinhDo; }
-            set { trinhDo = value; }
         }
         private string chucVu;
         public string ChucVu
@@ -54,12 +48,11 @@ namespace QLPK.DTO
 
 
 
-        public BacSiDTO(DataRow row)
+        public BacSiNhanVienDTO(DataRow row)
         {
-            this.MaBacSi = row["MaBacSi"].ToString();
+            this.MaBacSiNhanVien = row[0].ToString();
             this.HoTen = row["HoTen"].ToString();
             this.GioiTinh = row["GioiTinh"].ToString();
-            this.TrinhDo = row["TrinhDo"].ToString();
             this.ChucVu = row["ChucVu"].ToString();
             this.DiaChi = row["DiaChi"].ToString();
             this.SDT = row["SDT"].ToString();
