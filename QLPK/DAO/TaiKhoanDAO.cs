@@ -32,7 +32,9 @@ namespace QLPK.DAO
                     query = "select MaNhanVien,HoTen,GioiTinh,SDT,ChucVu,DiaChi from NhanVien where MaNhanVien = @TenDangNhap ";
                     break;
             }
-            object[] parameter = {tenDangNhap };
+
+            string query = "select @NguoiDung ,HoTen,GioiTinh,SDT,ChucVu,DiaChi from @Bang where @TenDangNhap = @NguoiDung1 ";
+            object[] parameter = { nguoiDung,bang,tenDangNhap,nguoiDung };
             return new BacSiNhanVienDTO(DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
         }
         
@@ -91,6 +93,12 @@ namespace QLPK.DAO
             object[] parameter1 = { tenDangNhap, matKhau, quyenTruyCap, trangThai };
             object[] parameter2 = { tenDangNhap};
             return DataProvider.Instance.ExecuteNonQuery(query, parameter1) > 0;
+        }
+        public NguoiDungDTO layThongTinNguoiDung(string tenDangNhap)
+        {
+            string query = "(select TenDangNhap,HoTen,QuyenTruyCap,ChucVu from TaiKhoan,Bacsi where TaiKhoan.TenDangNhap=BacSi.MaBacSi and  MaBacSi = @TenDangNhap1 )union(select TenDangNhap,HoTen,QuyenTruyCap,ChucVu from TaiKhoan,NhanVien where TaiKhoan.TenDangNhap=NhanVien.MaNhanVien and  MaNhanVien= @TenDangNhap2 )";
+            object[] parameter = { tenDangNhap, tenDangNhap };
+            return new NguoiDungDTO(DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
         }
     }
 }

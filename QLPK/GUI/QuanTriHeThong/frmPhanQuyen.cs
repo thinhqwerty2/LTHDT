@@ -79,5 +79,10 @@ namespace QLPK.GUI.QuanTriHeThong
                 hienThiDS();
             }
         }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
