@@ -73,7 +73,6 @@ namespace QLPK.GUI.QuanLyDanhMuc
             }
             hienThiDS();
 
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

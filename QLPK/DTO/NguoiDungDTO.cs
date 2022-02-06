@@ -13,8 +13,8 @@ namespace QLPK.DTO
         private string tenDangNhap;
         public string TenDangNhap
         {
-            get { return TenDangNhap; }
-            set { TenDangNhap= value; }
+            get { return tenDangNhap; }
+            set { tenDangNhap= value; }
         }
         private string hoTen;
         public string HoTen
@@ -32,7 +32,7 @@ namespace QLPK.DTO
         public NguoiDungDTO(DataRow row)
         {
             this.TenDangNhap = row["TenDangNhap"].ToString();
-            this.HoTen = row["HoTen"].ToString();
+            //this.HoTen = row["HoTen"].ToString();
             this.QuyenTruyCap = Convert.ToInt32(row["QuyenTruyCap"].ToString());
         }
     }
