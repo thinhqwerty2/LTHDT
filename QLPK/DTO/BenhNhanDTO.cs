@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace QLPK.DTO
 {
+
+
     public class BenhNhanDTO
     {
         private string maBenhNhan;
@@ -45,7 +47,6 @@ namespace QLPK.DTO
             get { return sdt; }
             set { sdt = value; }
         }
-
         public BenhNhanDTO(DataRow row)
         {
             this.MaBenhNhan = row["MaBenhNhan"].ToString();

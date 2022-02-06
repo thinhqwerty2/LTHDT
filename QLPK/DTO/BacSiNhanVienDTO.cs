@@ -45,8 +45,12 @@ namespace QLPK.DTO
             get { return sdt; }
             set { sdt = value; }
         }
-
-
+        private string trinhDo;
+        public string TrinhDo
+        {
+            get { return trinhDo; }
+            set { trinhDo = value; }
+        }
 
         public BacSiNhanVienDTO(DataRow row)
         {
@@ -56,6 +60,13 @@ namespace QLPK.DTO
             this.ChucVu = row["ChucVu"].ToString();
             this.DiaChi = row["DiaChi"].ToString();
             this.SDT = row["SDT"].ToString();
+            try
+            {
+                this.TrinhDo = row["TrinhDo"].ToString();
+            }
+            catch
+            {
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ namespace QLPK.GUI.QuanTriHeThong
         private void btnPhanQuyen_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanTriHeThong.Controls.Clear();
-            frmPhanQuyen fPhanQuyen = new frmPhanQuyen();
+            frmPhanQuyen fPhanQuyen = new frmPhanQuyen(NguoiDung);
             fPhanQuyen.TopLevel = false;
             this.pnlXemQuanTriHeThong.Controls.Add(fPhanQuyen);
             fPhanQuyen.Show();
