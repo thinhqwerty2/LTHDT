@@ -1,9 +1,9 @@
-﻿using QLPK.GUI.BaoCaoThongKe;
-using QLPK.GUI.ChuaBenh;
+﻿using QLPK.DTO;
+using QLPK.GUI.BaoCaoThongKe;
+using QLPK.GUI.KhamBenh;
 using QLPK.GUI.QuanLyDanhMuc;
 using QLPK.GUI.QuanTriHeThong;
 using QLPK.GUI.ThanhToan;
-using QLPK.GUI.KhamBenh;
 using System;
 using System.Windows.Forms;
 
@@ -11,9 +11,12 @@ namespace QLPK
 {
     public partial class frmChinh : Form
     {
-        public frmChinh()
+        private static NguoiDungDTO nguoiDung;
+        public frmChinh(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            this.lblName.Text = nguoiDung.HoTen;
+
         }
         private void btnHeThong_Click(object sender, EventArgs e)
         {
@@ -51,14 +54,6 @@ namespace QLPK
             fThanhToan.Show();
         }
 
-        private void btnChuaBenh_Click(object sender, EventArgs e)
-        {
-            this.pnlChinh.Controls.Clear();
-            frmChuaBenh fChuaBenh = new frmChuaBenh();
-            fChuaBenh.TopLevel = false;
-            this.pnlChinh.Controls.Add(fChuaBenh);
-            fChuaBenh.Show();
-        }
 
         private void btnKhamBenh_Click(object sender, EventArgs e)
         {

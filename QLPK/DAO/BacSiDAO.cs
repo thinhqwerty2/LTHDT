@@ -25,7 +25,7 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSBacSi()
         {
-            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable hienThiDSTatCaBacSi()
@@ -41,27 +41,27 @@ namespace QLPK.DAO
         }
         public bool themBacSi(string maBacSi, string hoTen, string gioiTinh, string diaChi, string sdt, string trinhDo, string chucVu)
         {
-            TaiKhoanDAO.Instance.themTaiKhoan(maBacSi, "1", 1, 1);
+            TaiKhoanDAO.Instance.themTaiKhoan(maBacSi, "1", 1, "Đang làm việc");
             string query = "insert into BacSi (MaBacSi,HoTen,GioiTinh,DiaChi,SDT,TrinhDo,ChucVu) values ( @MaBacSi , @HoTen , @GioiTinh , @DiaChi , @SDT , @TrinhDo , @ChucVu )";
             object[] parameter = { maBacSi, hoTen, gioiTinh, diaChi, sdt, trinhDo, chucVu };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
         public bool xoaBacSi(string maBacSi)
         {
-            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai=0 where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
+            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai='Nghỉ việc' where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
         }
         public DataTable timKiemBacSi(string key, bool checkTatCa)
         {
             key = $"%{key}%";
             string query;
-            if(checkTatCa)
+            if (checkTatCa)
             {
                 query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
 
             }
             else
             {
-                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and TrangThai=1 and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and TrangThai=1 and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
             }
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);

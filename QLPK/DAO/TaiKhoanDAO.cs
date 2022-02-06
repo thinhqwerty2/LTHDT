@@ -18,7 +18,7 @@ namespace QLPK.DAO
             }
             private set { instance = value; }
         }
-        public bool themTaiKhoan(string tenDangNhap, string matKhau, int quyenTruyCap, int trangThai)
+        public bool themTaiKhoan(string tenDangNhap, string matKhau, int quyenTruyCap, string trangThai)
         {
             string query = "insert into TaiKhoan (TenDangNhap,MatKhau,QuyenTruyCap,TrangThai) values ( @TenDangNhap , @MatKhau , @QuyenTruyCap , @TrangThai )";
             object[] parameter = { tenDangNhap,matKhau,quyenTruyCap,trangThai};

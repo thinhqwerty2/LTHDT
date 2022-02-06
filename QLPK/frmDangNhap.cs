@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPK.DAO;
+using QLPK.DTO;
 
 namespace QLPK
 {
@@ -16,14 +17,15 @@ namespace QLPK
         public frmDangNhap()
         {
             InitializeComponent();
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (DangNhapDAO.Instance.DangNhap(txtTenDangNhap.Text, txtMatKhau.Text))
             {
-                //NhanVienDTO nhanVien = NhanVienDAO.Instance.getNVByID(txtUserName.Text);
-                frmChinh fChinh = new frmChinh();
+                NguoiDungDTO user = NguoiDungDAO.Instance.layThongTinNguoiDung(this.txtTenDangNhap.Text);
+                frmChinh fChinh = new frmChinh(user);
                 this.Hide();
                 fChinh.ShowDialog();
                 txtTenDangNhap.Text = txtMatKhau.Text = "";
