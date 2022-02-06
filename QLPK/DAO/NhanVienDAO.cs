@@ -24,7 +24,7 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSNhanVien()
         {
-            string query = "select MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT,TrangThai from NhanVien,TaiKhoan where TrangThai=1 and NhanVien.MaNhanVien=TaiKhoan.TenDangNhap";
+            string query = "select MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT,TrangThai from NhanVien,TaiKhoan where TrangThai=N'Đang làm việc' and NhanVien.MaNhanVien=TaiKhoan.TenDangNhap";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable hienThiDSTatCaNhanVien()
@@ -47,7 +47,7 @@ namespace QLPK.DAO
         }
         public bool xoaNhanVien(string maNhanVien)
         {
-            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai='Nghỉ việc' where TenDangNhap= @MaNhanVien", new object[] { maNhanVien }) > 0;
+            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai=N'Nghỉ việc' where TenDangNhap= @MaNhanVien", new object[] { maNhanVien }) > 0;
         }
         public DataTable timKiemNhanVien(string key, bool checkTatCa)
         {
