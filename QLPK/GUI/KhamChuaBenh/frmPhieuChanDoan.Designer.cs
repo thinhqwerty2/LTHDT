@@ -118,7 +118,7 @@ namespace QLPK.GUI.KhamBenh
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 160);
+            this.label3.Location = new System.Drawing.Point(28, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 72;
@@ -126,7 +126,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 160);
+            this.textBox3.Location = new System.Drawing.Point(30, 186);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(561, 117);
@@ -134,7 +134,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(449, 583);
+            this.button1.Location = new System.Drawing.Point(354, 576);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 75;
@@ -143,7 +143,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(530, 583);
+            this.button3.Location = new System.Drawing.Point(435, 576);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 75;
@@ -152,7 +152,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(611, 583);
+            this.button4.Location = new System.Drawing.Point(516, 576);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 75;
@@ -162,7 +162,7 @@ namespace QLPK.GUI.KhamBenh
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 312);
+            this.label5.Location = new System.Drawing.Point(28, 318);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 76;
@@ -170,17 +170,17 @@ namespace QLPK.GUI.KhamBenh
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(111, 341);
+            this.textBox5.Location = new System.Drawing.Point(30, 349);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(561, 180);
+            this.textBox5.Size = new System.Drawing.Size(561, 123);
             this.textBox5.TabIndex = 74;
             // 
             // frmPhieuChanDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 634);
+            this.ClientSize = new System.Drawing.Size(646, 634);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

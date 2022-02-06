@@ -34,13 +34,12 @@ namespace QLPK.DAO
             object[] parameter = { hoTen, gioiTinh, ngaySinh, diaChi, sdt, maBenhNhan };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        /*public bool themBenhNhan(string maBenhNhan, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string sdt)
+        public bool themBenhNhan(string maBenhNhan, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string sdt)
         {
-            TaiKhoanDAO.Instance.themTaiKhoan(maBenhNhan, "1", 1, "Đang làm việc");
-            string query = "insert into BenhNhan (MaBenhNhan,HoTen,GioiTinh,DiaChi,SDT,TrinhDo,ChucVu) values ( @MaBenhNhan , @HoTen , @GioiTinh , @DiaChi , @SDT , @TrinhDo , @ChucVu )";
-            object[] parameter = { maBenhNhan, hoTen, gioiTinh, diaChi, sdt, trinhDo, chucVu };
+            string query = "insert into BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT) values ( @MaBenhNhan , @HoTen , @GioiTinh , @NgaySinh , @DiaChi , @SDT )";
+            object[] parameter = { maBenhNhan, hoTen, gioiTinh, ngaySinh,diaChi, sdt };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
-        }*/
+        }
         public DataTable timKiemBenhNhan(string key)
         {
             key = $"%{key}%";

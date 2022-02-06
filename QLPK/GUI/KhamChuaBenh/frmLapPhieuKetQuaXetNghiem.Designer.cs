@@ -44,6 +44,10 @@ namespace QLPK.GUI.KhamBenh
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDichVu = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMaBanKe = new System.Windows.Forms.Label();
+            this.cmbMaBanKe = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label4
@@ -118,16 +122,16 @@ namespace QLPK.GUI.KhamBenh
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(42, 126);
+            this.textBox3.Location = new System.Drawing.Point(42, 169);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(632, 242);
+            this.textBox3.Size = new System.Drawing.Size(632, 199);
             this.textBox3.TabIndex = 66;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 101);
+            this.label5.Location = new System.Drawing.Point(39, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 64;
@@ -175,11 +179,48 @@ namespace QLPK.GUI.KhamBenh
             this.textBox5.Size = new System.Drawing.Size(315, 20);
             this.textBox5.TabIndex = 68;
             // 
+            // txtDichVu
+            // 
+            this.txtDichVu.Location = new System.Drawing.Point(130, 112);
+            this.txtDichVu.Name = "txtDichVu";
+            this.txtDichVu.Size = new System.Drawing.Size(160, 20);
+            this.txtDichVu.TabIndex = 69;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Dịch vụ";
+            // 
+            // txtMaBanKe
+            // 
+            this.txtMaBanKe.AutoSize = true;
+            this.txtMaBanKe.Location = new System.Drawing.Point(392, 118);
+            this.txtMaBanKe.Name = "txtMaBanKe";
+            this.txtMaBanKe.Size = new System.Drawing.Size(58, 13);
+            this.txtMaBanKe.TabIndex = 72;
+            this.txtMaBanKe.Text = "Mã bản kê";
+            // 
+            // cmbMaBanKe
+            // 
+            this.cmbMaBanKe.FormattingEnabled = true;
+            this.cmbMaBanKe.Location = new System.Drawing.Point(480, 112);
+            this.cmbMaBanKe.Name = "cmbMaBanKe";
+            this.cmbMaBanKe.Size = new System.Drawing.Size(121, 21);
+            this.cmbMaBanKe.TabIndex = 73;
+            // 
             // frmLapPhieuKetQuaXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbMaBanKe);
+            this.Controls.Add(this.txtMaBanKe);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtDichVu);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button4);
@@ -220,5 +261,9 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDichVu;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtMaBanKe;
+        private System.Windows.Forms.ComboBox cmbMaBanKe;
     }
 }

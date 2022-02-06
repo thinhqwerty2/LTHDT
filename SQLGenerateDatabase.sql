@@ -1,5 +1,7 @@
-﻿
+﻿create database QLPK
+go
 use QLPK
+go
 CREATE TABLE BenhNhan
 (
   MaBenhNhan VARCHAR(7) NOT NULL,
@@ -66,7 +68,7 @@ CREATE TABLE BacSi
 
 CREATE TABLE BanKe
 (
-  MaBanKe VARCHAR(10) NOT NULL,
+  MaBanKe INT Identity(1,1) NOT NULL,
   NgayLapBanKe DATE NOT NULL,
   MaBenhNhan VARCHAR(7) NOT NULL,
   MaNhanVien VARCHAR(7) NOT NULL,
@@ -77,7 +79,7 @@ CREATE TABLE BanKe
 
 CREATE TABLE ChiTietBanKe
 (
-  MaBanKe VARCHAR(10) NOT NULL,
+  MaBanKe INT NOT NULL,
   MaDichVu VARCHAR(7) NOT NULL,
   SoLuong INT NOT NULL,
   PRIMARY KEY (MaBanKe, MaDichVu),
@@ -104,7 +106,7 @@ CREATE TABLE PhieuThuTienTamUng
   MaPhieuThuTienTamUng VARCHAR(10) NOT NULL,
   SoTienThuTamUng FLOAT NOT NULL,
   NgayThuTienTamUng DATE NOT NULL,
-  MaBanKe VARCHAR(10) NOT NULL,
+  MaBanKe INT NOT NULL,
   MaNhanVien VARCHAR(7) NOT NULL,
   PRIMARY KEY (MaPhieuThuTienTamUng),
   FOREIGN KEY (MaBanKe) REFERENCES BanKe(MaBanKe),
@@ -113,7 +115,7 @@ CREATE TABLE PhieuThuTienTamUng
 
 CREATE TABLE KetQuaXetNghiem
 (
-  MaBanKe VARCHAR(10) NOT NULL,
+  MaBanKe INT NOT NULL,
   MaDichVu VARCHAR(7) NOT NULL,
   MaBacSi VARCHAR(7) NOT NULL,
   NgayKham DATE NOT NULL,

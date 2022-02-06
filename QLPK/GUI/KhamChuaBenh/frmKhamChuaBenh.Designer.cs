@@ -66,6 +66,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuSuDungDichVu.TabIndex = 3;
             this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ chữa bệnh";
             this.btnLapPhieuSuDungDichVu.UseVisualStyleBackColor = true;
+            this.btnLapPhieuSuDungDichVu.Click += new System.EventHandler(this.btnLapPhieuSuDungDichVu_Click);
             // 
             // btnChanDoan
             // 
@@ -75,6 +76,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnChanDoan.TabIndex = 2;
             this.btnChanDoan.Text = "Phiếu chẩn đoán";
             this.btnChanDoan.UseVisualStyleBackColor = true;
+            this.btnChanDoan.Click += new System.EventHandler(this.btnChanDoan_Click);
             // 
             // btnLapPhieuKetQuaXetNghiem
             // 
@@ -84,6 +86,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuKetQuaXetNghiem.TabIndex = 1;
             this.btnLapPhieuKetQuaXetNghiem.Text = "Lập phiếu kết quả xét nghiệm";
             this.btnLapPhieuKetQuaXetNghiem.UseVisualStyleBackColor = true;
+            this.btnLapPhieuKetQuaXetNghiem.Click += new System.EventHandler(this.btnLapPhieuKetQuaXetNghiem_Click);
             // 
             // btnLapPhieuDangKyXetNghiem
             // 
@@ -93,6 +96,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKyXetNghiem.TabIndex = 1;
             this.btnLapPhieuDangKyXetNghiem.Text = "Lập phiếu đăng ký xét nghiệm";
             this.btnLapPhieuDangKyXetNghiem.UseVisualStyleBackColor = true;
+            this.btnLapPhieuDangKyXetNghiem.Click += new System.EventHandler(this.btnLapPhieuDangKyXetNghiem_Click);
             // 
             // btnLapPhieuDangKiKhamBenh
             // 

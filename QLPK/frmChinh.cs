@@ -6,6 +6,7 @@ using QLPK.GUI.QuanTriHeThong;
 using QLPK.GUI.ThanhToan;
 using System;
 using System.Windows.Forms;
+using QLPK.DAO;
 
 namespace QLPK
 {

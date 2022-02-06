@@ -25,11 +25,47 @@ namespace QLPK.GUI.KhamBenh
         {
             
                 this.pnlXemKhamChuaBenh.Controls.Clear();
-                frmPhieuDangKyKhamBenh fPhieuDangKyKhamBenh = new frmPhieuDangKyKhamBenh();
+                frmPhieuDangKyKhamBenh fPhieuDangKyKhamBenh = new frmPhieuDangKyKhamBenh(NguoiDung);
                 fPhieuDangKyKhamBenh.TopLevel = false;
                 this.pnlXemKhamChuaBenh.Controls.Add(fPhieuDangKyKhamBenh);
                 fPhieuDangKyKhamBenh.Show();
             
+        }
+
+        private void btnLapPhieuDangKyXetNghiem_Click(object sender, EventArgs e)
+        {
+            this.pnlXemKhamChuaBenh.Controls.Clear();
+            frmPhieuSuDungXetNghiem fPhieuSuDungXetNghiem = new frmPhieuSuDungXetNghiem(NguoiDung);
+            fPhieuSuDungXetNghiem.TopLevel = false;
+            this.pnlXemKhamChuaBenh.Controls.Add(fPhieuSuDungXetNghiem);
+            fPhieuSuDungXetNghiem.Show();
+        }
+
+        private void btnLapPhieuKetQuaXetNghiem_Click(object sender, EventArgs e)
+        {
+            this.pnlXemKhamChuaBenh.Controls.Clear();
+            frmLapPhieuKetQuaXetNghiem fLapPhieuKetQuaXetNghiem = new frmLapPhieuKetQuaXetNghiem(NguoiDung);
+            fLapPhieuKetQuaXetNghiem.TopLevel = false;
+            this.pnlXemKhamChuaBenh.Controls.Add(fLapPhieuKetQuaXetNghiem);
+            fLapPhieuKetQuaXetNghiem.Show();
+        }
+
+        private void btnChanDoan_Click(object sender, EventArgs e)
+        {
+            this.pnlXemKhamChuaBenh.Controls.Clear();
+            frmPhieuChanDoan fPhieuChanDoan = new frmPhieuChanDoan(NguoiDung);
+            fPhieuChanDoan.TopLevel = false;
+            this.pnlXemKhamChuaBenh.Controls.Add(fPhieuChanDoan);
+            fPhieuChanDoan.Show();
+        }
+
+        private void btnLapPhieuSuDungDichVu_Click(object sender, EventArgs e)
+        {
+            this.pnlXemKhamChuaBenh.Controls.Clear();
+            frmPhieuSuDungDichVuChuaBenh fPhieuSuDungDichVuChuaBenh = new frmPhieuSuDungDichVuChuaBenh(NguoiDung);
+            fPhieuSuDungDichVuChuaBenh.TopLevel = false;
+            this.pnlXemKhamChuaBenh.Controls.Add(fPhieuSuDungDichVuChuaBenh);
+            fPhieuSuDungDichVuChuaBenh.Show();
         }
     }
 }

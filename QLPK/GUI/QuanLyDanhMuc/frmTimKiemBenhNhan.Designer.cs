@@ -60,6 +60,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.Controls.Add(this.textBox1);
             this.Name = "frmTimKiemBenhNhan";
             this.Text = "frmTimKiemBenhNhan";
+            this.Load += new System.EventHandler(this.frmTimKiemBenhNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

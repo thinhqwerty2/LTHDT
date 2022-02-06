@@ -47,18 +47,18 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.dgvDanhMucBenhNhan.DataSource = BenhNhanDAO.Instance.hienThiDSBenhNhan();
         }
 
-        /*private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             if (batLoi())
             {
-                BenhNhanDAO.Instance.themBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
+                BenhNhanDAO.Instance.themBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text,dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
                 hienThiDS();
             }
             else
             {
                 MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }*/
+        }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -111,5 +111,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
             dgvDanhMucBenhNhan.DataSource = BenhNhanDAO.Instance.timKiemBenhNhan(txtTimKiemBenhNhan.Text);
         }
+
+
     }
 }

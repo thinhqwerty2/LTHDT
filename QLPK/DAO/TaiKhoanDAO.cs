@@ -22,26 +22,17 @@ namespace QLPK.DAO
         }
         public BacSiNhanVienDTO layThongTinBacSiNhanVien(string tenDangNhap,int quyenDangNhap)
         {
-            string bang;
-            string nguoiDung;
+            string query;
             switch (quyenDangNhap)
             {
                 case 1:
-                    bang = "BacSi";
-                    nguoiDung = "MaBacSi";
-                    break;
-                case 2:
-                    bang = "NhanVien";
-                    nguoiDung = "MaNhanVien";
+                    query = "select MaBacSi,HoTen,GioiTinh,SDT,ChucVu,DiaChi from BacSi where MaBacSi = @TenDangNhap ";
                     break;
                 default:
-                    bang = "NhanVien";
-                    nguoiDung = "MaNhanVien";
+                    query = "select MaNhanVien,HoTen,GioiTinh,SDT,ChucVu,DiaChi from NhanVien where MaNhanVien = @TenDangNhap ";
                     break;
             }
-
-            string query = "select @NguoiDung ,HoTen,GioiTinh,SDT,ChucVu,DiaChi from @Bang where @TenDangNhap = @NguoiDung1 ";
-            object[] parameter = { nguoiDung,bang,tenDangNhap,nguoiDung };
+            object[] parameter = { tenDangNhap };
             return new BacSiNhanVienDTO(DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
         }
         

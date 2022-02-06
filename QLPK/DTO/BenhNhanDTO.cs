@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace QLPK.DTO
 {
-    public class NhanVienDTO
+    public class BenhNhanDTO
     {
-        private string maNhanVien;
-        public string MaNhanVien
+        private string maBenhNhan;
+        public string MaBenhNhan
         {
-            get { return maNhanVien; }
-            set { maNhanVien = value; }
+            get { return maBenhNhan; }
+            set { maBenhNhan = value; }
         }
         private string hoTen;
         public string HoTen
@@ -27,11 +27,11 @@ namespace QLPK.DTO
             get { return gioiTinh; }
             set { gioiTinh = value; }
         }
-        private string chucVu;
-        public string ChucVu
+        private DateTime ngaySinh;
+        public DateTime NgaySinh
         {
-            get { return chucVu; }
-            set { chucVu = value; }
+            get { return ngaySinh; }
+            set { ngaySinh = value; }
         }
         private string diaChi;
         public string DiaChi
@@ -46,12 +46,12 @@ namespace QLPK.DTO
             set { sdt = value; }
         }
 
-        public NhanVienDTO(DataRow row)
+        public BenhNhanDTO(DataRow row)
         {
-            this.MaNhanVien = row["MaNhanVien"].ToString();
+            this.MaBenhNhan = row["MaBenhNhan"].ToString();
             this.HoTen = row["HoTen"].ToString();
             this.GioiTinh = row["GioiTinh"].ToString();
-            this.ChucVu = row["ChucVu"].ToString();
+            this.NgaySinh = DateTime.Parse(row["NgaySinh"].ToString());
             this.DiaChi = row["DiaChi"].ToString();
             this.SDT = row["SDT"].ToString();
         }
