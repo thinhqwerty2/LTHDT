@@ -32,7 +32,7 @@ namespace QLPK.DTO
         public NguoiDungDTO(DataRow row)
         {
             this.TenDangNhap = row["TenDangNhap"].ToString();
-            this.HoTen = row["HoTen"].ToString();
+            //this.HoTen = row["HoTen"].ToString();
             this.QuyenTruyCap = Convert.ToInt32(row["QuyenTruyCap"].ToString());
         }
     }

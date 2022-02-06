@@ -25,7 +25,7 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSBacSi()
         {
-            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+            string query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where TrangThai= N'Đang làm việc' and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable hienThiDSTatCaBacSi()
@@ -61,7 +61,7 @@ namespace QLPK.DAO
             }
             else
             {
-                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and TrangThai=1 and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and TrangThai=N'Đang làm việc' and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
             }
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
