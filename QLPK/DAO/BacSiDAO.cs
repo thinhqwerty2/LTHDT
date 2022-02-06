@@ -56,12 +56,12 @@ namespace QLPK.DAO
             string query;
             if(checkTatCa)
             {
-                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT,TrangThai from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
 
             }
             else
             {
-                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where TrangThai=1 and BacSi.MaBacSi=TaiKhoan.TenDangNhap";
+                query = "select MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT from BacSi,TaiKhoan where BacSi.MaBacSi=TaiKhoan.TenDangNhap and TrangThai=1 and (MaBacSi like @key1 or HoTen like @key2 or SDT like @key3 )";
             }
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
