@@ -41,9 +41,9 @@ namespace QLPK.GUI.KhamBenh
             // 
             // pnlXemKhamChuaBenh
             // 
-            this.pnlXemKhamChuaBenh.Location = new System.Drawing.Point(234, 2);
+            this.pnlXemKhamChuaBenh.Location = new System.Drawing.Point(176, 3);
             this.pnlXemKhamChuaBenh.Name = "pnlXemKhamChuaBenh";
-            this.pnlXemKhamChuaBenh.Size = new System.Drawing.Size(564, 446);
+            this.pnlXemKhamChuaBenh.Size = new System.Drawing.Size(966, 508);
             this.pnlXemKhamChuaBenh.TabIndex = 5;
             // 
             // pnlNutKhamChuaBenh
@@ -53,17 +53,17 @@ namespace QLPK.GUI.KhamBenh
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKiKhamBenh);
-            this.pnlNutKhamChuaBenh.Location = new System.Drawing.Point(3, 2);
+            this.pnlNutKhamChuaBenh.Location = new System.Drawing.Point(2, 3);
             this.pnlNutKhamChuaBenh.Name = "pnlNutKhamChuaBenh";
-            this.pnlNutKhamChuaBenh.Size = new System.Drawing.Size(225, 446);
+            this.pnlNutKhamChuaBenh.Size = new System.Drawing.Size(168, 508);
             this.pnlNutKhamChuaBenh.TabIndex = 4;
             // 
             // btnLapPhieuSuDungDichVu
             // 
             this.btnLapPhieuSuDungDichVu.Location = new System.Drawing.Point(9, 282);
             this.btnLapPhieuSuDungDichVu.Name = "btnLapPhieuSuDungDichVu";
-            this.btnLapPhieuSuDungDichVu.Size = new System.Drawing.Size(212, 50);
-            this.btnLapPhieuSuDungDichVu.TabIndex = 3;
+            this.btnLapPhieuSuDungDichVu.Size = new System.Drawing.Size(114, 50);
+            this.btnLapPhieuSuDungDichVu.TabIndex = 4;
             this.btnLapPhieuSuDungDichVu.Text = "Lập phiếu sử dụng dịch vụ chữa bệnh";
             this.btnLapPhieuSuDungDichVu.UseVisualStyleBackColor = true;
             this.btnLapPhieuSuDungDichVu.Click += new System.EventHandler(this.btnLapPhieuSuDungDichVu_Click);
@@ -72,8 +72,8 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.btnChanDoan.Location = new System.Drawing.Point(9, 215);
             this.btnChanDoan.Name = "btnChanDoan";
-            this.btnChanDoan.Size = new System.Drawing.Size(212, 50);
-            this.btnChanDoan.TabIndex = 2;
+            this.btnChanDoan.Size = new System.Drawing.Size(114, 50);
+            this.btnChanDoan.TabIndex = 3;
             this.btnChanDoan.Text = "Phiếu chẩn đoán";
             this.btnChanDoan.UseVisualStyleBackColor = true;
             this.btnChanDoan.Click += new System.EventHandler(this.btnChanDoan_Click);
@@ -82,8 +82,8 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.btnLapPhieuKetQuaXetNghiem.Location = new System.Drawing.Point(10, 149);
             this.btnLapPhieuKetQuaXetNghiem.Name = "btnLapPhieuKetQuaXetNghiem";
-            this.btnLapPhieuKetQuaXetNghiem.Size = new System.Drawing.Size(212, 50);
-            this.btnLapPhieuKetQuaXetNghiem.TabIndex = 1;
+            this.btnLapPhieuKetQuaXetNghiem.Size = new System.Drawing.Size(114, 50);
+            this.btnLapPhieuKetQuaXetNghiem.TabIndex = 2;
             this.btnLapPhieuKetQuaXetNghiem.Text = "Lập phiếu kết quả xét nghiệm";
             this.btnLapPhieuKetQuaXetNghiem.UseVisualStyleBackColor = true;
             this.btnLapPhieuKetQuaXetNghiem.Click += new System.EventHandler(this.btnLapPhieuKetQuaXetNghiem_Click);
@@ -92,7 +92,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.btnLapPhieuDangKyXetNghiem.Location = new System.Drawing.Point(9, 79);
             this.btnLapPhieuDangKyXetNghiem.Name = "btnLapPhieuDangKyXetNghiem";
-            this.btnLapPhieuDangKyXetNghiem.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuDangKyXetNghiem.Size = new System.Drawing.Size(114, 50);
             this.btnLapPhieuDangKyXetNghiem.TabIndex = 1;
             this.btnLapPhieuDangKyXetNghiem.Text = "Lập phiếu đăng ký xét nghiệm";
             this.btnLapPhieuDangKyXetNghiem.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.btnLapPhieuDangKiKhamBenh.Location = new System.Drawing.Point(10, 10);
             this.btnLapPhieuDangKiKhamBenh.Name = "btnLapPhieuDangKiKhamBenh";
-            this.btnLapPhieuDangKiKhamBenh.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuDangKiKhamBenh.Size = new System.Drawing.Size(114, 50);
             this.btnLapPhieuDangKiKhamBenh.TabIndex = 0;
             this.btnLapPhieuDangKiKhamBenh.Text = "Lập phiếu đăng kí khám bệnh";
             this.btnLapPhieuDangKiKhamBenh.UseVisualStyleBackColor = true;
@@ -112,12 +112,13 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1144, 515);
             this.Controls.Add(this.pnlXemKhamChuaBenh);
             this.Controls.Add(this.pnlNutKhamChuaBenh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKhamChuaBenh";
             this.Text = "frmKhamBenh";
+            this.Load += new System.EventHandler(this.frmKhamChuaBenh_Load);
             this.pnlNutKhamChuaBenh.ResumeLayout(false);
             this.ResumeLayout(false);
 

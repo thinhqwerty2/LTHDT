@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPK.GUI.BaoCaoThongKe
+namespace QLPK.GUI.ThanhToan
 {
-    public partial class frmThongKeBenh : Form
+    public partial class frmTongHopChiPhi : Form
     {
         private static NguoiDungDTO NguoiDung;
 
-        public frmThongKeBenh(NguoiDungDTO nguoiDung)
+        public frmTongHopChiPhi(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
             NguoiDung = nguoiDung;

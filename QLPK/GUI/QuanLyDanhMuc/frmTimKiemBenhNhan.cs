@@ -20,8 +20,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView gridView = (DataGridView)sender;
+            if (e.RowIndex != gridView.RowCount - 1)
+            {
             benhNhan = new BenhNhanDTO( ((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
             this.Close();
+            }
         }
         
 

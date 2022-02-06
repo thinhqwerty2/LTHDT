@@ -67,5 +67,14 @@ namespace QLPK.GUI.KhamBenh
             this.pnlXemKhamChuaBenh.Controls.Add(fPhieuSuDungDichVuChuaBenh);
             fPhieuSuDungDichVuChuaBenh.Show();
         }
+
+        private void frmKhamChuaBenh_Load(object sender, EventArgs e)
+        {
+            this.pnlXemKhamChuaBenh.Controls.Clear();
+            frmPhieuDangKyKhamBenh fPhieuDangKyKhamBenh = new frmPhieuDangKyKhamBenh(NguoiDung);
+            fPhieuDangKyKhamBenh.TopLevel = false;
+            this.pnlXemKhamChuaBenh.Controls.Add(fPhieuDangKyKhamBenh);
+            fPhieuDangKyKhamBenh.Show();
+        }
     }
 }

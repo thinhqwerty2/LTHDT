@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPK.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace QLPK.GUI.BaoCaoThongKe
 {
     public partial class frmThongKeBenhNhan : Form
     {
-        public frmThongKeBenhNhan()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmThongKeBenhNhan(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

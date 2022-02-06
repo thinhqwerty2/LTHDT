@@ -46,14 +46,14 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnBenhNhan);
             this.pnlNutQuanLyDanhMuc.Location = new System.Drawing.Point(2, 3);
             this.pnlNutQuanLyDanhMuc.Name = "pnlNutQuanLyDanhMuc";
-            this.pnlNutQuanLyDanhMuc.Size = new System.Drawing.Size(225, 580);
+            this.pnlNutQuanLyDanhMuc.Size = new System.Drawing.Size(168, 508);
             this.pnlNutQuanLyDanhMuc.TabIndex = 0;
             // 
             // btnNhanVien
             // 
             this.btnNhanVien.Location = new System.Drawing.Point(10, 220);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(212, 50);
+            this.btnNhanVien.Size = new System.Drawing.Size(133, 50);
             this.btnNhanVien.TabIndex = 3;
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             this.btnDichVu.Location = new System.Drawing.Point(10, 149);
             this.btnDichVu.Name = "btnDichVu";
-            this.btnDichVu.Size = new System.Drawing.Size(212, 50);
+            this.btnDichVu.Size = new System.Drawing.Size(133, 50);
             this.btnDichVu.TabIndex = 2;
             this.btnDichVu.Text = "Dịch vụ";
             this.btnDichVu.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             this.btnBacSi.Location = new System.Drawing.Point(10, 77);
             this.btnBacSi.Name = "btnBacSi";
-            this.btnBacSi.Size = new System.Drawing.Size(212, 50);
+            this.btnBacSi.Size = new System.Drawing.Size(133, 50);
             this.btnBacSi.TabIndex = 1;
             this.btnBacSi.Text = "Bác sĩ";
             this.btnBacSi.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             this.btnBenhNhan.Location = new System.Drawing.Point(10, 9);
             this.btnBenhNhan.Name = "btnBenhNhan";
-            this.btnBenhNhan.Size = new System.Drawing.Size(212, 50);
+            this.btnBenhNhan.Size = new System.Drawing.Size(133, 50);
             this.btnBenhNhan.TabIndex = 0;
             this.btnBenhNhan.Text = "Bệnh nhân";
             this.btnBenhNhan.UseVisualStyleBackColor = true;
@@ -91,21 +91,22 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // pnlXemQuanLyDanhMuc
             // 
-            this.pnlXemQuanLyDanhMuc.Location = new System.Drawing.Point(233, 3);
+            this.pnlXemQuanLyDanhMuc.Location = new System.Drawing.Point(176, 3);
             this.pnlXemQuanLyDanhMuc.Name = "pnlXemQuanLyDanhMuc";
-            this.pnlXemQuanLyDanhMuc.Size = new System.Drawing.Size(564, 580);
+            this.pnlXemQuanLyDanhMuc.Size = new System.Drawing.Size(966, 508);
             this.pnlXemQuanLyDanhMuc.TabIndex = 1;
             // 
             // frmQuanLyDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 595);
+            this.ClientSize = new System.Drawing.Size(1144, 515);
             this.Controls.Add(this.pnlXemQuanLyDanhMuc);
             this.Controls.Add(this.pnlNutQuanLyDanhMuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanLyDanhMuc";
             this.Text = "frmQuanTriHeThong";
+            this.Load += new System.EventHandler(this.frmQuanLyDanhMuc_Load);
             this.pnlNutQuanLyDanhMuc.ResumeLayout(false);
             this.ResumeLayout(false);
 

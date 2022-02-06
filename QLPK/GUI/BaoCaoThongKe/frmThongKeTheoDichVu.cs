@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPK.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace QLPK.GUI.BaoCaoThongKe
 {
     public partial class frmThongKeDichVu : Form
     {
-        public frmThongKeDichVu()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmThongKeDichVu(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
 
         private void label1_Click(object sender, EventArgs e)

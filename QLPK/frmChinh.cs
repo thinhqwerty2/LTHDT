@@ -22,6 +22,7 @@ namespace QLPK
         }
         private void btnHeThong_Click(object sender, EventArgs e)
         {
+            
             this.pnlChinh.Controls.Clear();
             frmQuanTriHeThong fQuanTriHeThong = new frmQuanTriHeThong(NguoiDung);
             fQuanTriHeThong.TopLevel = false;
@@ -64,6 +65,15 @@ namespace QLPK
             fKhamBenh.TopLevel = false;
             this.pnlChinh.Controls.Add(fKhamBenh);
             fKhamBenh.Show();
+        }
+
+        private void frmChinh_Load(object sender, EventArgs e)
+        {
+            this.pnlChinh.Controls.Clear();
+            frmQuanTriHeThong fQuanTriHeThong = new frmQuanTriHeThong(NguoiDung);
+            fQuanTriHeThong.TopLevel = false;
+            this.pnlChinh.Controls.Add(fQuanTriHeThong);
+            fQuanTriHeThong.Show();
         }
     }
 }

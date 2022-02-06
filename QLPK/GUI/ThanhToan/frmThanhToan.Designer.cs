@@ -44,53 +44,57 @@ namespace QLPK.GUI.ThanhToan
             this.pnlNutThanhToan.Controls.Add(this.btnThongTinBanKe);
             this.pnlNutThanhToan.Location = new System.Drawing.Point(2, 3);
             this.pnlNutThanhToan.Name = "pnlNutThanhToan";
-            this.pnlNutThanhToan.Size = new System.Drawing.Size(225, 446);
+            this.pnlNutThanhToan.Size = new System.Drawing.Size(168, 508);
             this.pnlNutThanhToan.TabIndex = 0;
             // 
             // btnTongHopChiPhi
             // 
             this.btnTongHopChiPhi.Location = new System.Drawing.Point(10, 149);
             this.btnTongHopChiPhi.Name = "btnTongHopChiPhi";
-            this.btnTongHopChiPhi.Size = new System.Drawing.Size(212, 50);
+            this.btnTongHopChiPhi.Size = new System.Drawing.Size(140, 50);
             this.btnTongHopChiPhi.TabIndex = 2;
             this.btnTongHopChiPhi.Text = "Bảng tổng hợp chi phí";
             this.btnTongHopChiPhi.UseVisualStyleBackColor = true;
+            this.btnTongHopChiPhi.Click += new System.EventHandler(this.btnTongHopChiPhi_Click);
             // 
             // btnLapPhieuThuTienTamUng
             // 
             this.btnLapPhieuThuTienTamUng.Location = new System.Drawing.Point(10, 77);
             this.btnLapPhieuThuTienTamUng.Name = "btnLapPhieuThuTienTamUng";
-            this.btnLapPhieuThuTienTamUng.Size = new System.Drawing.Size(212, 50);
+            this.btnLapPhieuThuTienTamUng.Size = new System.Drawing.Size(140, 50);
             this.btnLapPhieuThuTienTamUng.TabIndex = 1;
             this.btnLapPhieuThuTienTamUng.Text = "Lập phiếu thu tiền tạm ứng";
             this.btnLapPhieuThuTienTamUng.UseVisualStyleBackColor = true;
+            this.btnLapPhieuThuTienTamUng.Click += new System.EventHandler(this.btnLapPhieuThuTienTamUng_Click);
             // 
             // btnThongTinBanKe
             // 
             this.btnThongTinBanKe.Location = new System.Drawing.Point(10, 9);
             this.btnThongTinBanKe.Name = "btnThongTinBanKe";
-            this.btnThongTinBanKe.Size = new System.Drawing.Size(212, 50);
+            this.btnThongTinBanKe.Size = new System.Drawing.Size(140, 50);
             this.btnThongTinBanKe.TabIndex = 0;
             this.btnThongTinBanKe.Text = "Thông tin bản kê";
             this.btnThongTinBanKe.UseVisualStyleBackColor = true;
+            this.btnThongTinBanKe.Click += new System.EventHandler(this.btnThongTinBanKe_Click);
             // 
             // pnlXemThanhToan
             // 
-            this.pnlXemThanhToan.Location = new System.Drawing.Point(233, 3);
+            this.pnlXemThanhToan.Location = new System.Drawing.Point(176, 3);
             this.pnlXemThanhToan.Name = "pnlXemThanhToan";
-            this.pnlXemThanhToan.Size = new System.Drawing.Size(564, 446);
+            this.pnlXemThanhToan.Size = new System.Drawing.Size(966, 508);
             this.pnlXemThanhToan.TabIndex = 1;
             // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1144, 515);
             this.Controls.Add(this.pnlXemThanhToan);
             this.Controls.Add(this.pnlNutThanhToan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThanhToan";
             this.Text = "frmQuanTriHeThong";
+            this.Load += new System.EventHandler(this.frmThanhToan_Load);
             this.pnlNutThanhToan.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -28,13 +28,18 @@ namespace QLPK.GUI.KhamBenh
         private void txtTimKiemBenhNhan_Click(object sender, EventArgs e)
         {
             QuanLyDanhMuc.frmTimKiemBenhNhan fTimKiemBenhNhan = new QuanLyDanhMuc.frmTimKiemBenhNhan();
+            fTimKiemBenhNhan.StartPosition = FormStartPosition.CenterParent;
             fTimKiemBenhNhan.ShowDialog();
+            if(QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan != null)
+            {
+
             txtTimKiemBenhNhan.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.MaBenhNhan;
             txtDiaChi.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.DiaChi;
             txtSDT.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.SDT;
             txtGioiTinh.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.GioiTinh;
             txtNgaySinh.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.ToString();
             txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
+            }    
         }
 
         private void btnThemBenhNhan_Click(object sender, EventArgs e)
