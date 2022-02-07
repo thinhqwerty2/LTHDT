@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPK.DAO;
 
 namespace QLPK.GUI.BaoCaoThongKe
 {
@@ -25,5 +26,13 @@ namespace QLPK.GUI.BaoCaoThongKe
         {
 
         }
+
+
+        private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ThongKeADO.Instance.thongKeBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
+        }
+
+
     }
 }

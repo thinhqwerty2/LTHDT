@@ -30,8 +30,8 @@ namespace QLPK.GUI.BaoCaoThongKe
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,31 +58,33 @@ namespace QLPK.GUI.BaoCaoThongKe
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 415);
+            this.button1.Location = new System.Drawing.Point(742, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "In";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpTuNgay
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpTuNgay.Location = new System.Drawing.Point(226, 39);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(200, 20);
+            this.dtpTuNgay.TabIndex = 1;
+            this.dtpTuNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged);
             // 
-            // dateTimePicker2
+            // dtpDenNgay
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(508, 19);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dtpDenNgay.Location = new System.Drawing.Point(574, 39);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(200, 20);
+            this.dtpDenNgay.TabIndex = 1;
+            this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 19);
+            this.label1.Location = new System.Drawing.Point(120, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 2;
@@ -91,7 +93,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(402, 25);
+            this.label2.Location = new System.Drawing.Point(480, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
@@ -100,7 +102,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 57);
+            this.label3.Location = new System.Drawing.Point(120, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 3;
@@ -109,7 +111,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(566, 57);
+            this.label4.Location = new System.Drawing.Point(644, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 3;
@@ -118,7 +120,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(388, 57);
+            this.label5.Location = new System.Drawing.Point(466, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 13);
             this.label5.TabIndex = 3;
@@ -127,7 +129,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 91);
+            this.label6.Location = new System.Drawing.Point(120, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 13);
             this.label6.TabIndex = 3;
@@ -136,7 +138,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(388, 91);
+            this.label7.Location = new System.Drawing.Point(466, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 3;
@@ -155,7 +157,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(104, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(743, 237);
@@ -213,7 +215,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(179, 57);
+            this.label8.Location = new System.Drawing.Point(257, 78);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 5;
@@ -222,7 +224,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(179, 91);
+            this.label9.Location = new System.Drawing.Point(257, 112);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 5;
@@ -231,7 +233,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(477, 57);
+            this.label10.Location = new System.Drawing.Point(555, 78);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 5;
@@ -240,7 +242,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(661, 57);
+            this.label11.Location = new System.Drawing.Point(739, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 5;
@@ -249,7 +251,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(532, 91);
+            this.label12.Location = new System.Drawing.Point(610, 112);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 13);
             this.label12.TabIndex = 5;
@@ -273,8 +275,8 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDenNgay);
+            this.Controls.Add(this.dtpTuNgay);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKeBenhNhan";
@@ -288,8 +290,8 @@ namespace QLPK.GUI.BaoCaoThongKe
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

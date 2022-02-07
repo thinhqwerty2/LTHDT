@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\BacSiDAO.cs" />
+    <Compile Include="DAO\ChiTietBanKeDAO.cs" />
+    <Compile Include="DAO\KetQuaXetNghiemDAO.cs" />
     <Compile Include="DAO\LoaiBenhDAO.cs" />
     <Compile Include="DAO\BanKeDAO.cs" />
     <Compile Include="DAO\BenhNhanDAO.cs" />
@@ -64,9 +66,11 @@
     <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="DAO\HoSoBenhAnDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuThuTienTamUngDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="DAO\ThongKeADO.cs" />
+    <Compile Include="DAO\TongChiPhiDAO.cs" />
     <Compile Include="DTO\BacSiNhanVienDTO.cs" />
     <Compile Include="DTO\BenhNhanDTO.cs" />
     <Compile Include="DTO\DichVuDTO.cs" />

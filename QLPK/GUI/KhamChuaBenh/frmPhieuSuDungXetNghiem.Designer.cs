@@ -131,6 +131,7 @@ namespace QLPK.GUI.KhamBenh
             this.button5.TabIndex = 53;
             this.button5.Text = "Đồng ý (hiển thị ra form tạm ứng)";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -190,9 +191,8 @@ namespace QLPK.GUI.KhamBenh
             this.lblNgayBanKe.AutoSize = true;
             this.lblNgayBanKe.Location = new System.Drawing.Point(279, 144);
             this.lblNgayBanKe.Name = "lblNgayBanKe";
-            this.lblNgayBanKe.Size = new System.Drawing.Size(48, 13);
+            this.lblNgayBanKe.Size = new System.Drawing.Size(0, 13);
             this.lblNgayBanKe.TabIndex = 59;
-            this.lblNgayBanKe.Text = "???Date";
             // 
             // label6
             // 
@@ -256,7 +256,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dgvDichVuDuocChon;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
         private System.Windows.Forms.ComboBox cmbMaBanKe;
         private System.Windows.Forms.Label label2;
@@ -264,5 +263,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Label lblNgayBanKe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDichVu;
+        public System.Windows.Forms.DataGridView dgvDichVuDuocChon;
     }
 }

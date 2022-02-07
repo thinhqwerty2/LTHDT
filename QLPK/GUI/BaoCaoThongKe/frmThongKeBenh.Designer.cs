@@ -131,6 +131,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.txtTimKiemBenhNhan.Size = new System.Drawing.Size(113, 20);
             this.txtTimKiemBenhNhan.TabIndex = 82;
             this.txtTimKiemBenhNhan.Click += new System.EventHandler(this.txtTimKiemBenhNhan_Click);
+            this.txtTimKiemBenhNhan.TextChanged += new System.EventHandler(this.txtTimKiemBenhNhan_TextChanged);
             // 
             // label2
             // 

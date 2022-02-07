@@ -35,13 +35,13 @@ namespace QLPK.GUI.KhamBenh
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNgayKham = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtKetLuan = new System.Windows.Forms.TextBox();
             this.txtDichVu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
@@ -104,13 +104,13 @@ namespace QLPK.GUI.KhamBenh
             this.button1.Text = "In";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtMoTa
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 186);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(632, 199);
-            this.textBox3.TabIndex = 66;
+            this.txtMoTa.Location = new System.Drawing.Point(141, 186);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(632, 199);
+            this.txtMoTa.TabIndex = 66;
             // 
             // label5
             // 
@@ -155,13 +155,14 @@ namespace QLPK.GUI.KhamBenh
             this.button4.TabIndex = 65;
             this.button4.Text = "Đồng  ý";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox5
+            // txtKetLuan
             // 
-            this.textBox5.Location = new System.Drawing.Point(184, 418);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(315, 20);
-            this.textBox5.TabIndex = 68;
+            this.txtKetLuan.Location = new System.Drawing.Point(184, 418);
+            this.txtKetLuan.Name = "txtKetLuan";
+            this.txtKetLuan.Size = new System.Drawing.Size(315, 20);
+            this.txtKetLuan.TabIndex = 68;
             // 
             // txtDichVu
             // 
@@ -245,8 +246,8 @@ namespace QLPK.GUI.KhamBenh
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDichVu);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtKetLuan);
+            this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -261,6 +262,7 @@ namespace QLPK.GUI.KhamBenh
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLapPhieuKetQuaXetNghiem";
             this.Text = "frmLapPhieuKetQuaXetNghiem";
+            this.Load += new System.EventHandler(this.frmLapPhieuKetQuaXetNghiem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,13 +276,13 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNgayKham;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtKetLuan;
         private System.Windows.Forms.TextBox txtDichVu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;

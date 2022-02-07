@@ -34,5 +34,10 @@ namespace QLPK.GUI.BaoCaoThongKe
                 txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
             }
         }
+
+        private void txtTimKiemBenhNhan_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

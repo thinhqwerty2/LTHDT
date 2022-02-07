@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLPK.DAO;
+using QLPK.DTO;
 
 namespace QLPK.DAO
 {
@@ -46,6 +47,10 @@ namespace QLPK.DAO
             string query= "select MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT from BenhNhan where (MaBenhNhan like @key1 or HoTen like @key2 or SDT like @key3 )";
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
+        }
+        public BenhNhanDTO layThongTinBenhNhan(string maBenhNhan)
+        {
+            return new BenhNhanDTO(DataProvider.Instance.ExecuteQuery("select * from BenhNhan where MaBenhNhan= @MaBenhNhan ",new object[] { maBenhNhan }).Rows[0]);
         }
     }
 }

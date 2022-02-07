@@ -56,5 +56,16 @@ namespace QLPK.GUI.KhamBenh
                 
             }
         }
+
+        private void frmLapPhieuKetQuaXetNghiem_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            KetQuaXetNghiemDAO.Instance.themKetQuaXetNghiem(cmbMaBanKe.Text, txtDichVu.Text, NguoiDung.TenDangNhap, DateTime.Now, txtKetLuan.Text);
+        }
     }
 }

@@ -65,6 +65,7 @@ namespace QLPK.GUI.ThanhToan
             this.btnLapPhieuThuTienTamUng.TabIndex = 1;
             this.btnLapPhieuThuTienTamUng.Text = "Lập phiếu thu tiền tạm ứng";
             this.btnLapPhieuThuTienTamUng.UseVisualStyleBackColor = true;
+            this.btnLapPhieuThuTienTamUng.Visible = false;
             this.btnLapPhieuThuTienTamUng.Click += new System.EventHandler(this.btnLapPhieuThuTienTamUng_Click);
             // 
             // btnThongTinBanKe

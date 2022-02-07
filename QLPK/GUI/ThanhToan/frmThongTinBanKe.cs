@@ -20,5 +20,10 @@ namespace QLPK.GUI.ThanhToan
             InitializeComponent();
             NguoiDung = nguoiDung;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
