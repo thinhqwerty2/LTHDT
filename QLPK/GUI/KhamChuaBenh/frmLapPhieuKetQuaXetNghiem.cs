@@ -56,5 +56,11 @@ namespace QLPK.GUI.KhamBenh
                 
             }
         }
+
+        private void frmLapPhieuKetQuaXetNghiem_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

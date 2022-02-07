@@ -261,6 +261,7 @@ namespace QLPK.GUI.KhamBenh
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLapPhieuKetQuaXetNghiem";
             this.Text = "frmLapPhieuKetQuaXetNghiem";
+            this.Load += new System.EventHandler(this.frmLapPhieuKetQuaXetNghiem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

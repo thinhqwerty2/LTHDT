@@ -10,7 +10,7 @@ namespace QLPK.GUI.KhamBenh
     public partial class frmPhieuSuDungXetNghiem : Form
     {
         private static NguoiDungDTO NguoiDung;
-        private static List<int> listDichVuDangChon;
+        public static DataGridView tableDichVuDaChon=new DataGridView();
 
         public frmPhieuSuDungXetNghiem(NguoiDungDTO nguoiDung)
         {
@@ -61,16 +61,35 @@ namespace QLPK.GUI.KhamBenh
         {
             for (int i = 0; i < dgvDichVu.Rows.Count; i++)
             {
+                bool kiemTraTrung = false;
                 if (dgvDichVu.Rows[i].Selected == true)
                 {
                     DataGridViewRow row = (DataGridViewRow)dgvDichVu.Rows[i].Clone();
                     row.Cells[0].Value = dgvDichVu.Rows[i].Cells[0].Value;
+                    foreach (DataGridViewRow item in dgvDichVuDuocChon.Rows)
+                    {
+                        if(item.Cells[0].Value==row.Cells[0].Value)
+                        {
+                            kiemTraTrung = true;
+                            break;
+                        }    
+                        
+                    }
+                    if(kiemTraTrung==false)
+                    {
+                        dgvDichVuDuocChon.Rows.Add(row);
+                    }    
+                    else
+                    {
+                        continue;
+                    }    
                     row.Cells[1].Value = dgvDichVu.Rows[i].Cells[1].Value;
                     row.Cells[2].Value = dgvDichVu.Rows[i].Cells[2].Value;
                     row.Cells[3].Value = dgvDichVu.Rows[i].Cells[3].Value;
                     row.Cells[4].Value = dgvDichVu.Rows[i].Cells[4].Value;
                     row.Cells[5].Value = dgvDichVu.Rows[i].Cells[5].Value;
-                    dgvDichVuDuocChon.Rows.Add(row);
+
+                        
                 }
             }
         }
@@ -111,6 +130,18 @@ namespace QLPK.GUI.KhamBenh
         private void txtDichVu_TextChanged(object sender, EventArgs e)
         {
             dgvDichVu.DataSource = DichVuDAO.Instance.hienThiDSDichVuXetNghiem();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tableDichVuDaChon = dgvDichVuDuocChon;
+            ThanhToan.frmLapPhieuThuTienTamUng fLapPhieuThuTienTamUng = new ThanhToan.frmLapPhieuThuTienTamUng(NguoiDung);
+            ThanhToan.frmLapPhieuThuTienTamUng.MaBenhNhan = txtTimKiemBenhNhan.Text;
+            fLapPhieuThuTienTamUng.ShowDialog();
+            foreach (DataGridViewRow row in dgvDichVuDuocChon.Rows)
+            {
+                ChiTietBanKeDAO.Instance.themChiTietBanKe(cmbMaBanKe.Text, row.Cells["MaDichVu"].Value.ToString());
+            }
         }
     }
 }
