@@ -81,7 +81,6 @@ CREATE TABLE ChiTietBanKe
 (
   MaBanKe INT NOT NULL,
   MaDichVu VARCHAR(7) NOT NULL,
-  SoLuong INT NOT NULL,
   PRIMARY KEY (MaBanKe, MaDichVu),
   FOREIGN KEY (MaBanKe) REFERENCES BanKe(MaBanKe),
   FOREIGN KEY (MaDichVu) REFERENCES DichVu(MaDichVu)
@@ -103,7 +102,7 @@ CREATE TABLE HoSoBenhAn
 
 CREATE TABLE PhieuThuTienTamUng
 (
-  MaPhieuThuTienTamUng VARCHAR(10) NOT NULL,
+  MaPhieuThuTienTamUng INT IDENTITY(1,1) NOT NULL,
   SoTienThuTamUng FLOAT NOT NULL,
   NgayThuTienTamUng DATE NOT NULL,
   MaBanKe INT NOT NULL,
@@ -127,8 +126,8 @@ CREATE TABLE KetQuaXetNghiem
 
 CREATE TABLE TongHopChiPhi
 (
-  MaHoaDon VARCHAR(10) NOT NULL,
-  MaPhieuThuTienTamUng VARCHAR(10) NOT NULL,
+  MaHoaDon INT IDENTITY(1,1) NOT NULL,
+  MaPhieuThuTienTamUng INT NOT NULL,
   MaNhanVien VARCHAR(7) NOT NULL,
   ThanhTien FLOAT NOT NULL,
   NgayThanhToan DATE NOT NULL,

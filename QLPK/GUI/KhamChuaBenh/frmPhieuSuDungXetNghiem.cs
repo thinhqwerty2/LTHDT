@@ -129,20 +129,25 @@ namespace QLPK.GUI.KhamBenh
 
         private void txtDichVu_TextChanged(object sender, EventArgs e)
         {
-            dgvDichVu.DataSource = DichVuDAO.Instance.hienThiDSDichVuXetNghiem();
+            dgvDichVu.DataSource = DichVuDAO.Instance.timKiemDichVu(txtDichVu.Text,false);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if(dgvDichVuDuocChon.Rows.Count>1)
+            {
+
             tableDichVuDaChon = dgvDichVuDuocChon;
             ThanhToan.frmLapPhieuThuTienTamUng fLapPhieuThuTienTamUng = new ThanhToan.frmLapPhieuThuTienTamUng(NguoiDung);
             ThanhToan.frmLapPhieuThuTienTamUng.MaBenhNhan = txtTimKiemBenhNhan.Text;
             ThanhToan.frmLapPhieuThuTienTamUng.MaBanKe = cmbMaBanKe.Text;
             fLapPhieuThuTienTamUng.ShowDialog();
-            foreach (DataGridViewRow row in dgvDichVuDuocChon.Rows)
+            int n = dgvDichVuDuocChon.Rows.Count;
+            for (int i = 0; i < n; i++)
             {
-                ChiTietBanKeDAO.Instance.themChiTietBanKe(cmbMaBanKe.Text, row.Cells["MaDichVu"].Value.ToString());
+                ChiTietBanKeDAO.Instance.themChiTietBanKe(cmbMaBanKe.Text, dgvDichVuDuocChon.Rows[i].Cells["MaDichVu"].Value.ToString());
             }
+            }    
         }
     }
 }

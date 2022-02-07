@@ -45,5 +45,25 @@ namespace QLPK
             }   
         }
 
+        private void ckbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckbHienThiMatKhau.Checked)
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                this.txtMatKhau.UseSystemPasswordChar = false;
+            }   
+            else
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                this.txtMatKhau.UseSystemPasswordChar = true;
+            }   
+            
+            
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

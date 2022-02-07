@@ -36,6 +36,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuKetQuaXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKyXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNutKhamChuaBenh.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +49,15 @@ namespace QLPK.GUI.KhamBenh
             // 
             // pnlNutKhamChuaBenh
             // 
+            this.pnlNutKhamChuaBenh.BackColor = System.Drawing.Color.DarkCyan;
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuSuDungDichVu);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnChanDoan);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuKetQuaXetNghiem);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKyXetNghiem);
             this.pnlNutKhamChuaBenh.Controls.Add(this.btnLapPhieuDangKiKhamBenh);
-            this.pnlNutKhamChuaBenh.Location = new System.Drawing.Point(2, 3);
+            this.pnlNutKhamChuaBenh.Location = new System.Drawing.Point(-5, -8);
             this.pnlNutKhamChuaBenh.Name = "pnlNutKhamChuaBenh";
-            this.pnlNutKhamChuaBenh.Size = new System.Drawing.Size(168, 508);
+            this.pnlNutKhamChuaBenh.Size = new System.Drawing.Size(160, 530);
             this.pnlNutKhamChuaBenh.TabIndex = 4;
             // 
             // btnLapPhieuSuDungDichVu
@@ -108,11 +110,20 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKiKhamBenh.UseVisualStyleBackColor = true;
             this.btnLapPhieuDangKiKhamBenh.Click += new System.EventHandler(this.btnLapPhieuDangKiKhamBenh_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel1.Location = new System.Drawing.Point(151, -8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(20, 572);
+            this.panel1.TabIndex = 6;
+            // 
             // frmKhamChuaBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 515);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlXemKhamChuaBenh);
             this.Controls.Add(this.pnlNutKhamChuaBenh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -133,5 +144,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Button btnLapPhieuKetQuaXetNghiem;
         private System.Windows.Forms.Button btnChanDoan;
         private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
+        private System.Windows.Forms.Panel panel1;
     }
 }

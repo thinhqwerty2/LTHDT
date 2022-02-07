@@ -374,6 +374,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -388,6 +389,38 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Image\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\HidePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\ShowPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\clinic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\payment-method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\manager.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
