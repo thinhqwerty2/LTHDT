@@ -59,6 +59,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Name = "frmTimKiemBenhNhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmTimKiemBenhNhan";
             this.Load += new System.EventHandler(this.frmTimKiemBenhNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

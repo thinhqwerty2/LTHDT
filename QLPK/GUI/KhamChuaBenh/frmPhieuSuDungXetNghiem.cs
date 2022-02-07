@@ -56,19 +56,10 @@ namespace QLPK.GUI.KhamBenh
 
         private void button3_Click(object sender, EventArgs e)
         {
-            for (int i=0; i<dgvDichVu.Rows.Count; i++)
+            foreach (DataGridViewRow item in dgvDichVu.SelectedRows)
             {
-                if (dgvDichVu.Rows[i].Selected==true)
-                {
-                    DataGridViewRow row = (DataGridViewRow)dgvDichVu.Rows[i].Clone();
-                    row.Cells[0].Value = dgvDichVu.Rows[i].Cells[0].Value;
-                    row.Cells[1].Value = dgvDichVu.Rows[i].Cells[1].Value;
-                    row.Cells[2].Value = dgvDichVu.Rows[i].Cells[2].Value;
-                    row.Cells[3].Value = dgvDichVu.Rows[i].Cells[3].Value;
-                    row.Cells[4].Value = dgvDichVu.Rows[i].Cells[4].Value;
-                    row.Cells[5].Value = dgvDichVu.Rows[i].Cells[5].Value;
-                    dgvDichVuDuocChon.Rows.Add(row);
-                }
+
+                dgvDichVuDuocChon.Rows.Add(item);
             }
         }
         private void dgvDichVu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -106,13 +97,6 @@ namespace QLPK.GUI.KhamBenh
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow item in dgvDichVu.SelectedRows)
-            {
 
-                dgvDichVuDuocChon.Rows.Add(item);
-            }
-        }
     }
 }

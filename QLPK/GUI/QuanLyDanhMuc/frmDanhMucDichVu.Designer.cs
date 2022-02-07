@@ -60,6 +60,7 @@
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(76, 20);
             this.txtGhiChu.TabIndex = 71;
+            this.txtGhiChu.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // txtTenDichVu
             // 
@@ -68,6 +69,7 @@
             this.txtTenDichVu.Name = "txtTenDichVu";
             this.txtTenDichVu.Size = new System.Drawing.Size(76, 20);
             this.txtTenDichVu.TabIndex = 70;
+            this.txtTenDichVu.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // lblGhiChu
             // 
@@ -150,6 +152,7 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(76, 20);
             this.txtDonGia.TabIndex = 58;
+            this.txtDonGia.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // txtDonViTinh
             // 
@@ -158,6 +161,7 @@
             this.txtDonViTinh.Name = "txtDonViTinh";
             this.txtDonViTinh.Size = new System.Drawing.Size(76, 20);
             this.txtDonViTinh.TabIndex = 57;
+            this.txtDonViTinh.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // txtMaDichVu
             // 
@@ -166,6 +170,7 @@
             this.txtMaDichVu.Name = "txtMaDichVu";
             this.txtMaDichVu.Size = new System.Drawing.Size(76, 20);
             this.txtMaDichVu.TabIndex = 56;
+            this.txtMaDichVu.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // lblDonViTinh
             // 
@@ -239,6 +244,7 @@
             this.txtSoLanSuDung.Name = "txtSoLanSuDung";
             this.txtSoLanSuDung.Size = new System.Drawing.Size(76, 20);
             this.txtSoLanSuDung.TabIndex = 71;
+            this.txtSoLanSuDung.Validated += new System.EventHandler(this.txtGhiChu_Validated);
             // 
             // label2
             // 

@@ -26,9 +26,12 @@ namespace QLPK.GUI.KhamBenh
         {
             QuanLyDanhMuc.frmTimKiemBenhNhan fTimKiemBenhNhan = new QuanLyDanhMuc.frmTimKiemBenhNhan();
             fTimKiemBenhNhan.ShowDialog();
+            if(QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan!=null)
+            { 
             txtTimKiemBenhNhan.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.MaBenhNhan;
             txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
             txtTuoi.Text = (-QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.Year + DateTime.Now.Year).ToString();
+            }    
             data = BanKeDAO.Instance.layBanKeCuaBenhNhan(txtTimKiemBenhNhan.Text).Rows;
             foreach (DataRow row in data)
             {

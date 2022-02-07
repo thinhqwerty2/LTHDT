@@ -17,6 +17,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             InitializeComponent();
             txtSoLanSuDung.ReadOnly = true;
+            btnSua.Enabled = false;
         }
 
         bool batLoi()
@@ -79,7 +80,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 DichVuDAO.Instance.suaDichVu(txtTenDichVu.Text,txtDonGia.Text,txtDonViTinh.Text,txtGhiChu.Text,txtMaDichVu.Text);
             }
             hienThiDS();
-
+            btnSua.Enabled = false;
 
         }
 
