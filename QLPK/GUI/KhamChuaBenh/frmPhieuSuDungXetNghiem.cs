@@ -27,12 +27,14 @@ namespace QLPK.GUI.KhamBenh
             txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
             txtTuoi.Text = (-QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.Year + DateTime.Now.Year).ToString();
             data = BanKeDAO.Instance.layBanKeCuaBenhNhan(txtTimKiemBenhNhan.Text).Rows ;
+            cmbMaBanKe.Items.Clear();
             foreach (DataRow row in data)
             {
                 cmbMaBanKe.Items.Add(row["MaBanKe"]);
             }
             cmbMaBanKe.Text = cmbMaBanKe.Items[cmbMaBanKe.Items.Count - 1].ToString();
             lblNgayBanKe.Text = data[cmbMaBanKe.Items.Count-1]["NgayLapBanKe"].ToString();
+                
         }
 
 
@@ -103,5 +105,5 @@ namespace QLPK.GUI.KhamBenh
                 //MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+}
 }

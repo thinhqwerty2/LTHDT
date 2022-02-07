@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPK.DAO;
 
 namespace QLPK.GUI.KhamBenh
 {
@@ -19,6 +20,31 @@ namespace QLPK.GUI.KhamBenh
         {
             InitializeComponent();
             NguoiDung = nguoiDung;
+        }
+
+
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Xác nhận lưu?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
+            { 
+            HoSoBenhAnDAO.Instance.themHoSoBenhAn(txtTimKiemBenhNhan.Text, DateTime.Now, txtChanDoan.Text, txtMaBenh.Text,NguoiDung.TenDangNhap);
+            }    
+        }
+
+        private void txtTimKiemBenhNhan_Click(object sender, EventArgs e)
+        {
+            QuanLyDanhMuc.frmTimKiemBenhNhan fTimKiemBenhNhan = new QuanLyDanhMuc.frmTimKiemBenhNhan();
+            fTimKiemBenhNhan.StartPosition = FormStartPosition.CenterParent;
+            fTimKiemBenhNhan.ShowDialog();
+            if (QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan != null)
+            {
+
+                txtTimKiemBenhNhan.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.MaBenhNhan;
+                txtTuoi.Text = (-QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.Year + DateTime.Now.Year).ToString();
+                txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
+                txtNgayKham.Text = DateTime.Now.ToString();
+            }
         }
     }
 }

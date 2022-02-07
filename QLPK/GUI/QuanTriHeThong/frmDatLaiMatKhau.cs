@@ -37,7 +37,7 @@ namespace QLPK.GUI.QuanTriHeThong
             }
         }
 
-        private void cmbTenDangNhap_TextChanged(object sender, EventArgs e)
+        private void cmbTenDangNhap_Validated(object sender, EventArgs e)
         {
             if (cmbTenDangNhap.Items.Contains(cmbTenDangNhap.Text))
             {

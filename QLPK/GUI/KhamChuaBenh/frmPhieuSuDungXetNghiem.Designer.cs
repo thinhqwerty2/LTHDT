@@ -52,7 +52,7 @@ namespace QLPK.GUI.KhamBenh
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 44);
+            this.label1.Location = new System.Drawing.Point(152, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 48;
@@ -60,7 +60,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(463, 44);
+            this.txtHoTen.Location = new System.Drawing.Point(559, 65);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(100, 20);
@@ -69,7 +69,7 @@ namespace QLPK.GUI.KhamBenh
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(372, 47);
+            this.label3.Location = new System.Drawing.Point(468, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 51;
@@ -78,7 +78,7 @@ namespace QLPK.GUI.KhamBenh
             // dgvDichVu
             // 
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(42, 203);
+            this.dgvDichVu.Location = new System.Drawing.Point(138, 224);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.Size = new System.Drawing.Size(265, 181);
             this.dgvDichVu.TabIndex = 52;
@@ -86,7 +86,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(346, 251);
+            this.button3.Location = new System.Drawing.Point(442, 272);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 53;
@@ -96,7 +96,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(346, 309);
+            this.button4.Location = new System.Drawing.Point(442, 330);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 53;
@@ -106,7 +106,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtTuoi
             // 
-            this.txtTuoi.Location = new System.Drawing.Point(463, 83);
+            this.txtTuoi.Location = new System.Drawing.Point(559, 104);
             this.txtTuoi.Name = "txtTuoi";
             this.txtTuoi.ReadOnly = true;
             this.txtTuoi.Size = new System.Drawing.Size(100, 20);
@@ -115,7 +115,7 @@ namespace QLPK.GUI.KhamBenh
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(372, 86);
+            this.label4.Location = new System.Drawing.Point(468, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 51;
@@ -123,7 +123,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(224, 403);
+            this.button5.Location = new System.Drawing.Point(341, 443);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(176, 23);
             this.button5.TabIndex = 53;
@@ -132,7 +132,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(488, 403);
+            this.button6.Location = new System.Drawing.Point(571, 443);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 53;
@@ -142,7 +142,7 @@ namespace QLPK.GUI.KhamBenh
             // dgvDichVuDuocChon
             // 
             this.dgvDichVuDuocChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVuDuocChon.Location = new System.Drawing.Point(463, 203);
+            this.dgvDichVuDuocChon.Location = new System.Drawing.Point(559, 224);
             this.dgvDichVuDuocChon.Name = "dgvDichVuDuocChon";
             this.dgvDichVuDuocChon.Size = new System.Drawing.Size(291, 174);
             this.dgvDichVuDuocChon.TabIndex = 54;
@@ -150,7 +150,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtTimKiemBenhNhan
             // 
-            this.txtTimKiemBenhNhan.Location = new System.Drawing.Point(147, 41);
+            this.txtTimKiemBenhNhan.Location = new System.Drawing.Point(243, 62);
             this.txtTimKiemBenhNhan.Name = "txtTimKiemBenhNhan";
             this.txtTimKiemBenhNhan.Size = new System.Drawing.Size(160, 20);
             this.txtTimKiemBenhNhan.TabIndex = 55;
@@ -159,7 +159,7 @@ namespace QLPK.GUI.KhamBenh
             // cmbMaBanKe
             // 
             this.cmbMaBanKe.FormattingEnabled = true;
-            this.cmbMaBanKe.Location = new System.Drawing.Point(147, 86);
+            this.cmbMaBanKe.Location = new System.Drawing.Point(243, 107);
             this.cmbMaBanKe.Name = "cmbMaBanKe";
             this.cmbMaBanKe.Size = new System.Drawing.Size(121, 21);
             this.cmbMaBanKe.TabIndex = 56;
@@ -168,7 +168,7 @@ namespace QLPK.GUI.KhamBenh
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 93);
+            this.label2.Location = new System.Drawing.Point(155, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 57;
@@ -177,7 +177,7 @@ namespace QLPK.GUI.KhamBenh
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 123);
+            this.label5.Location = new System.Drawing.Point(152, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 13);
             this.label5.TabIndex = 58;
@@ -186,7 +186,7 @@ namespace QLPK.GUI.KhamBenh
             // lblNgayBanKe
             // 
             this.lblNgayBanKe.AutoSize = true;
-            this.lblNgayBanKe.Location = new System.Drawing.Point(183, 123);
+            this.lblNgayBanKe.Location = new System.Drawing.Point(279, 144);
             this.lblNgayBanKe.Name = "lblNgayBanKe";
             this.lblNgayBanKe.Size = new System.Drawing.Size(48, 13);
             this.lblNgayBanKe.TabIndex = 59;

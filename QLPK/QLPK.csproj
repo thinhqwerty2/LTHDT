@@ -56,11 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\BacSiDAO.cs" />
+    <Compile Include="DAO\LoaiBenhDAO.cs" />
     <Compile Include="DAO\BanKeDAO.cs" />
     <Compile Include="DAO\BenhNhanDAO.cs" />
     <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\HoSoBenhAnDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
@@ -145,6 +147,12 @@
     </Compile>
     <Compile Include="GUI\KhamChuaBenh\frmPhieuSuDungXetNghiem.Designer.cs">
       <DependentUpon>frmPhieuSuDungXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucBenh.Designer.cs">
+      <DependentUpon>frmDanhMucBenh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.cs">
       <SubType>Form</SubType>
@@ -282,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamChuaBenh\frmPhieuSuDungXetNghiem.resx">
       <DependentUpon>frmPhieuSuDungXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucBenh.resx">
+      <DependentUpon>frmDanhMucBenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyDanhMuc\frmDanhMucDichVu.resx">
       <DependentUpon>frmDanhMucDichVu.cs</DependentUpon>
