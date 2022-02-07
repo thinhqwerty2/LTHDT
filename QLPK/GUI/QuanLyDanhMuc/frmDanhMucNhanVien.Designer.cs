@@ -221,6 +221,7 @@
             this.dgvDanhMucNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhMucNhanVien.Location = new System.Drawing.Point(94, 316);
             this.dgvDanhMucNhanVien.Name = "dgvDanhMucNhanVien";
+            this.dgvDanhMucNhanVien.ReadOnly = true;
             this.dgvDanhMucNhanVien.Size = new System.Drawing.Size(741, 150);
             this.dgvDanhMucNhanVien.TabIndex = 50;
             this.dgvDanhMucNhanVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhMucNhanVien_CellMouseClick);

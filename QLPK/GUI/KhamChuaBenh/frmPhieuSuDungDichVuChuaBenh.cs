@@ -20,5 +20,10 @@ namespace QLPK.GUI.KhamBenh
             InitializeComponent();
             NguoiDung = nguoiDung;
         }
+
+        private void txtTimKiemBenhNhan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

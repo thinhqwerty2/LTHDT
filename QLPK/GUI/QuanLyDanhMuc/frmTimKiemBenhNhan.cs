@@ -23,7 +23,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             DataGridView gridView = (DataGridView)sender;
             if (e.RowIndex != gridView.RowCount - 1)
             {
-            benhNhan = new BenhNhanDTO( ((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
+            benhNhan = new BenhNhanDTO(((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
             this.Close();
             }
         }

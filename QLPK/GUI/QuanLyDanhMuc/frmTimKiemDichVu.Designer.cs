@@ -1,7 +1,7 @@
 ﻿
 namespace QLPK.GUI.QuanLyDanhMuc
 {
-    partial class frmTimKiemBenhNhan
+    partial class frmTimKiemDichVu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(27, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(911, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -48,20 +40,26 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.dataGridView1.Location = new System.Drawing.Point(27, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(911, 406);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // frmTimKiemBenhNhan
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(27, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(911, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // frmTimKiemDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 469);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
-            this.Name = "frmTimKiemBenhNhan";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Tìm kiếm bệnh nhân";
-            this.Load += new System.EventHandler(this.frmTimKiemBenhNhan_Load);
+            this.Name = "frmTimKiemDichVu";
+            this.Text = "Tìm kiếm dịch vụ";
+            this.Load += new System.EventHandler(this.frmTimKiemDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -70,7 +68,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         #endregion
 
-        public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

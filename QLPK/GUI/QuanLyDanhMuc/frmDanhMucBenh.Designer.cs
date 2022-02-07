@@ -34,19 +34,17 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnNhapLai = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chkHienThiTatCa = new System.Windows.Forms.CheckBox();
-            this.txtTimKiemBacSi = new System.Windows.Forms.TextBox();
+            this.txtTimKiemLoaiBenh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvDanhMucBacSi = new System.Windows.Forms.DataGridView();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtMaBacSi = new System.Windows.Forms.TextBox();
+            this.dgvDanhMucLoaiBenh = new System.Windows.Forms.DataGridView();
+            this.txtMoTaBenh = new System.Windows.Forms.TextBox();
+            this.txtLoaiBenh = new System.Windows.Forms.TextBox();
+            this.txtMaBenh = new System.Windows.Forms.TextBox();
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblMaBacSi = new System.Windows.Forms.Label();
             this.pnlDanhMucBacSi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBacSi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucLoaiBenh)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDanhMucBacSi
@@ -80,6 +78,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnNhapLai.TabIndex = 40;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnSua
             // 
@@ -90,6 +89,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -100,31 +100,15 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnThem.TabIndex = 44;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // label2
+            // txtTimKiemLoaiBenh
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(498, 240);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "Hiển thị tất cả";
-            // 
-            // chkHienThiTatCa
-            // 
-            this.chkHienThiTatCa.AutoSize = true;
-            this.chkHienThiTatCa.Location = new System.Drawing.Point(583, 240);
-            this.chkHienThiTatCa.Name = "chkHienThiTatCa";
-            this.chkHienThiTatCa.Size = new System.Drawing.Size(15, 14);
-            this.chkHienThiTatCa.TabIndex = 98;
-            this.chkHienThiTatCa.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiemBacSi
-            // 
-            this.txtTimKiemBacSi.Location = new System.Drawing.Point(192, 237);
-            this.txtTimKiemBacSi.Name = "txtTimKiemBacSi";
-            this.txtTimKiemBacSi.Size = new System.Drawing.Size(100, 20);
-            this.txtTimKiemBacSi.TabIndex = 97;
+            this.txtTimKiemLoaiBenh.Location = new System.Drawing.Point(192, 237);
+            this.txtTimKiemLoaiBenh.Name = "txtTimKiemLoaiBenh";
+            this.txtTimKiemLoaiBenh.Size = new System.Drawing.Size(100, 20);
+            this.txtTimKiemLoaiBenh.TabIndex = 97;
+            this.txtTimKiemLoaiBenh.TextChanged += new System.EventHandler(this.txtTimKiemLoaiBenh_TextChanged);
             // 
             // label1
             // 
@@ -135,39 +119,42 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.label1.TabIndex = 96;
             this.label1.Text = "Tìm kiếm";
             // 
-            // dgvDanhMucBacSi
+            // dgvDanhMucLoaiBenh
             // 
-            this.dgvDanhMucBacSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMucBacSi.Location = new System.Drawing.Point(120, 278);
-            this.dgvDanhMucBacSi.Name = "dgvDanhMucBacSi";
-            this.dgvDanhMucBacSi.ReadOnly = true;
-            this.dgvDanhMucBacSi.RowHeadersWidth = 51;
-            this.dgvDanhMucBacSi.Size = new System.Drawing.Size(565, 145);
-            this.dgvDanhMucBacSi.TabIndex = 94;
+            this.dgvDanhMucLoaiBenh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhMucLoaiBenh.Location = new System.Drawing.Point(120, 278);
+            this.dgvDanhMucLoaiBenh.Name = "dgvDanhMucLoaiBenh";
+            this.dgvDanhMucLoaiBenh.ReadOnly = true;
+            this.dgvDanhMucLoaiBenh.RowHeadersWidth = 51;
+            this.dgvDanhMucLoaiBenh.Size = new System.Drawing.Size(565, 145);
+            this.dgvDanhMucLoaiBenh.TabIndex = 94;
             // 
-            // txtHoTen
+            // txtMoTaBenh
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(232, 99);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(76, 20);
-            this.txtHoTen.TabIndex = 89;
+            this.txtMoTaBenh.Location = new System.Drawing.Point(232, 99);
+            this.txtMoTaBenh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTaBenh.Name = "txtMoTaBenh";
+            this.txtMoTaBenh.Size = new System.Drawing.Size(76, 20);
+            this.txtMoTaBenh.TabIndex = 89;
+            this.txtMoTaBenh.TextChanged += new System.EventHandler(this.txtDiaChi_Validated);
             // 
-            // txtSDT
+            // txtLoaiBenh
             // 
-            this.txtSDT.Location = new System.Drawing.Point(493, 30);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(76, 20);
-            this.txtSDT.TabIndex = 88;
+            this.txtLoaiBenh.Location = new System.Drawing.Point(493, 30);
+            this.txtLoaiBenh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLoaiBenh.Name = "txtLoaiBenh";
+            this.txtLoaiBenh.Size = new System.Drawing.Size(76, 20);
+            this.txtLoaiBenh.TabIndex = 88;
+            this.txtLoaiBenh.TextChanged += new System.EventHandler(this.txtDiaChi_Validated);
             // 
-            // txtMaBacSi
+            // txtMaBenh
             // 
-            this.txtMaBacSi.Location = new System.Drawing.Point(232, 27);
-            this.txtMaBacSi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaBacSi.Name = "txtMaBacSi";
-            this.txtMaBacSi.Size = new System.Drawing.Size(76, 20);
-            this.txtMaBacSi.TabIndex = 87;
+            this.txtMaBenh.Location = new System.Drawing.Point(232, 27);
+            this.txtMaBenh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaBenh.Name = "txtMaBenh";
+            this.txtMaBenh.Size = new System.Drawing.Size(76, 20);
+            this.txtMaBenh.TabIndex = 87;
+            this.txtMaBenh.TextChanged += new System.EventHandler(this.txtDiaChi_Validated);
             // 
             // lblSDT
             // 
@@ -205,22 +192,21 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 508);
             this.Controls.Add(this.pnlDanhMucBacSi);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.chkHienThiTatCa);
-            this.Controls.Add(this.txtTimKiemBacSi);
+            this.Controls.Add(this.txtTimKiemLoaiBenh);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvDanhMucBacSi);
-            this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtMaBacSi);
+            this.Controls.Add(this.dgvDanhMucLoaiBenh);
+            this.Controls.Add(this.txtMoTaBenh);
+            this.Controls.Add(this.txtLoaiBenh);
+            this.Controls.Add(this.txtMaBenh);
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.lblMaBacSi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDanhMucBenh";
             this.Text = "frmDanhMucBenh";
+            this.Load += new System.EventHandler(this.frmDanhMucBenh_Load);
             this.pnlDanhMucBacSi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBacSi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucLoaiBenh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,14 +218,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private System.Windows.Forms.Button btnNhapLai;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox chkHienThiTatCa;
-        private System.Windows.Forms.TextBox txtTimKiemBacSi;
+        private System.Windows.Forms.TextBox txtTimKiemLoaiBenh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvDanhMucBacSi;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtMaBacSi;
+        private System.Windows.Forms.DataGridView dgvDanhMucLoaiBenh;
+        private System.Windows.Forms.TextBox txtMoTaBenh;
+        private System.Windows.Forms.TextBox txtLoaiBenh;
+        private System.Windows.Forms.TextBox txtMaBenh;
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblMaBacSi;

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace QLPK.DAO
 {
@@ -22,28 +17,37 @@ namespace QLPK.DAO
         public LoaiBenhDAO()
         {
         }
-        public bool themBenh(string maBenh,string loaiBenh,string moTa)
+        public bool themLoaiBenh(string maBenh, string loaiBenh, string moTa)
         {
             string query = "insert into Benh (MaBenh,LoaiBenh,MoTaBenh) values ( @MaBenh , @LoaiBenh , @MoTa )";
-            object[] parameter = { maBenh,loaiBenh,moTa};
+            object[] parameter = { maBenh, loaiBenh, moTa };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        public DataTable hienThiDSBenh()
+        public DataTable hienThiDSLoaiBenh()
         {
             string query = "select MaBenh,LoaiBenh,MoTaBenh from Benh";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        
-        public bool suaBenh(string loaiBenh, string moTa,string maBenh)
+
+        public bool suaLoaiBenh(string loaiBenh, string moTa, string maBenh)
         {
             string query = "update Benh set LoaiBenh= @LoaiBenh ,MoTa= @MoTa where MaBenh= @MaBenh";
-            object[] parameter = { loaiBenh,moTa, maBenh };
+            object[] parameter = { loaiBenh, moTa, maBenh };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
+        /*
         public bool xoaBenh(string maBenh)
         {
-            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai='Nghỉ việc' where TenDangNhap= @MaBenh", new object[] { maBenh }) > 0;
+            return DataProvider.Instance.ExecuteNonQuery("update Benh set TrangThai='Nghỉ việc' where TenDangNhap= @MaBenh", new object[] { maBenh }) > 0;
         }
+        */
+        public DataTable timKiemLoaiBenh(string key)
+        {
+            key = $"%{key}%";
+            string query = "select * from Benh where  MaBenh like @key1 or LoaiBenh like @key2 or MoTaBenh like @key3 ";
 
+            object[] parameter = { key, key,key };
+            return DataProvider.Instance.ExecuteQuery(query, parameter);
+        }
     }
 }

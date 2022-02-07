@@ -105,7 +105,7 @@
             this.cmbTenDangNhap.Name = "cmbTenDangNhap";
             this.cmbTenDangNhap.Size = new System.Drawing.Size(140, 21);
             this.cmbTenDangNhap.TabIndex = 28;
-            this.cmbTenDangNhap.TextChanged += new System.EventHandler(this.cmbTenDangNhap_TextChanged);
+            this.cmbTenDangNhap.Validated += new System.EventHandler(this.cmbTenDangNhap_Validated);
             // 
             // frmDatLaiMatKhau
             // 
@@ -119,7 +119,7 @@
             this.Controls.Add(this.lblTenDangNhap);
             this.Controls.Add(this.lblDatLaiMatKhau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDatLaiMatKhau";
             this.Text = "frmDatLaiMatKhau";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

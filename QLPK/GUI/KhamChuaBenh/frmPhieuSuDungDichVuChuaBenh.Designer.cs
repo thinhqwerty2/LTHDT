@@ -40,8 +40,8 @@ namespace QLPK.GUI.KhamBenh
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,29 +141,30 @@ namespace QLPK.GUI.KhamBenh
             this.label2.TabIndex = 54;
             this.label2.Text = "Mã dịch vụ";
             // 
-            // button1
+            // txtTimKiemBenhNhan
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(140, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 23);
-            this.button1.TabIndex = 57;
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtTimKiemBenhNhan.Location = new System.Drawing.Point(154, 39);
+            this.txtTimKiemBenhNhan.Name = "txtTimKiemBenhNhan";
+            this.txtTimKiemBenhNhan.Size = new System.Drawing.Size(113, 20);
+            this.txtTimKiemBenhNhan.TabIndex = 68;
+            this.txtTimKiemBenhNhan.Click += new System.EventHandler(this.txtTimKiemBenhNhan_Click);
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Mã bệnh nhân";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Mã bệnh nhân";
             // 
             // frmPhieuSuDungDichVuChuaBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 508);
+            this.Controls.Add(this.txtTimKiemBenhNhan);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -175,8 +176,6 @@ namespace QLPK.GUI.KhamBenh
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhieuSuDungDichVuChuaBenh";
             this.Text = "frmPhieuSuDungDichVuChuaBenh";
@@ -199,7 +198,7 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -169,6 +169,7 @@ namespace QLPK.GUI.KhamBenh
             this.txtDichVu.Name = "txtDichVu";
             this.txtDichVu.Size = new System.Drawing.Size(160, 20);
             this.txtDichVu.TabIndex = 69;
+            this.txtDichVu.Click += new System.EventHandler(this.txtDichVu_Click);
             // 
             // label6
             // 

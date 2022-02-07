@@ -32,7 +32,6 @@ namespace QLPK.GUI.KhamBenh
             fTimKiemBenhNhan.ShowDialog();
             if(QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan != null)
             {
-
             txtTimKiemBenhNhan.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.MaBenhNhan;
             txtDiaChi.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.DiaChi;
             txtSDT.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.SDT;

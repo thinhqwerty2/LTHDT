@@ -46,5 +46,18 @@ namespace QLPK.GUI.KhamBenh
                 txtNgayKham.Text = DateTime.Now.ToString();
             }
         }
+
+        private void txtMaBenh_Click(object sender, EventArgs e)
+        {
+            QuanLyDanhMuc.frmTimKiemLoaiBenh fTimKiemLoaiBenh = new QuanLyDanhMuc.frmTimKiemLoaiBenh();
+            fTimKiemLoaiBenh.StartPosition = FormStartPosition.CenterParent;
+            fTimKiemLoaiBenh.ShowDialog();
+            if (QuanLyDanhMuc.frmTimKiemLoaiBenh.loaiBenh != null)
+            {
+                txtMaBenh.Text = QuanLyDanhMuc.frmTimKiemLoaiBenh.loaiBenh.MaBenh;
+                txtLoaiBenh.Text = QuanLyDanhMuc.frmTimKiemLoaiBenh.loaiBenh.LoaiBenh;
+                txtNgayKham.Text = DateTime.Now.ToString();
+            }
+        }
     }
 }

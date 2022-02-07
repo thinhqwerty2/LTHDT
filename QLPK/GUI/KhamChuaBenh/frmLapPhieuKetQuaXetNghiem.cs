@@ -33,6 +33,7 @@ namespace QLPK.GUI.KhamBenh
             txtTuoi.Text = (-QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.Year + DateTime.Now.Year).ToString();
             }    
             data = BanKeDAO.Instance.layBanKeCuaBenhNhan(txtTimKiemBenhNhan.Text).Rows;
+            cmbMaBanKe.Items.Clear();
             foreach (DataRow row in data)
             {
                 cmbMaBanKe.Items.Add(row["MaBanKe"]);
@@ -43,6 +44,17 @@ namespace QLPK.GUI.KhamBenh
         private void cmbMaBanKe_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblNgayBanKe.Text = data[cmbMaBanKe.SelectedIndex]["NgayLapBanKe"].ToString();
+        }
+
+        private void txtDichVu_Click(object sender, EventArgs e)
+        {
+            QuanLyDanhMuc.frmTimKiemDichVu fTimKiemDichVu = new QuanLyDanhMuc.frmTimKiemDichVu();
+            fTimKiemDichVu.ShowDialog();
+            if (QuanLyDanhMuc.frmTimKiemDichVu.dichVu != null)
+            {
+                txtDichVu.Text = QuanLyDanhMuc.frmTimKiemDichVu.dichVu.TenDichVu;
+                
+            }
         }
     }
 }

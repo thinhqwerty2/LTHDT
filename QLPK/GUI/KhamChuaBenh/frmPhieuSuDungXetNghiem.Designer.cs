@@ -45,6 +45,8 @@ namespace QLPK.GUI.KhamBenh
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblNgayBanKe = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDichVu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDuocChon)).BeginInit();
             this.SuspendLayout();
@@ -192,11 +194,30 @@ namespace QLPK.GUI.KhamBenh
             this.lblNgayBanKe.TabIndex = 59;
             this.lblNgayBanKe.Text = "???Date";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(138, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "Dịch vụ";
+            // 
+            // txtDichVu
+            // 
+            this.txtDichVu.Location = new System.Drawing.Point(227, 198);
+            this.txtDichVu.Name = "txtDichVu";
+            this.txtDichVu.Size = new System.Drawing.Size(160, 20);
+            this.txtDichVu.TabIndex = 71;
+            this.txtDichVu.TextChanged += new System.EventHandler(this.txtDichVu_TextChanged);
+            // 
             // frmPhieuSuDungXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 508);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtDichVu);
             this.Controls.Add(this.lblNgayBanKe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -241,5 +262,7 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNgayBanKe;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtDichVu;
     }
 }

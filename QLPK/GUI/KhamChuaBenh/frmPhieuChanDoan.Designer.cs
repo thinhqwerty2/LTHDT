@@ -195,7 +195,8 @@ namespace QLPK.GUI.KhamBenh
             this.txtMaBenh.Name = "txtMaBenh";
             this.txtMaBenh.Size = new System.Drawing.Size(165, 20);
             this.txtMaBenh.TabIndex = 78;
-             // 
+            this.txtMaBenh.Click += new System.EventHandler(this.txtMaBenh_Click);
+            // 
             // txtLoaiBenh
             // 
             this.txtLoaiBenh.Location = new System.Drawing.Point(670, 109);
