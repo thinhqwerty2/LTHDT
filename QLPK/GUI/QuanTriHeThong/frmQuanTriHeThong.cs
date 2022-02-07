@@ -66,5 +66,14 @@ namespace QLPK.GUI.QuanTriHeThong
             this.pnlXemQuanTriHeThong.Controls.Add(fThongTinTaiKhoan);
             fThongTinTaiKhoan.Show();
         }
+
+        private void btnDatLaiMatKhau_Click(object sender, EventArgs e)
+        {
+            this.pnlXemQuanTriHeThong.Controls.Clear();
+            frmDatLaiMatKhau fDatLaiMatKhau = new frmDatLaiMatKhau();
+            fDatLaiMatKhau.TopLevel = false;
+            this.pnlXemQuanTriHeThong.Controls.Add(fDatLaiMatKhau);
+            fDatLaiMatKhau.Show();
+        }
     }
 }

@@ -20,12 +20,12 @@ namespace QLPK.DAO
             }
             private set { instance = value; }
         }
-        public BacSiNhanVienDTO layThongTinBacSiNhanVien(string tenDangNhap,int quyenDangNhap)
+        public BacSiNhanVienDTO layThongTinBacSiNhanVien(string tenDangNhap)
         {
             string query;
-            switch (quyenDangNhap)
+            switch (tenDangNhap.Contains("BS"))
             {
-                case 1:
+                case true:
                     query = "select MaBacSi,HoTen,GioiTinh,SDT,ChucVu,DiaChi from BacSi where MaBacSi = @TenDangNhap ";
                     break;
                 default:
@@ -90,16 +90,14 @@ namespace QLPK.DAO
             string query1 = "insert into NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT) values ( @TenDangNhap ,'admin',N'Nam','admin',N'Bách khoa','0000000000')";
             object[] parameter1 = { tenDangNhap, matKhau, quyenTruyCap, trangThai };
             object[] parameter2 = { tenDangNhap};
-            return DataProvider.Instance.ExecuteNonQuery(query, parameter1) > 0;
+            return (DataProvider.Instance.ExecuteNonQuery(query, parameter1) > 0) && (DataProvider.Instance.ExecuteNonQuery(query1,parameter2)>0);
         }
-        /*
-        public NguoiDungDTO layThongTinNguoiDung(string tenDangNhap)
+        public bool datLaiMatKhau(string tenDangNhap)
         {
-            string query = "(select TenDangNhap,HoTen,QuyenTruyCap,ChucVu from TaiKhoan,Bacsi where TaiKhoan.TenDangNhap=BacSi.MaBacSi and  MaBacSi = @TenDangNhap1 )union(select TenDangNhap,HoTen,QuyenTruyCap,ChucVu from TaiKhoan,NhanVien where TaiKhoan.TenDangNhap=NhanVien.MaNhanVien and  MaNhanVien= @TenDangNhap2 )";
-            object[] parameter = { tenDangNhap, tenDangNhap };
-            return new NguoiDungDTO(DataProvider.Instance.ExecuteQuery(query, parameter).Rows[0]);
+            string query = "update TaiKhoan set MatKhau = 1 where TenDangNhap= @TenDangNhap ";
+            object[] parameter2 = { tenDangNhap };
+            return DataProvider.Instance.ExecuteNonQuery(query, parameter2) > 0;
         }
-        */
     }
 }
 

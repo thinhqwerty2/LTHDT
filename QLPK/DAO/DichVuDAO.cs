@@ -26,6 +26,11 @@ namespace QLPK.DAO
         {
             return DataProvider.Instance.ExecuteQuery("select * from DichVu where DonGia<>-1");
         }
+        public DataTable hienThiDSDichVuXetNghiem()
+        {
+            string query = "select * from DichVu";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable hienThiDSTatCaDichVu()
         {
             string query = "select * from DichVU";
@@ -34,7 +39,7 @@ namespace QLPK.DAO
 
         internal bool themDichVu(string maDichVu, string tenDichVu, string donGia, string donViTinh, string ghiChu)
         {
-            string query = "insert into DichVu (MaDichVu,TenDichVu,DonGia,DonViTinh,GhiChu,SoLanSuDung) values ( @MaDichVu , @TenDichVu , @DonGia , @DonViTinh , @GhiChu , 0 ";
+            string query = "insert into DichVu (MaDichVu,TenDichVu,DonGia,DonViTinh,GhiChu,SoLanSuDung) values ( @MaDichVu , @TenDichVu , @DonGia , @DonViTinh , @GhiChu , 0)";
             object[] parameter = { maDichVu,tenDichVu,donGia,donViTinh,ghiChu };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter)>0;
         }

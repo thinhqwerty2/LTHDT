@@ -41,9 +41,6 @@ namespace QLPK.GUI.QuanTriHeThong
         {
             if (batLoi() && txtMatKhau.Text==txtNhapLaiMatKhau.Text)
             {
-                string query = "insert into TaiKhoan (TenDangNhap,MatKhau,QuyenTruyCap,TrangThai) values ( @tendangnhap , @matkhau , 0,N'Đang làm việc')";
-                string query1 = "insert into NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT) values ( @tendangnhap ,'admin',N'Nam','admin','0000000000')";
-                object[] parameter = { txtTenDangNhap.Text,txtMatKhau.Text };
                 if (!TaiKhoanDAO.Instance.kiemTraTaiKhoan(txtTenDangNhap.Text)) 
                 {
                     TaiKhoanDAO.Instance.themTaiKhoanAdmin(txtTenDangNhap.Text, txtMatKhau.Text, 0, "Đang làm việc");

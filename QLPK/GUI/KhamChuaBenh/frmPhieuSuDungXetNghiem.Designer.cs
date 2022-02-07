@@ -82,6 +82,7 @@ namespace QLPK.GUI.KhamBenh
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.Size = new System.Drawing.Size(265, 181);
             this.dgvDichVu.TabIndex = 52;
+            this.dgvDichVu.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDichVu_CellMouseClick);
             // 
             // button3
             // 
@@ -91,6 +92,7 @@ namespace QLPK.GUI.KhamBenh
             this.button3.TabIndex = 53;
             this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -100,6 +102,7 @@ namespace QLPK.GUI.KhamBenh
             this.button4.TabIndex = 53;
             this.button4.Text = "<";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtTuoi
             // 
@@ -143,6 +146,7 @@ namespace QLPK.GUI.KhamBenh
             this.dgvDichVuDuocChon.Name = "dgvDichVuDuocChon";
             this.dgvDichVuDuocChon.Size = new System.Drawing.Size(291, 174);
             this.dgvDichVuDuocChon.TabIndex = 54;
+            this.dgvDichVuDuocChon.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDichVuDuocChon_CellMouseClick);
             // 
             // txtTimKiemBenhNhan
             // 

@@ -45,7 +45,7 @@
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Location = new System.Drawing.Point(411, 331);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(82, 33);
             this.btnDangKy.TabIndex = 15;
@@ -56,7 +56,7 @@
             // txtNhapLaiMatKhau
             // 
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(441, 265);
-            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(163, 20);
             this.txtNhapLaiMatKhau.TabIndex = 11;
@@ -77,7 +77,7 @@
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(441, 217);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(163, 20);
             this.txtMatKhau.TabIndex = 12;
@@ -97,7 +97,7 @@
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(441, 172);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(163, 20);
             this.txtTenDangNhap.TabIndex = 14;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.lblTenDangNhap);
             this.Controls.Add(this.lblThayDoiMatKhau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDangKyTaiKhoan";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -18,7 +18,7 @@ namespace QLPK.GUI.QuanTriHeThong
         public frmThongTinTaiKhoan(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
-            NguoiDung=TaiKhoanDAO.Instance.layThongTinBacSiNhanVien(nguoiDung.TenDangNhap, nguoiDung.QuyenTruyCap);
+            NguoiDung=TaiKhoanDAO.Instance.layThongTinBacSiNhanVien(nguoiDung.TenDangNhap);
             btnLuuThayDoi.Enabled = false;
         }
 

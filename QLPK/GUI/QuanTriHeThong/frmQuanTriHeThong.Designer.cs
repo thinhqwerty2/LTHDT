@@ -32,6 +32,7 @@ namespace QLPK.GUI.QuanTriHeThong
             this.pnlNutQuanTriHeThong = new System.Windows.Forms.Panel();
             this.btnPhanQuyen = new System.Windows.Forms.Button();
             this.btnTaoTaiKhoan = new System.Windows.Forms.Button();
+            this.btnDatLaiMatKhau = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnThongTinTaiKhoan = new System.Windows.Forms.Button();
             this.pnlXemQuanTriHeThong = new System.Windows.Forms.Panel();
@@ -42,6 +43,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnPhanQuyen);
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnTaoTaiKhoan);
+            this.pnlNutQuanTriHeThong.Controls.Add(this.btnDatLaiMatKhau);
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnDoiMatKhau);
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.pnlNutQuanTriHeThong.Location = new System.Drawing.Point(2, 3);
@@ -69,9 +71,19 @@ namespace QLPK.GUI.QuanTriHeThong
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
             this.btnTaoTaiKhoan.Click += new System.EventHandler(this.btnTaoTaiKhoan_Click);
             // 
+            // btnDatLaiMatKhau
+            // 
+            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(10, 366);
+            this.btnDatLaiMatKhau.Name = "btnDatLaiMatKhau";
+            this.btnDatLaiMatKhau.Size = new System.Drawing.Size(147, 70);
+            this.btnDatLaiMatKhau.TabIndex = 1;
+            this.btnDatLaiMatKhau.Text = "Đặt lại mật khẩu";
+            this.btnDatLaiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDatLaiMatKhau.Click += new System.EventHandler(this.btnDatLaiMatKhau_Click);
+            // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(10, 109);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(10, 93);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(147, 70);
             this.btnDoiMatKhau.TabIndex = 1;
@@ -120,5 +132,6 @@ namespace QLPK.GUI.QuanTriHeThong
         private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Button btnThongTinTaiKhoan;
         private System.Windows.Forms.Panel pnlXemQuanTriHeThong;
+        private System.Windows.Forms.Button btnDatLaiMatKhau;
     }
 }
