@@ -35,11 +35,13 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.btnBacSi = new System.Windows.Forms.Button();
             this.btnBenhNhan = new System.Windows.Forms.Button();
             this.pnlXemQuanLyDanhMuc = new System.Windows.Forms.Panel();
+            this.btnBenh = new System.Windows.Forms.Button();
             this.pnlNutQuanLyDanhMuc.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlNutQuanLyDanhMuc
             // 
+            this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnBenh);
             this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnNhanVien);
             this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnDichVu);
             this.pnlNutQuanLyDanhMuc.Controls.Add(this.btnBacSi);
@@ -96,6 +98,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.pnlXemQuanLyDanhMuc.Size = new System.Drawing.Size(966, 508);
             this.pnlXemQuanLyDanhMuc.TabIndex = 1;
             // 
+            // btnBenh
+            // 
+            this.btnBenh.Location = new System.Drawing.Point(10, 298);
+            this.btnBenh.Name = "btnBenh";
+            this.btnBenh.Size = new System.Drawing.Size(133, 50);
+            this.btnBenh.TabIndex = 4;
+            this.btnBenh.Text = "Bệnh";
+            this.btnBenh.UseVisualStyleBackColor = true;
+            this.btnBenh.Click += new System.EventHandler(this.btnBenh_Click);
+            // 
             // frmQuanLyDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,5 +132,6 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private System.Windows.Forms.Button btnBacSi;
         private System.Windows.Forms.Button btnBenhNhan;
         private System.Windows.Forms.Panel pnlXemQuanLyDanhMuc;
+        private System.Windows.Forms.Button btnBenh;
     }
 }
