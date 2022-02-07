@@ -79,7 +79,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(200, 20);
             this.dtpDenNgay.TabIndex = 1;
-            this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged_1);
+            this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged);
             // 
             // label1
             // 

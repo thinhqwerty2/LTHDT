@@ -29,7 +29,7 @@ namespace QLPK.GUI.BaoCaoThongKe
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            ThongKeADO.Instance.
+
         }
     }
 }
