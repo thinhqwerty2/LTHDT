@@ -28,7 +28,17 @@ namespace QLPK.DAO
         }
         public DataTable hienThiDSTatCaDichVu()
         {
-            string query = "select * from DichVU";
+            string query = "select * from DichVu";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable hienThiDSDichVuXetNghiem()
+        {
+            string query = "select * from DichVu";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable hienThiDSDichVuChuaBenh()
+        {
+            string query = "select * from DichVu";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
