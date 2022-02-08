@@ -82,6 +82,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.btnThongKeLoaiBenhPhoBien.TabIndex = 4;
             this.btnThongKeLoaiBenhPhoBien.Text = "Thống kê theo loại bệnh";
             this.btnThongKeLoaiBenhPhoBien.UseVisualStyleBackColor = true;
+            this.btnThongKeLoaiBenhPhoBien.Visible = false;
             this.btnThongKeLoaiBenhPhoBien.Click += new System.EventHandler(this.btnThongKeLoaiBenhPhoBien_Click);
             // 
             // btnThongKeTheoBenhNhan
