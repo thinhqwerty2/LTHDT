@@ -58,10 +58,10 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(427, 26);
+            this.btnSua.Location = new System.Drawing.Point(290, 21);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(62, 28);
+            this.btnSua.Size = new System.Drawing.Size(96, 47);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -223,9 +223,9 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(79, 29);
+            this.btnThem.Location = new System.Drawing.Point(41, 19);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(96, 49);
             this.btnThem.TabIndex = 80;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -279,9 +279,9 @@
             // btnNhapLai
             // 
             this.btnNhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhapLai.Location = new System.Drawing.Point(242, 31);
+            this.btnNhapLai.Location = new System.Drawing.Point(535, 19);
             this.btnNhapLai.Name = "btnNhapLai";
-            this.btnNhapLai.Size = new System.Drawing.Size(75, 23);
+            this.btnNhapLai.Size = new System.Drawing.Size(96, 49);
             this.btnNhapLai.TabIndex = 80;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;

@@ -69,16 +69,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.label3.Location = new System.Drawing.Point(37, 83);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 79;
             this.label3.Text = "Trạng thái";
             // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(483, 26);
+            this.btnNhapLai.Location = new System.Drawing.Point(533, 12);
             this.btnNhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapLai.Name = "btnNhapLai";
-            this.btnNhapLai.Size = new System.Drawing.Size(80, 28);
+            this.btnNhapLai.Size = new System.Drawing.Size(113, 40);
             this.btnNhapLai.TabIndex = 40;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(285, 26);
+            this.btnXoa.Location = new System.Drawing.Point(214, 12);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(62, 28);
+            this.btnXoa.Size = new System.Drawing.Size(95, 40);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(386, 26);
+            this.btnSua.Location = new System.Drawing.Point(385, 12);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(62, 28);
+            this.btnSua.Size = new System.Drawing.Size(95, 40);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(177, 26);
+            this.btnThem.Location = new System.Drawing.Point(37, 12);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(62, 28);
+            this.btnThem.Size = new System.Drawing.Size(95, 40);
             this.btnThem.TabIndex = 44;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(586, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 77;
             this.label2.Text = "Hiển thị tất cả";
             // 
@@ -161,7 +161,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 74;
             this.label1.Text = "Từ khoá";
             // 
@@ -254,7 +254,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblGioiTinh.Location = new System.Drawing.Point(37, 117);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(57, 16);
+            this.lblGioiTinh.Size = new System.Drawing.Size(58, 16);
             this.lblGioiTinh.TabIndex = 62;
             this.lblGioiTinh.Text = "Giới tính:";
             // 
@@ -264,7 +264,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblSDT.Location = new System.Drawing.Point(355, 24);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(88, 16);
+            this.lblSDT.Size = new System.Drawing.Size(89, 16);
             this.lblSDT.TabIndex = 60;
             this.lblSDT.Text = "Số điện thoại:";
             // 
@@ -274,7 +274,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblHoTen.Location = new System.Drawing.Point(37, 54);
             this.lblHoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(49, 16);
+            this.lblHoTen.Size = new System.Drawing.Size(50, 16);
             this.lblHoTen.TabIndex = 64;
             this.lblHoTen.Text = "Họ tên:";
             // 
@@ -284,7 +284,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblMaBacSi.Location = new System.Drawing.Point(37, 24);
             this.lblMaBacSi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaBacSi.Name = "lblMaBacSi";
-            this.lblMaBacSi.Size = new System.Drawing.Size(70, 16);
+            this.lblMaBacSi.Size = new System.Drawing.Size(71, 16);
             this.lblMaBacSi.TabIndex = 59;
             this.lblMaBacSi.Text = "Mã bác sĩ:";
             // 
@@ -294,7 +294,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblChucVu.Location = new System.Drawing.Point(355, 54);
             this.lblChucVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(57, 16);
+            this.lblChucVu.Size = new System.Drawing.Size(58, 16);
             this.lblChucVu.TabIndex = 70;
             this.lblChucVu.Text = "Chức vụ:";
             // 
@@ -304,7 +304,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblDiaChi.Location = new System.Drawing.Point(355, 115);
             this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(50, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
             this.lblDiaChi.TabIndex = 63;
             this.lblDiaChi.Text = "Địa chỉ:";
             // 
@@ -314,7 +314,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.lblTrinhDo.Location = new System.Drawing.Point(355, 83);
             this.lblTrinhDo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTrinhDo.Name = "lblTrinhDo";
-            this.lblTrinhDo.Size = new System.Drawing.Size(59, 16);
+            this.lblTrinhDo.Size = new System.Drawing.Size(60, 16);
             this.lblTrinhDo.TabIndex = 61;
             this.lblTrinhDo.Text = "Trình độ:";
             // 

@@ -31,7 +31,6 @@
             this.txtChucVu = new System.Windows.Forms.TextBox();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.btnNhapLai = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -78,37 +77,27 @@
             this.lblChucVu.Location = new System.Drawing.Point(379, 60);
             this.lblChucVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(57, 16);
+            this.lblChucVu.Size = new System.Drawing.Size(58, 16);
             this.lblChucVu.TabIndex = 47;
             this.lblChucVu.Text = "Chức vụ:";
             // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(587, 12);
+            this.btnNhapLai.Location = new System.Drawing.Point(577, 2);
             this.btnNhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapLai.Name = "btnNhapLai";
-            this.btnNhapLai.Size = new System.Drawing.Size(73, 28);
+            this.btnNhapLai.Size = new System.Drawing.Size(84, 50);
             this.btnNhapLai.TabIndex = 43;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(484, 12);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(62, 28);
-            this.btnLuu.TabIndex = 42;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(386, 12);
+            this.btnXoa.Location = new System.Drawing.Point(408, 3);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(62, 28);
+            this.btnXoa.Size = new System.Drawing.Size(73, 50);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -116,10 +105,10 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(227, 12);
+            this.btnSua.Location = new System.Drawing.Point(243, 2);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(62, 28);
+            this.btnSua.Size = new System.Drawing.Size(73, 50);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -127,10 +116,10 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(63, 12);
+            this.btnThem.Location = new System.Drawing.Point(58, 2);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(62, 28);
+            this.btnThem.Size = new System.Drawing.Size(73, 50);
             this.btnThem.TabIndex = 44;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -183,7 +172,7 @@
             this.lblDiaChi.Location = new System.Drawing.Point(379, 92);
             this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(50, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
             this.lblDiaChi.TabIndex = 32;
             this.lblDiaChi.Text = "Địa chỉ:";
             // 
@@ -194,7 +183,7 @@
             this.lblGioiTinh.Location = new System.Drawing.Point(35, 92);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(57, 16);
+            this.lblGioiTinh.Size = new System.Drawing.Size(58, 16);
             this.lblGioiTinh.TabIndex = 31;
             this.lblGioiTinh.Text = "Giới tính:";
             // 
@@ -205,7 +194,7 @@
             this.lblSDT.Location = new System.Drawing.Point(379, 23);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(37, 16);
+            this.lblSDT.Size = new System.Drawing.Size(38, 16);
             this.lblSDT.TabIndex = 29;
             this.lblSDT.Text = "SĐT:";
             // 
@@ -216,7 +205,7 @@
             this.lblHoTen.Location = new System.Drawing.Point(35, 60);
             this.lblHoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(49, 16);
+            this.lblHoTen.Size = new System.Drawing.Size(50, 16);
             this.lblHoTen.TabIndex = 33;
             this.lblHoTen.Text = "Họ tên:";
             // 
@@ -227,7 +216,7 @@
             this.lblMaNhanVien.Location = new System.Drawing.Point(35, 23);
             this.lblMaNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaNhanVien.Name = "lblMaNhanVien";
-            this.lblMaNhanVien.Size = new System.Drawing.Size(89, 16);
+            this.lblMaNhanVien.Size = new System.Drawing.Size(90, 16);
             this.lblMaNhanVien.TabIndex = 28;
             this.lblMaNhanVien.Text = "Mã nhân viên:";
             // 
@@ -249,7 +238,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnNhapLai);
-            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThem);
@@ -280,7 +268,7 @@
             this.label1.Location = new System.Drawing.Point(35, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 32;
             this.label1.Text = "Trạng thái";
             // 
@@ -289,7 +277,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(584, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 59;
             this.label2.Text = "Hiển thị tất cả";
             // 
@@ -316,7 +304,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 56;
             this.label3.Text = "Từ khoá";
             // 
@@ -400,7 +388,6 @@
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Label lblChucVu;
         private System.Windows.Forms.Button btnNhapLai;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;

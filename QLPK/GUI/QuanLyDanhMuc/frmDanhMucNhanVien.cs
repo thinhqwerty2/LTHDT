@@ -21,6 +21,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             InitializeComponent();
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
+            txtMaNhanVien.Enabled = false;
             NguoiDung = nguoiDung;
             if(NguoiDung.QuyenTruyCap!=0)
             {
@@ -29,7 +30,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         }
         bool batLoi()
         {
-            if (txtMaNhanVien.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
+            if ( txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
             {
                 return false;
             }
@@ -79,15 +80,15 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                if (!NhanVienDAO.Instance.timNhanVien(txtMaNhanVien.Text))
+                if (NhanVienDAO.Instance.themNhanVien(txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtChucVu.Text))
                 {
-                    NhanVienDAO.Instance.themNhanVien(txtMaNhanVien.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtChucVu.Text);
+                    MessageBox.Show("Thêm nhân viên mới thành công");
                     hienThiDS();
                     xoaThongTin();
                 }
                 else
                 {
-                    MessageBox.Show("Mã nhân viên bị trùng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Thêm không thành công", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

@@ -42,8 +42,18 @@ namespace QLPK.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        internal bool themDichVu(string maDichVu, string tenDichVu, string donGia, string donViTinh, string ghiChu)
+        internal bool themDichVu( string tenDichVu, string donGia, string donViTinh, string ghiChu)
         {
+            string maDichVu;
+            string maxMaDichVu = DataProvider.Instance.ExecuteScalar("select max(MaBacSi) from BacSi").ToString();
+            if (maxMaDichVu == "")
+            {
+                maDichVu = "DV1";
+            }
+            else
+            {
+                maDichVu = "DV" + (Convert.ToInt32(maxMaDichVu.Substring(2)) + 1);
+            }
             string query = "insert into DichVu (MaDichVu,TenDichVu,DonGia,DonViTinh,GhiChu,SoLanSuDung) values ( @MaDichVu , @TenDichVu , @DonGia , @DonViTinh , @GhiChu , 0)";
             object[] parameter = { maDichVu,tenDichVu,donGia,donViTinh,ghiChu };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter)>0;

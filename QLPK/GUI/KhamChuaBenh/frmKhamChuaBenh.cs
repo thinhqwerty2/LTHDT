@@ -91,11 +91,23 @@ namespace QLPK.GUI.KhamBenh
 
         private void frmKhamChuaBenh_Load(object sender, EventArgs e)
         {
+            if(NguoiDung.QuyenTruyCap!=1)
+            {
+
             this.pnlXemKhamChuaBenh.Controls.Clear();
             frmPhieuDangKyKhamBenh fPhieuDangKyKhamBenh = new frmPhieuDangKyKhamBenh(NguoiDung);
             fPhieuDangKyKhamBenh.TopLevel = false;
             this.pnlXemKhamChuaBenh.Controls.Add(fPhieuDangKyKhamBenh);
             fPhieuDangKyKhamBenh.Show();
+            }   
+            else
+            {
+                this.pnlXemKhamChuaBenh.Controls.Clear();
+                frmLapPhieuKetQuaXetNghiem fLapPhieuKetQuaXetNghiem = new frmLapPhieuKetQuaXetNghiem(NguoiDung);
+                fLapPhieuKetQuaXetNghiem.TopLevel = false;
+                this.pnlXemKhamChuaBenh.Controls.Add(fLapPhieuKetQuaXetNghiem);
+                fLapPhieuKetQuaXetNghiem.Show();
+            }    
         }
     }
 }

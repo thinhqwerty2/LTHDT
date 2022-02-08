@@ -66,20 +66,20 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // btnXoa
             // 
             this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(388, 23);
+            this.btnXoa.Location = new System.Drawing.Point(233, 2);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(62, 28);
+            this.btnXoa.Size = new System.Drawing.Size(86, 49);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(607, 23);
+            this.btnNhapLai.Location = new System.Drawing.Point(585, 2);
             this.btnNhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapLai.Name = "btnNhapLai";
-            this.btnNhapLai.Size = new System.Drawing.Size(62, 28);
+            this.btnNhapLai.Size = new System.Drawing.Size(86, 49);
             this.btnNhapLai.TabIndex = 40;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
@@ -87,10 +87,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(493, 23);
+            this.btnSua.Location = new System.Drawing.Point(410, 2);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(62, 28);
+            this.btnSua.Size = new System.Drawing.Size(86, 49);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(119, 23);
+            this.btnThem.Location = new System.Drawing.Point(51, 2);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(62, 28);
+            this.btnThem.Size = new System.Drawing.Size(86, 49);
             this.btnThem.TabIndex = 44;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;

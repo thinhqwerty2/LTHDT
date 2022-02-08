@@ -15,6 +15,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             btnXoa.Enabled = false;
             txtMaBacSi.ReadOnly = false;
             txtHoTen.ReadOnly = false;
+            txtMaBacSi.Enabled = false;
             NguoiDung = nguoiDung;
             if(nguoiDung.QuyenTruyCap!=0)
             {
@@ -39,7 +40,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         }
         bool batLoi()
         {
-            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
+            if (/*txtMaBacSi.Text == "" ||*/ txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
             {
                 return false;
             }
@@ -80,16 +81,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                if (!TaiKhoanDAO.Instance.kiemTraTaiKhoan(txtMaBacSi.Text))
+                if (BacSiDAO.Instance.themBacSi(txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text))
                 {
-                    BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
+                    
                     hienThiDS();
                     MessageBox.Show("Thêm bác sĩ mới thành công!");
                     xoaThongTin();
                 }
                 else
                 {
-                    MessageBox.Show("Mã bác sĩ bị trùng!");
+                    MessageBox.Show("Thêm không thành công");
                 }
 
             }

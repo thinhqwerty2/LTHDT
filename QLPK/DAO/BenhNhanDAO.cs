@@ -35,8 +35,18 @@ namespace QLPK.DAO
             object[] parameter = { hoTen, gioiTinh, ngaySinh, diaChi, sdt, maBenhNhan };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        public bool themBenhNhan(string maBenhNhan, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string sdt)
+        public bool themBenhNhan( string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string sdt)
         {
+            string maBenhNhan;
+            string maxMaBenhNhan = DataProvider.Instance.ExecuteScalar("select max(MaBenhNhan) from BenhNhan").ToString();
+            if (maxMaBenhNhan == "")
+            {
+                maBenhNhan = "BN1";
+            }
+            else
+            {
+                maBenhNhan = "BN" + (Convert.ToInt32(maxMaBenhNhan.Substring(2)) + 1);
+            }
             string query = "insert into BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT) values ( @MaBenhNhan , @HoTen , @GioiTinh , @NgaySinh , @DiaChi , @SDT )";
             object[] parameter = { maBenhNhan, hoTen, gioiTinh, ngaySinh,diaChi, sdt };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;

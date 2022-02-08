@@ -38,8 +38,18 @@ namespace QLPK.DAO
             object[] parameter = { diaChi, sdt, chucVu, maNhanVien };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        public bool themNhanVien(string maNhanVien, string hoTen, string gioiTinh, string diaChi, string sdt, string chucVu)
+        public bool themNhanVien( string hoTen, string gioiTinh, string diaChi, string sdt, string chucVu)
         {
+            string maNhanVien;
+            string maxMaNhanVien = DataProvider.Instance.ExecuteScalar("select max(MaNhanVien) from NhanVien").ToString();
+            if (maxMaNhanVien == "")
+            {
+                maNhanVien = "NV1";
+            }
+            else
+            {
+                maNhanVien = "NV" + (Convert.ToInt32(maxMaNhanVien.Substring(2)) + 1);
+            }
             TaiKhoanDAO.Instance.themTaiKhoan(maNhanVien, "1", 2, "Đang làm việc");
             string query = "insert into NhanVien (MaNhanVien,HoTen,GioiTinh,DiaChi,SDT,ChucVu) values ( @MaNhanVien , @HoTen , @GioiTinh , @DiaChi , @SDT  , @ChucVu )";
             object[] parameter = { maNhanVien, hoTen, gioiTinh, diaChi, sdt, chucVu };

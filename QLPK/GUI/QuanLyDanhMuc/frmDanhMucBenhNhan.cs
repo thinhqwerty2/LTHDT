@@ -39,7 +39,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         }
         bool batLoi()
         {
-            if (txtMaBenhNhan.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
+            if ( txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
             {
                 return false;
             }
@@ -71,7 +71,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 if (!BenhNhanDAO.Instance.timBenhNhan(txtMaBenhNhan.Text))
                 {
-                    BenhNhanDAO.Instance.themBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text, dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
+                    BenhNhanDAO.Instance.themBenhNhan( txtHoTen.Text, cmbGioiTinh.Text, dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
                     hienThiDS();
                 }
                 else

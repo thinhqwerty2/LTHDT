@@ -39,8 +39,18 @@ namespace QLPK.DAO
             object[] parameter = { diaChi, sdt, trinhDo, chucVu, maBacSi };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        public bool themBacSi(string maBacSi, string hoTen, string gioiTinh, string diaChi, string sdt, string trinhDo, string chucVu)
+        public bool themBacSi( string hoTen, string gioiTinh, string diaChi, string sdt, string trinhDo, string chucVu)
         {
+            string maBacSi;
+            string maxMaBacSi = DataProvider.Instance.ExecuteScalar("select max(MaBacSi) from BacSi").ToString();
+            if(maxMaBacSi=="")
+            {
+                maBacSi = "BS1";
+            }    
+            else
+            {
+                maBacSi = "BS" + (Convert.ToInt32(maxMaBacSi.Substring(2)) + 1);
+            }    
             TaiKhoanDAO.Instance.themTaiKhoan(maBacSi, "1", 1, "Đang làm việc");
             string query = "insert into BacSi (MaBacSi,HoTen,GioiTinh,DiaChi,SDT,TrinhDo,ChucVu) values ( @MaBacSi , @HoTen , @GioiTinh , @DiaChi , @SDT , @TrinhDo , @ChucVu )";
             object[] parameter = { maBacSi, hoTen, gioiTinh, diaChi, sdt, trinhDo, chucVu };

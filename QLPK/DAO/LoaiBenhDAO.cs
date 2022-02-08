@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace QLPK.DAO
 {
@@ -17,8 +18,18 @@ namespace QLPK.DAO
         public LoaiBenhDAO()
         {
         }
-        public bool themLoaiBenh(string maBenh, string loaiBenh, string moTa)
+        public bool themLoaiBenh( string loaiBenh, string moTa)
         {
+            string maBenh;
+            string maxMaBenh = DataProvider.Instance.ExecuteScalar("select max(MaBenh) from Benh").ToString();
+            if (maxMaBenh == "")
+            {
+                maBenh = "BE1";
+            }
+            else
+            {
+                maBenh = "BE" + (Convert.ToInt32(maxMaBenh.Substring(2)) + 1);
+            }
             string query = "insert into Benh (MaBenh,LoaiBenh,MoTaBenh) values ( @MaBenh , @LoaiBenh , @MoTa )";
             object[] parameter = { maBenh, loaiBenh, moTa };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;

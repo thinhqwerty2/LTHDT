@@ -24,11 +24,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtSoLanSuDung.Text = "0";
             txtMaDichVu.ReadOnly = false;
             NguoiDung = nguoiDung;
+            txtMaDichVu.Enabled = false;
         }
 
         bool batLoi()
         {
-            if (txtMaDichVu.Text == "" || txtTenDichVu.Text == "" || txtDonGia.Text == "" || txtDonViTinh.Text == "" || txtGhiChu.Text == "")
+            if ( txtTenDichVu.Text == "" || txtDonGia.Text == "" || txtDonViTinh.Text == "" || txtGhiChu.Text == "")
             {
                 return false;
             }
@@ -86,7 +87,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 {
                     if (double.TryParse(txtDonGia.Text, out double result))
                     {
-                        DichVuDAO.Instance.themDichVu(txtMaDichVu.Text, txtTenDichVu.Text, txtDonGia.Text, txtDonViTinh.Text, txtGhiChu.Text);
+                        DichVuDAO.Instance.themDichVu( txtTenDichVu.Text, txtDonGia.Text, txtDonViTinh.Text, txtGhiChu.Text);
                         hienThiDS();
                         xoaThongTin();
                     }
