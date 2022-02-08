@@ -219,6 +219,7 @@ namespace QLPK.GUI.ThanhToan
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Name = "frmLapPhieuThuTienTamUng";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Phiếu thu tiền tạm ứng";
             this.Load += new System.EventHandler(this.frmLapPhieuThuTienTamUng_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

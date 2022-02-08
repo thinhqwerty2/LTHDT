@@ -1,4 +1,5 @@
 ﻿using QLPK.DAO;
+using QLPK.DTO;
 using System;
 using System.Windows.Forms;
 
@@ -6,9 +7,11 @@ namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmDanhMucBenh : Form
     {
-        public frmDanhMucBenh()
+        private static NguoiDungDTO NguoiDung;
+        public frmDanhMucBenh(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
+            NguoiDung = nguoiDung;
         }
         bool batLoi()
         {

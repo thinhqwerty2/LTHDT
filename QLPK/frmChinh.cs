@@ -18,6 +18,12 @@ namespace QLPK
             InitializeComponent();
             NguoiDung = nguoiDung;
             this.lblName.Text = nguoiDung.HoTen;
+            if(nguoiDung.QuyenTruyCap==1)
+            {
+                btnThanhToan.Enabled = false;
+                toolTip1.SetToolTip(btnThanhToan, "Bác sĩ không được thanh toán");
+                toolTip1.SetToolTip(pictureBox6, "Bác sĩ không được thanh toán");
+            }    
 
         }
         private void btnHeThong_Click(object sender, EventArgs e)

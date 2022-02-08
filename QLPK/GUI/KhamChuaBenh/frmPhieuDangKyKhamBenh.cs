@@ -45,7 +45,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnThemBenhNhan_Click(object sender, EventArgs e)
         {
-            QuanLyDanhMuc.frmDanhMucBenhNhan fDanhMucBenhNhan = new QuanLyDanhMuc.frmDanhMucBenhNhan();
+            QuanLyDanhMuc.frmDanhMucBenhNhan fDanhMucBenhNhan = new QuanLyDanhMuc.frmDanhMucBenhNhan(NguoiDung);
             fDanhMucBenhNhan.FormBorderStyle = FormBorderStyle.Sizable;
             fDanhMucBenhNhan.btnSua.Visible = false;
             fDanhMucBenhNhan.btnThem.Visible = true;

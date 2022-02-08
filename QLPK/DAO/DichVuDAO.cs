@@ -81,5 +81,11 @@ namespace QLPK.DAO
             object[] parameter = { maDichVu };
             return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
         }
+        public bool themSoLanSuDung(string maDichVu)
+        {
+            string query = "update DichVu set SoLanSuDung=SoLanSuDung+1 where MaDichVu= @MaDichVu ";
+            object[] parameter = { maDichVu };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

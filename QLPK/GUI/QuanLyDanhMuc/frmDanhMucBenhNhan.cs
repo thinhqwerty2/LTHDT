@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPK.DAO;
+using QLPK.DTO;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmDanhMucBenhNhan : Form
     {
-        public frmDanhMucBenhNhan()
+        private static NguoiDungDTO NguoiDung;
+        public frmDanhMucBenhNhan(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
             btnSua.Enabled = false;
@@ -23,6 +25,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtSDT.Enabled = false;
             txtDiaChi.Enabled = false;
             txtMaBenhNhan.Enabled = false;
+            NguoiDung = nguoiDung;
         }
         void xoaThongTin()
         {

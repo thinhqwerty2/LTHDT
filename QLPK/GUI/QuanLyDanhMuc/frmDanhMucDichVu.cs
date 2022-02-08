@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPK.DAO;
+using QLPK.DTO;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmDanhMucDichVu : Form
     {
-        public frmDanhMucDichVu()
+        private static NguoiDungDTO NguoiDung;
+        public frmDanhMucDichVu(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
             txtSoLanSuDung.ReadOnly = true;
@@ -21,6 +23,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             btnXoa.Enabled = false;
             txtSoLanSuDung.Text = "0";
             txtMaDichVu.ReadOnly = false;
+            NguoiDung = nguoiDung;
         }
 
         bool batLoi()

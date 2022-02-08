@@ -158,6 +158,7 @@ namespace QLPK.GUI.KhamBenh
                 for (int i = 0; i < n; i++)
                 {
                     ChiTietBanKeDAO.Instance.themChiTietBanKe(cmbMaBanKe.Text, dgvDichVuDuocChon.Rows[i].Cells["MaDichVu"].Value.ToString());
+                    DichVuDAO.Instance.themSoLanSuDung(dgvDichVuDuocChon.Rows[i].Cells["MaDichVu"].Value.ToString());
                 }
             }
         }
