@@ -33,12 +33,12 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label1 = new System.Windows.Forms.Label();
             this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHoSoBenhAn = new System.Windows.Forms.DataGridView();
             this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoSoBenhAn)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(364, 54);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(35, 16);
+            this.label.Size = new System.Drawing.Size(34, 16);
             this.label.TabIndex = 78;
             this.label.Text = "Tuổi";
             // 
@@ -58,7 +58,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(364, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 16);
+            this.label1.Size = new System.Drawing.Size(31, 16);
             this.label1.TabIndex = 79;
             this.label1.Text = "Tên";
             // 
@@ -80,19 +80,19 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.txtHoTen.Size = new System.Drawing.Size(188, 22);
             this.txtHoTen.TabIndex = 76;
             // 
-            // dataGridView1
+            // dgvHoSoBenhAn
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(153, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 324);
-            this.dataGridView1.TabIndex = 80;
+            this.dgvHoSoBenhAn.AllowUserToAddRows = false;
+            this.dgvHoSoBenhAn.AllowUserToDeleteRows = false;
+            this.dgvHoSoBenhAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoSoBenhAn.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHoSoBenhAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoSoBenhAn.Location = new System.Drawing.Point(153, 142);
+            this.dgvHoSoBenhAn.Name = "dgvHoSoBenhAn";
+            this.dgvHoSoBenhAn.ReadOnly = true;
+            this.dgvHoSoBenhAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHoSoBenhAn.Size = new System.Drawing.Size(700, 324);
+            this.dgvHoSoBenhAn.TabIndex = 80;
             // 
             // txtTimKiemBenhNhan
             // 
@@ -110,7 +110,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 16);
+            this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 81;
             this.label2.Text = "Mã bệnh nhân";
             // 
@@ -136,7 +136,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(150, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 84;
             this.label3.Text = "Hồ sơ bệnh án:";
             // 
@@ -147,11 +147,11 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHoSoBenhAn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKeBenh";
             this.Text = "frmThongKeBenh";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoSoBenhAn)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -164,7 +164,7 @@ namespace QLPK.GUI.BaoCaoThongKe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTuoi;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHoSoBenhAn;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;

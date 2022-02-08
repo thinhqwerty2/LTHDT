@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace QLPK.DAO
 {
-    class ThongKeADO
+    class ThongKeDAO
     {
-        private static ThongKeADO instance;
-        public static ThongKeADO Instance
+        private static ThongKeDAO instance;
+        public static ThongKeDAO Instance
         {
             get
             {
-                if (instance == null) instance = new ThongKeADO();
+                if (instance == null) instance = new ThongKeDAO();
                 return instance;
             }
             private set { instance = value; }
@@ -22,7 +22,7 @@ namespace QLPK.DAO
 
         public DataTable thongKeBenhNhan(DateTime tuNgay,DateTime denNgay)
         {
-            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
+            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,convert(varchar, NgayKham, 103) as 'NgayKham',ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
             object[] parameter = { tuNgay.ToString("yyyy-MM-dd"), denNgay.ToString("yyyy-MM-dd") };
             return DataProvider.Instance.ExecuteQuery(query, parameter) ;
         }
@@ -40,7 +40,7 @@ namespace QLPK.DAO
         }
         public DataTable thongKeBenhAn(string maBenhNhan)
         {
-            string query = "select SoBenhAn,NgayKham,ChanDoan,BacSi.HoTen,LoaiBenh from HoSoBenhAn,BenhNhan,Benh,BacSi where HoSoBenhAn.MaBenhNhan=BenhNhan.MaBenhNhan and HoSoBenhAn.MaBacSi=BacSi.MaBacSi and HoSoBenhAn.MaBenh=Benh.MaBenh and (HoSoBenhAn.MaBenhNhan= @MaBenhNhan )"; 
+            string query = "select SoBenhAn,convert(varchar, NgayKham, 103) as 'NgayKham',ChanDoan,BacSi.HoTen,LoaiBenh from HoSoBenhAn,BenhNhan,Benh,BacSi where HoSoBenhAn.MaBenhNhan=BenhNhan.MaBenhNhan and HoSoBenhAn.MaBacSi=BacSi.MaBacSi and HoSoBenhAn.MaBenh=Benh.MaBenh and (HoSoBenhAn.MaBenhNhan= @MaBenhNhan )"; 
             object[] parameter = { maBenhNhan };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
@@ -50,11 +50,11 @@ namespace QLPK.DAO
             object[] parameter = { tuNgay.ToString("yyyy-MM-dd"), denNgay.ToString("yyyy-MM-dd") };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
-        public DataTable thongKeBenhNhanMoi(DateTime tuNgay)
+        public int thongKeBenhNhanMoi(DateTime tuNgay,DateTime denNgay)
         {
-            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where BenhNhan.MaBenhNhan NOT IN (select BenhNhan.MaBenhNhan from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham < @TuNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan)";
-            object[] parameter = { tuNgay.ToString("yyyy-MM-dd")};
-            return DataProvider.Instance.ExecuteQuery(query, parameter);
+            string query = "(select DISTINCT BenhNhan.MaBenhNhan from BenhNhan,HoSoBenhAn where NgayKham <= @denNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan) EXCEPT (select DISTINCT BenhNhan.MaBenhNhan from BenhNhan,HoSoBenhAn where NgayKham < @tuNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan)";
+            object[] parameter = { tuNgay.ToString("yyyy-MM-dd"),denNgay.ToString("yyyy-MM-dd") };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count;
         }
     }
 }

@@ -23,8 +23,8 @@ namespace QLPK.GUI.BaoCaoThongKe
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            dgvThongKeDichVu.DataSource = ThongKeADO.Instance.thongKeDichVu(dtpTuNgay.Value, dtpDenNgay.Value);
-            lblTongTien1.Text = ThongKeADO.Instance.thongKeTongTienDichVu(dtpTuNgay.Value, dtpDenNgay.Value).ToString();
+            dgvThongKeDichVu.DataSource = ThongKeDAO.Instance.thongKeDichVu(dtpTuNgay.Value, dtpDenNgay.Value);
+            lblTongTien1.Text = ThongKeDAO.Instance.thongKeTongTienDichVu(dtpTuNgay.Value, dtpDenNgay.Value).ToString();
         }
     }
 }

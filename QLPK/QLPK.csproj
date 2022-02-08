@@ -69,7 +69,7 @@
     <Compile Include="DAO\PhieuThuTienTamUngDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
-    <Compile Include="DAO\ThongKeADO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
     <Compile Include="DAO\TongChiPhiDAO.cs" />
     <Compile Include="DTO\BacSiNhanVienDTO.cs" />
     <Compile Include="DTO\BenhNhanDTO.cs" />
