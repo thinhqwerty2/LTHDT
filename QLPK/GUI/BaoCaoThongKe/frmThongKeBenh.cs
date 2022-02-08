@@ -38,7 +38,12 @@ namespace QLPK.GUI.BaoCaoThongKe
 
         private void txtTimKiemBenhNhan_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource= ThongKeADO.Instance.thongKeBenhAn(txtTimKiemBenhNhan.Text);
+            dgvHoSoBenhAn.DataSource= ThongKeDAO.Instance.thongKeBenhAn(txtTimKiemBenhNhan.Text);
+            dgvHoSoBenhAn.Columns["SoBenhAn"].HeaderText = "Số bệnh án";
+            dgvHoSoBenhAn.Columns["NgayKham"].HeaderText = "Ngày khám";
+            dgvHoSoBenhAn.Columns["ChanDoan"].HeaderText = "Chẩn đoán";
+            dgvHoSoBenhAn.Columns["HoTen"].HeaderText = "Bác sĩ chẩn đoán";
+            dgvHoSoBenhAn.Columns["LoaiBenh"].HeaderText = "Loại bệnh";
         }
     }
 }
