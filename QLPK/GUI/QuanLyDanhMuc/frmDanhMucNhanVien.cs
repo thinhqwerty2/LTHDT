@@ -25,7 +25,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             NguoiDung = nguoiDung;
             if(NguoiDung.QuyenTruyCap!=0)
             {
-                btnThem.Visible = false;
+                pnlDanhMucNhanVien.Enabled = false;
             }   
         }
         bool batLoi()

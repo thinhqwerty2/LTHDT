@@ -62,5 +62,51 @@ namespace QLPK.GUI.QuanTriHeThong
                 }
             }
         }
+
+        private void ckbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            
+                if (ckbHienThiMatKhau.Checked)
+                {
+                    this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                    this.txtMatKhauCu.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                    this.txtMatKhauCu.UseSystemPasswordChar = true;
+                }
+
+
+            
+        }
+
+        private void ckbHienThiMatKhauMoi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbHienThiMatKhauMoi.Checked)
+            {
+                this.ckbHienThiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                this.txtMatKhauMoi.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.ckbHienThiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                this.txtMatKhauMoi.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void ckbNhapLaiMatKhauMoi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbNhapLaiMatKhauMoi.Checked)
+            {
+                this.ckbNhapLaiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                this.txtNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.ckbNhapLaiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

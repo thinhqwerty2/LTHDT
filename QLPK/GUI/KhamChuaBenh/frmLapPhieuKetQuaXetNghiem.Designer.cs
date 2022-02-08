@@ -34,12 +34,10 @@ namespace QLPK.GUI.KhamBenh
             this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNgayKham = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.txtKetLuan = new System.Windows.Forms.TextBox();
             this.txtDichVu = new System.Windows.Forms.TextBox();
@@ -104,16 +102,6 @@ namespace QLPK.GUI.KhamBenh
             this.label3.TabIndex = 64;
             this.label3.Text = "Kết luận:";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(771, 464);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 38);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "In";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // txtMoTa
             // 
             this.txtMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,20 +140,10 @@ namespace QLPK.GUI.KhamBenh
             this.label7.TabIndex = 62;
             this.label7.Text = "Ngày khám:";
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(664, 464);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 38);
-            this.button3.TabIndex = 65;
-            this.button3.Text = "Huỷ";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(560, 464);
+            this.button4.Location = new System.Drawing.Point(778, 454);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 38);
             this.button4.TabIndex = 65;
@@ -303,8 +281,6 @@ namespace QLPK.GUI.KhamBenh
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLapPhieuKetQuaXetNghiem";
             this.Text = "frmLapPhieuKetQuaXetNghiem";
@@ -324,12 +300,10 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.TextBox txtTuoi;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNgayKham;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtKetLuan;
         private System.Windows.Forms.TextBox txtDichVu;

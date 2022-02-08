@@ -138,6 +138,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.dgvDanhMucLoaiBenh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhMucLoaiBenh.Size = new System.Drawing.Size(700, 213);
             this.dgvDanhMucLoaiBenh.TabIndex = 94;
+            this.dgvDanhMucLoaiBenh.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhMucLoaiBenh_CellMouseClick);
             // 
             // txtMoTaBenh
             // 

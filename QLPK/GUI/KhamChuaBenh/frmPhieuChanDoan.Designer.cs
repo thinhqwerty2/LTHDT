@@ -38,8 +38,6 @@ namespace QLPK.GUI.KhamBenh
             this.label3 = new System.Windows.Forms.Label();
             this.txtChanDoan = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhacDo = new System.Windows.Forms.TextBox();
             this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
@@ -133,33 +131,13 @@ namespace QLPK.GUI.KhamBenh
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(606, 488);
+            this.btnLuu.Location = new System.Drawing.Point(772, 488);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 32);
             this.btnLuu.TabIndex = 75;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(779, 488);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 32);
-            this.btnHuy.TabIndex = 75;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(698, 488);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 32);
-            this.button4.TabIndex = 75;
-            this.button4.Text = "In";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -280,8 +258,6 @@ namespace QLPK.GUI.KhamBenh
             this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhieuChanDoan";
@@ -305,8 +281,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtChanDoan;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPhacDo;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;

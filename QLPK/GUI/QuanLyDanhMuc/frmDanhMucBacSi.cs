@@ -19,7 +19,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
             NguoiDung = nguoiDung;
             if(nguoiDung.QuyenTruyCap!=0)
             {
-                btnThem.Visible = false;
+                pnlDanhMucBacSi.Enabled = false;
+
             }    
             
         }

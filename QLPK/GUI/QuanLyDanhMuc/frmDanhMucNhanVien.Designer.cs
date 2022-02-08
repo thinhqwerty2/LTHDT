@@ -44,7 +44,7 @@
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblMaNhanVien = new System.Windows.Forms.Label();
             this.dgvDanhMucNhanVien = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDanhMucNhanVien = new System.Windows.Forms.Panel();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbTrangThai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucNhanVien)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlDanhMucNhanVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +143,6 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(174, 22);
             this.txtHoTen.TabIndex = 36;
-            this.txtHoTen.Validated += new System.EventHandler(this.txtDiaChi_Validated);
             // 
             // txtSDT
             // 
@@ -235,17 +234,17 @@
             this.dgvDanhMucNhanVien.TabIndex = 50;
             this.dgvDanhMucNhanVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhMucNhanVien_CellMouseClick);
             // 
-            // panel1
+            // pnlDanhMucNhanVien
             // 
-            this.panel1.Controls.Add(this.btnNhapLai);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(154, 194);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 52);
-            this.panel1.TabIndex = 51;
+            this.pnlDanhMucNhanVien.Controls.Add(this.btnNhapLai);
+            this.pnlDanhMucNhanVien.Controls.Add(this.btnXoa);
+            this.pnlDanhMucNhanVien.Controls.Add(this.btnSua);
+            this.pnlDanhMucNhanVien.Controls.Add(this.btnThem);
+            this.pnlDanhMucNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlDanhMucNhanVien.Location = new System.Drawing.Point(154, 194);
+            this.pnlDanhMucNhanVien.Name = "pnlDanhMucNhanVien";
+            this.pnlDanhMucNhanVien.Size = new System.Drawing.Size(699, 52);
+            this.pnlDanhMucNhanVien.TabIndex = 51;
             // 
             // cmbGioiTinh
             // 
@@ -366,7 +365,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDanhMucNhanVien);
             this.Controls.Add(this.dgvDanhMucNhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -374,7 +373,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.frmDanhMucNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucNhanVien)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlDanhMucNhanVien.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -401,7 +400,7 @@
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblMaNhanVien;
         private System.Windows.Forms.DataGridView dgvDanhMucNhanVien;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDanhMucNhanVien;
         private System.Windows.Forms.ComboBox cmbGioiTinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

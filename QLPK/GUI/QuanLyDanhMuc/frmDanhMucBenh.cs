@@ -13,6 +13,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             InitializeComponent();
             NguoiDung = nguoiDung;
             txtMaBenh.Enabled = false;
+            
         }
         bool batLoi()
         {
@@ -122,5 +123,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             dgvDanhMucLoaiBenh.Columns["MoTaBenh"].HeaderText = "Mô tả bệnh";
 
         }
+
+ 
     }
 }

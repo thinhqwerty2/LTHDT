@@ -156,6 +156,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnIn.TabIndex = 48;
             this.btnIn.Text = "In phiếu đăng ký";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Visible = false;
             // 
             // txtTimKiemBenhNhan
             // 

@@ -23,7 +23,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnLapPhieuDangKiKhamBenh_Click(object sender, EventArgs e)
         {
-            if(NguoiDung.QuyenTruyCap==2)
+            if(NguoiDung.QuyenTruyCap!=1)
             {
 
                 this.pnlXemKhamChuaBenh.Controls.Clear();
@@ -41,11 +41,19 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnLapPhieuDangKyXetNghiem_Click(object sender, EventArgs e)
         {
-            this.pnlXemKhamChuaBenh.Controls.Clear();
+            if (NguoiDung.QuyenTruyCap != 1)
+            {
+                this.pnlXemKhamChuaBenh.Controls.Clear();
             frmPhieuSuDungXetNghiem fPhieuSuDungXetNghiem = new frmPhieuSuDungXetNghiem(NguoiDung);
             fPhieuSuDungXetNghiem.TopLevel = false;
             this.pnlXemKhamChuaBenh.Controls.Add(fPhieuSuDungXetNghiem);
             fPhieuSuDungXetNghiem.Show();
+            }
+            else
+            {
+                MessageBox.Show("Việc này là của nhân viên!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void btnLapPhieuKetQuaXetNghiem_Click(object sender, EventArgs e)

@@ -42,6 +42,9 @@
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.lblThayDoiMatKhau = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ckbHienThiMatKhau = new System.Windows.Forms.CheckBox();
+            this.ckbHienThiMatKhauMoi = new System.Windows.Forms.CheckBox();
+            this.ckbNhapLaiMatKhauMoi = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +68,7 @@
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(189, 22);
             this.txtNhapLaiMatKhau.TabIndex = 10;
+            this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
             this.txtNhapLaiMatKhau.TextChanged += new System.EventHandler(this.txtNhapLaiMatKhau_TextChanged);
             // 
             // lblNhapLai
@@ -86,6 +90,8 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(189, 22);
             this.txtMatKhauMoi.TabIndex = 11;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
+            this.txtMatKhauMoi.Validated += new System.EventHandler(this.txtNhapLaiMatKhau_TextChanged);
             // 
             // lblMatKhauMoi
             // 
@@ -106,6 +112,7 @@
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(189, 22);
             this.txtMatKhauCu.TabIndex = 12;
+            this.txtMatKhauCu.UseSystemPasswordChar = true;
             // 
             // lblMatKhauCu
             // 
@@ -176,11 +183,56 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // ckbHienThiMatKhau
+            // 
+            this.ckbHienThiMatKhau.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbHienThiMatKhau.BackColor = System.Drawing.Color.White;
+            this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+            this.ckbHienThiMatKhau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ckbHienThiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbHienThiMatKhau.Location = new System.Drawing.Point(702, 224);
+            this.ckbHienThiMatKhau.Name = "ckbHienThiMatKhau";
+            this.ckbHienThiMatKhau.Size = new System.Drawing.Size(32, 22);
+            this.ckbHienThiMatKhau.TabIndex = 16;
+            this.ckbHienThiMatKhau.UseVisualStyleBackColor = false;
+            this.ckbHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ckbHienThiMatKhau_CheckedChanged);
+            // 
+            // ckbHienThiMatKhauMoi
+            // 
+            this.ckbHienThiMatKhauMoi.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbHienThiMatKhauMoi.BackColor = System.Drawing.Color.White;
+            this.ckbHienThiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+            this.ckbHienThiMatKhauMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ckbHienThiMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbHienThiMatKhauMoi.Location = new System.Drawing.Point(702, 262);
+            this.ckbHienThiMatKhauMoi.Name = "ckbHienThiMatKhauMoi";
+            this.ckbHienThiMatKhauMoi.Size = new System.Drawing.Size(32, 22);
+            this.ckbHienThiMatKhauMoi.TabIndex = 16;
+            this.ckbHienThiMatKhauMoi.UseVisualStyleBackColor = false;
+            this.ckbHienThiMatKhauMoi.CheckedChanged += new System.EventHandler(this.ckbHienThiMatKhauMoi_CheckedChanged);
+            // 
+            // ckbNhapLaiMatKhauMoi
+            // 
+            this.ckbNhapLaiMatKhauMoi.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ckbNhapLaiMatKhauMoi.BackColor = System.Drawing.Color.White;
+            this.ckbNhapLaiMatKhauMoi.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+            this.ckbNhapLaiMatKhauMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ckbNhapLaiMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbNhapLaiMatKhauMoi.Location = new System.Drawing.Point(702, 300);
+            this.ckbNhapLaiMatKhauMoi.Name = "ckbNhapLaiMatKhauMoi";
+            this.ckbNhapLaiMatKhauMoi.Size = new System.Drawing.Size(32, 22);
+            this.ckbNhapLaiMatKhauMoi.TabIndex = 16;
+            this.ckbNhapLaiMatKhauMoi.UseVisualStyleBackColor = false;
+            this.ckbNhapLaiMatKhauMoi.CheckedChanged += new System.EventHandler(this.ckbNhapLaiMatKhauMoi_CheckedChanged);
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 523);
+            this.Controls.Add(this.ckbNhapLaiMatKhauMoi);
+            this.Controls.Add(this.ckbHienThiMatKhauMoi);
+            this.Controls.Add(this.ckbHienThiMatKhau);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.txtNhapLaiMatKhau);
             this.Controls.Add(this.lblNhapLai);
@@ -219,5 +271,8 @@
         private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.Label lblThayDoiMatKhau;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox ckbNhapLaiMatKhauMoi;
+        private System.Windows.Forms.CheckBox ckbHienThiMatKhauMoi;
+        private System.Windows.Forms.CheckBox ckbHienThiMatKhau;
     }
 }

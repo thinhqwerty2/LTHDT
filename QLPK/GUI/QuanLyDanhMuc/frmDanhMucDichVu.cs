@@ -25,6 +25,10 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtMaDichVu.ReadOnly = false;
             NguoiDung = nguoiDung;
             txtMaDichVu.Enabled = false;
+            if(nguoiDung.QuyenTruyCap!=0)
+            {
+                pnlDanhMucDichVu.Enabled = false;
+            }    
         }
 
         bool batLoi()

@@ -51,11 +51,11 @@
             this.chkHienThiTatCa = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDanhMucDichVu = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucDichVu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlDanhMucDichVu.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtGhiChu
@@ -306,23 +306,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
-            // panel1
+            // pnlDanhMucDichVu
             // 
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnNhapLai);
-            this.panel1.Location = new System.Drawing.Point(153, 186);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 58);
-            this.panel1.TabIndex = 79;
+            this.pnlDanhMucDichVu.Controls.Add(this.btnXoa);
+            this.pnlDanhMucDichVu.Controls.Add(this.btnSua);
+            this.pnlDanhMucDichVu.Controls.Add(this.btnThem);
+            this.pnlDanhMucDichVu.Controls.Add(this.btnNhapLai);
+            this.pnlDanhMucDichVu.Location = new System.Drawing.Point(153, 186);
+            this.pnlDanhMucDichVu.Name = "pnlDanhMucDichVu";
+            this.pnlDanhMucDichVu.Size = new System.Drawing.Size(700, 58);
+            this.pnlDanhMucDichVu.TabIndex = 79;
             // 
             // frmDanhMucDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 523);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDanhMucDichVu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDanhMucDichVu);
@@ -336,7 +336,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnlDanhMucDichVu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -366,6 +366,6 @@
         private System.Windows.Forms.CheckBox chkHienThiTatCa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDanhMucDichVu;
     }
 }

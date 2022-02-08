@@ -26,9 +26,13 @@ namespace QLPK.GUI.ThanhToan
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(dataGridView1.Rows.Count!=0)
+            {
+
             maPhieuThuTienTamUng = TongChiPhiDAO.Instance.layMaPhieuThuTienTamUng(cmbMaBanKe.Text);
             TongChiPhiDAO.Instance.themTongHopChiPhi(Convert.ToDouble(lblTongTien.Text), DateTime.Now, maPhieuThuTienTamUng, NguoiDung.TenDangNhap);
             MessageBox.Show("Thanh toán thành công");
+            }    
         }
         DataRowCollection data;
         private void txtTimKiemBenhNhan_Click(object sender, EventArgs e)
