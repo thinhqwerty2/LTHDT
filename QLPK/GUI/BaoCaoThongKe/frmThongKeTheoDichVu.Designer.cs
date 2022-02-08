@@ -30,24 +30,18 @@ namespace QLPK.GUI.BaoCaoThongKe
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.dgvThongKeDichVu = new System.Windows.Forms.DataGridView();
+            this.lblChiTiet = new System.Windows.Forms.Label();
+            this.lblTongTien1 = new System.Windows.Forms.Label();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpThongKeDichVu = new System.Windows.Forms.GroupBox();
+            this.grpThoiGian = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKeDichVu)).BeginInit();
+            this.grpThongKeDichVu.SuspendLayout();
+            this.grpThoiGian.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -56,108 +50,71 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(264, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 16);
+            this.label2.Size = new System.Drawing.Size(21, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "tới";
             // 
-            // dateTimePicker2
+            // dtpDenNgay
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(323, 31);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpDenNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDenNgay.Location = new System.Drawing.Point(323, 31);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(200, 22);
+            this.dtpDenNgay.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtpTuNgay
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(38, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpTuNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTuNgay.Location = new System.Drawing.Point(38, 30);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(200, 22);
+            this.dtpTuNgay.TabIndex = 4;
             // 
-            // label1
+            // lblTongTien
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Tổng tiền dịch vụ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(37, 117);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(108, 16);
+            this.lblTongTien.TabIndex = 6;
+            this.lblTongTien.Text = "Tổng tiền dịch vụ";
             // 
-            // dataGridView1
+            // dgvThongKeDichVu
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(153, 225);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 261);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvThongKeDichVu.AllowUserToAddRows = false;
+            this.dgvThongKeDichVu.AllowUserToDeleteRows = false;
+            this.dgvThongKeDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongKeDichVu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThongKeDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongKeDichVu.Location = new System.Drawing.Point(153, 225);
+            this.dgvThongKeDichVu.Name = "dgvThongKeDichVu";
+            this.dgvThongKeDichVu.ReadOnly = true;
+            this.dgvThongKeDichVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThongKeDichVu.Size = new System.Drawing.Size(700, 261);
+            this.dgvThongKeDichVu.TabIndex = 7;
             // 
-            // Column1
+            // lblChiTiet
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
+            this.lblChiTiet.AutoSize = true;
+            this.lblChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiTiet.Location = new System.Drawing.Point(150, 196);
+            this.lblChiTiet.Name = "lblChiTiet";
+            this.lblChiTiet.Size = new System.Drawing.Size(46, 16);
+            this.lblChiTiet.TabIndex = 6;
+            this.lblChiTiet.Text = "Chi tiết";
             // 
-            // Column2
+            // lblTongTien1
             // 
-            this.Column2.HeaderText = "Mã dịch vụ";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên dịch vụ";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Giá thành";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Số lần sử dụng";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Tổng tiền";
-            this.Column6.Name = "Column6";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(150, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Chi tiết";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(148, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "0";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
+            this.lblTongTien1.AutoSize = true;
+            this.lblTongTien1.Location = new System.Drawing.Point(148, 117);
+            this.lblTongTien1.Name = "lblTongTien1";
+            this.lblTongTien1.Size = new System.Drawing.Size(14, 16);
+            this.lblTongTien1.TabIndex = 6;
+            this.lblTongTien1.Text = "0";
             // 
             // btnThongKe
             // 
@@ -168,50 +125,50 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.btnThongKe.TabIndex = 8;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // groupBox1
+            // grpThongKeDichVu
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(153, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 159);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thống kê dịch vụ";
+            this.grpThongKeDichVu.Controls.Add(this.grpThoiGian);
+            this.grpThongKeDichVu.Controls.Add(this.lblTongTien1);
+            this.grpThongKeDichVu.Controls.Add(this.lblTongTien);
+            this.grpThongKeDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpThongKeDichVu.Location = new System.Drawing.Point(153, 12);
+            this.grpThongKeDichVu.Name = "grpThongKeDichVu";
+            this.grpThongKeDichVu.Size = new System.Drawing.Size(700, 159);
+            this.grpThongKeDichVu.TabIndex = 9;
+            this.grpThongKeDichVu.TabStop = false;
+            this.grpThongKeDichVu.Text = "Thống kê dịch vụ";
             // 
-            // groupBox2
+            // grpThoiGian
             // 
-            this.groupBox2.Controls.Add(this.btnThongKe);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Location = new System.Drawing.Point(25, 21);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 74);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thời gian";
+            this.grpThoiGian.Controls.Add(this.btnThongKe);
+            this.grpThoiGian.Controls.Add(this.label2);
+            this.grpThoiGian.Controls.Add(this.dtpDenNgay);
+            this.grpThoiGian.Controls.Add(this.dtpTuNgay);
+            this.grpThoiGian.Location = new System.Drawing.Point(25, 21);
+            this.grpThoiGian.Name = "grpThoiGian";
+            this.grpThoiGian.Size = new System.Drawing.Size(669, 74);
+            this.grpThoiGian.TabIndex = 9;
+            this.grpThoiGian.TabStop = false;
+            this.grpThoiGian.Text = "Thời gian";
             // 
             // frmThongKeDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 523);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.grpThongKeDichVu);
+            this.Controls.Add(this.dgvThongKeDichVu);
+            this.Controls.Add(this.lblChiTiet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKeDichVu";
             this.Text = "frmThongKeTheoDichVu";
-            this.Load += new System.EventHandler(this.frmThongKeDichVu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKeDichVu)).EndInit();
+            this.grpThongKeDichVu.ResumeLayout(false);
+            this.grpThongKeDichVu.PerformLayout();
+            this.grpThoiGian.ResumeLayout(false);
+            this.grpThoiGian.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,20 +177,14 @@ namespace QLPK.GUI.BaoCaoThongKe
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
+        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.DataGridView dgvThongKeDichVu;
+        private System.Windows.Forms.Label lblChiTiet;
+        private System.Windows.Forms.Label lblTongTien1;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpThongKeDichVu;
+        private System.Windows.Forms.GroupBox grpThoiGian;
     }
 }

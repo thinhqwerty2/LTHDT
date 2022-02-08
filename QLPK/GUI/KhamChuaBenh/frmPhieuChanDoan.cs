@@ -43,7 +43,7 @@ namespace QLPK.GUI.KhamBenh
                 txtTimKiemBenhNhan.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.MaBenhNhan;
                 txtTuoi.Text = (-QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.NgaySinh.Year + DateTime.Now.Year).ToString();
                 txtHoTen.Text = QuanLyDanhMuc.frmTimKiemBenhNhan.benhNhan.HoTen;
-                txtNgayKham.Text = DateTime.Now.ToString();
+                txtNgayKham.Text = DateTime.Now.ToString("dd/MM/yyyy");
             }
         }
 
@@ -56,7 +56,7 @@ namespace QLPK.GUI.KhamBenh
             {
                 txtMaBenh.Text = QuanLyDanhMuc.frmTimKiemLoaiBenh.loaiBenh.MaBenh;
                 txtLoaiBenh.Text = QuanLyDanhMuc.frmTimKiemLoaiBenh.loaiBenh.LoaiBenh;
-                txtNgayKham.Text = DateTime.Now.ToString();
+                txtNgayKham.Text = DateTime.Now.ToString("dd/MM/yyyy");
             }
         }
     }

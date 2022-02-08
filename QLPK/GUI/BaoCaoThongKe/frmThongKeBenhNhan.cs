@@ -22,15 +22,10 @@ namespace QLPK.GUI.BaoCaoThongKe
             NguoiDung = nguoiDung;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
         private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ThongKeADO.Instance.thongKeBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
+            dgvThongKeBenhNhan.DataSource = ThongKeADO.Instance.thongKeBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
+            DataTable dt = ThongKeADO.Instance.thongKeThongTinChiTietBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
         }
 
 
