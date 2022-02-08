@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +26,11 @@ namespace QLPK.DAO
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
 
+        public DataTable xemChiTietBanKe(string maBanKe)
+        {
+            string query = "select ChiTietBanKe.MaDichVu,TenDichVu,DonViTinh,DonGia from ChiTietBanKe,DichVu where ChiTietBanKe.MaDichVu=DichVu.MaDichVu and ChiTietBanKe.MaBanKe= @MaBanKe ";
+            object[] parameter = { maBanKe};
+            return DataProvider.Instance.ExecuteQuery(query, parameter) ;
+        }
     }
 }

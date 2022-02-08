@@ -223,7 +223,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.lblNgayBanKe.AutoSize = true;
             this.lblNgayBanKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayBanKe.Location = new System.Drawing.Point(153, 130);
+            this.lblNgayBanKe.Location = new System.Drawing.Point(168, 142);
             this.lblNgayBanKe.Name = "lblNgayBanKe";
             this.lblNgayBanKe.Size = new System.Drawing.Size(0, 16);
             this.lblNgayBanKe.TabIndex = 84;

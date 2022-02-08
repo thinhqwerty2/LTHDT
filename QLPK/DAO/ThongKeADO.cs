@@ -22,7 +22,7 @@ namespace QLPK.DAO
 
         public DataTable thongKeBenhNhan(DateTime tuNgay,DateTime denNgay)
         {
-            string query = "select MaBenhNhan,TenBenhNhan,GioiTinh,NgayKham,BacSi.HoTen,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
+            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,BacSi.HoTen,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
             object[] parameter = { tuNgay,denNgay};
             return DataProvider.Instance.ExecuteQuery(query, parameter) ;
         }
