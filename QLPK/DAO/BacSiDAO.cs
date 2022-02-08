@@ -66,5 +66,11 @@ namespace QLPK.DAO
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
+        public bool timBacSi(string maBacSi)
+        {
+            string query = "select * from BacSi where MaBacSi = @MaBacSi ";
+            object[] parameter = { maBacSi };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

@@ -41,8 +41,8 @@
             // 
             // btnDatLai
             // 
-            this.btnDatLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatLai.Location = new System.Drawing.Point(400, 234);
+            this.btnDatLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatLai.Location = new System.Drawing.Point(436, 230);
             this.btnDatLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatLai.Name = "btnDatLai";
             this.btnDatLai.Size = new System.Drawing.Size(82, 33);
@@ -53,43 +53,44 @@
             // 
             // txtHoVaTen
             // 
-            this.txtHoVaTen.Location = new System.Drawing.Point(423, 179);
+            this.txtHoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoVaTen.Location = new System.Drawing.Point(436, 179);
             this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoVaTen.Name = "txtHoVaTen";
             this.txtHoVaTen.ReadOnly = true;
-            this.txtHoVaTen.Size = new System.Drawing.Size(140, 20);
+            this.txtHoVaTen.Size = new System.Drawing.Size(193, 22);
             this.txtHoVaTen.TabIndex = 25;
             // 
             // lblHoVaTen
             // 
             this.lblHoVaTen.AutoSize = true;
-            this.lblHoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoVaTen.Location = new System.Drawing.Point(320, 179);
+            this.lblHoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoVaTen.Location = new System.Drawing.Point(286, 182);
             this.lblHoVaTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoVaTen.Name = "lblHoVaTen";
-            this.lblHoVaTen.Size = new System.Drawing.Size(61, 15);
+            this.lblHoVaTen.Size = new System.Drawing.Size(67, 16);
             this.lblHoVaTen.TabIndex = 20;
             this.lblHoVaTen.Text = "Họ và tên:";
             // 
             // lblTenDangNhap
             // 
             this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDangNhap.Location = new System.Drawing.Point(320, 140);
+            this.lblTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDangNhap.Location = new System.Drawing.Point(286, 140);
             this.lblTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(93, 15);
+            this.lblTenDangNhap.Size = new System.Drawing.Size(101, 16);
             this.lblTenDangNhap.TabIndex = 21;
             this.lblTenDangNhap.Text = "Tên đăng nhập:";
             // 
             // lblDatLaiMatKhau
             // 
             this.lblDatLaiMatKhau.AutoSize = true;
-            this.lblDatLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatLaiMatKhau.Location = new System.Drawing.Point(342, 82);
             this.lblDatLaiMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatLaiMatKhau.Name = "lblDatLaiMatKhau";
-            this.lblDatLaiMatKhau.Size = new System.Drawing.Size(229, 26);
+            this.lblDatLaiMatKhau.Size = new System.Drawing.Size(199, 24);
             this.lblDatLaiMatKhau.TabIndex = 16;
             this.lblDatLaiMatKhau.Text = "ĐẶT LẠI MẬT KHẨU";
             this.lblDatLaiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,10 +101,11 @@
             // 
             // cmbTenDangNhap
             // 
+            this.cmbTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenDangNhap.FormattingEnabled = true;
-            this.cmbTenDangNhap.Location = new System.Drawing.Point(423, 140);
+            this.cmbTenDangNhap.Location = new System.Drawing.Point(436, 137);
             this.cmbTenDangNhap.Name = "cmbTenDangNhap";
-            this.cmbTenDangNhap.Size = new System.Drawing.Size(140, 21);
+            this.cmbTenDangNhap.Size = new System.Drawing.Size(193, 24);
             this.cmbTenDangNhap.TabIndex = 28;
             this.cmbTenDangNhap.Validated += new System.EventHandler(this.cmbTenDangNhap_Validated);
             // 
@@ -111,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 508);
+            this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.cmbTenDangNhap);
             this.Controls.Add(this.btnDatLai);
             this.Controls.Add(this.txtHoVaTen);

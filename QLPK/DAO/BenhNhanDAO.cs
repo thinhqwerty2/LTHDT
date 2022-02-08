@@ -52,5 +52,11 @@ namespace QLPK.DAO
         {
             return new BenhNhanDTO(DataProvider.Instance.ExecuteQuery("select * from BenhNhan where MaBenhNhan= @MaBenhNhan ",new object[] { maBenhNhan }).Rows[0]);
         }
+        public bool timBenhNhan(string key)
+        {
+            string query = "select * from BenhNhan where MaBenhNhan = @key ";
+            object[] parameter = { key };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

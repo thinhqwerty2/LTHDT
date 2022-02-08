@@ -75,5 +75,11 @@ namespace QLPK.DAO
             object[] parameter = { key, key};
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
+        public bool timDichVu(string maDichVu)
+        {
+            string query = "select * from DichVu where MaDichVu= @MaDichVu ";
+            object[] parameter = { maDichVu };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

@@ -17,8 +17,23 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             InitializeComponent();
             btnSua.Enabled = false;
+            txtHoTen.Enabled = false;
+            cmbGioiTinh.Enabled = false;
+            dtpNgaySinh.Enabled = false;
+            txtSDT.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtMaBenhNhan.Enabled = false;
         }
-
+        void xoaThongTin()
+        {
+            txtMaBenhNhan.Text = "";
+            txtHoTen.Text = "";
+            cmbGioiTinh.Text = "";
+            dtpNgaySinh.Text = "";
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+            cmbGioiTinh.SelectedItem = null;
+        }
         bool batLoi()
         {
             if (txtMaBenhNhan.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
@@ -51,12 +66,19 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                BenhNhanDAO.Instance.themBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text,dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
-                hienThiDS();
+                if (!BenhNhanDAO.Instance.timBenhNhan(txtMaBenhNhan.Text))
+                {
+                    BenhNhanDAO.Instance.themBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text, dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
+                    hienThiDS();
+                }
+                else
+                {
+                    MessageBox.Show("Mã bệnh nhân bị trùng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -65,7 +87,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (kq == DialogResult.OK)
             {
-                BenhNhanDAO.Instance.suaBenhNhan(txtMaBenhNhan.Text,txtHoTen.Text,cmbGioiTinh.Text,dtpNgaySinh.Value,txtDiaChi.Text,txtSDT.Text);
+                BenhNhanDAO.Instance.suaBenhNhan(txtMaBenhNhan.Text, txtHoTen.Text, cmbGioiTinh.Text, dtpNgaySinh.Value, txtDiaChi.Text, txtSDT.Text);
             }
             hienThiDS();
         }
@@ -84,6 +106,11 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 dtpNgaySinh.Text = dgvDanhMucBenhNhan.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDiaChi.Text = dgvDanhMucBenhNhan.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtSDT.Text = dgvDanhMucBenhNhan.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtHoTen.Enabled = true;
+                cmbGioiTinh.Enabled = true;
+                dtpNgaySinh.Enabled = true;
+                txtSDT.Enabled = true;
+                txtDiaChi.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -96,22 +123,15 @@ namespace QLPK.GUI.QuanLyDanhMuc
             btnSua.Enabled = true;
         }
 
-        private void btnNhapLai_Click(object sender, EventArgs e)
-        {
-            txtMaBenhNhan.Text = "";
-            txtHoTen.Text = "";
-            cmbGioiTinh.Text = "";
-            dtpNgaySinh.Text = "";
-            txtDiaChi.Text = "";
-            txtSDT.Text = "";
-        }
-
         private void txtTimKiemBenhNhan_TextChanged(object sender, EventArgs e)
         {
 
             dgvDanhMucBenhNhan.DataSource = BenhNhanDAO.Instance.timKiemBenhNhan(txtTimKiemBenhNhan.Text);
         }
 
-
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            xoaThongTin();
+        }
     }
 }

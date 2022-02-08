@@ -163,7 +163,7 @@ namespace QLPK.GUI.ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 469);
+            this.ClientSize = new System.Drawing.Size(984, 484);
             this.Controls.Add(this.txtTimKiemBenhNhan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);

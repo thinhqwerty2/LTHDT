@@ -30,6 +30,7 @@ namespace QLPK
                 fChinh.ShowDialog();
                 txtTenDangNhap.Text = txtMatKhau.Text = "";
                 this.Show();
+                txtTenDangNhap.Focus();
             }
             else
             {
@@ -61,9 +62,16 @@ namespace QLPK
             
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            if (MessageBox.Show("Bạn thực sự muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

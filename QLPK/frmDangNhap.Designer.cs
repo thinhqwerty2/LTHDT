@@ -34,9 +34,8 @@ namespace QLPK
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ckbHienThiMatKhau = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,34 +78,14 @@ namespace QLPK
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(269, 179);
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Location = new System.Drawing.Point(354, 179);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(86, 38);
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(431, 179);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(86, 38);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLPK.Properties.Resources.Login;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 192);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // ckbHienThiMatKhau
             // 
@@ -122,6 +101,17 @@ namespace QLPK
             this.ckbHienThiMatKhau.UseVisualStyleBackColor = false;
             this.ckbHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ckbHienThiMatKhau_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLPK.Properties.Resources.Login;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 192);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
@@ -131,7 +121,6 @@ namespace QLPK
             this.ClientSize = new System.Drawing.Size(580, 243);
             this.Controls.Add(this.ckbHienThiMatKhau);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTenDangNhap);
@@ -140,7 +129,7 @@ namespace QLPK
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập hệ thống";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,7 +143,6 @@ namespace QLPK
         private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.Label lblMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox ckbHienThiMatKhau;
     }
