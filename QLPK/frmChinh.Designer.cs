@@ -96,9 +96,9 @@ namespace QLPK
             // pnlChinh
             // 
             this.pnlChinh.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlChinh.Location = new System.Drawing.Point(23, 164);
+            this.pnlChinh.Location = new System.Drawing.Point(0, 164);
             this.pnlChinh.Name = "pnlChinh";
-            this.pnlChinh.Size = new System.Drawing.Size(1144, 515);
+            this.pnlChinh.Size = new System.Drawing.Size(1179, 528);
             this.pnlChinh.TabIndex = 2;
             // 
             // pnlMenu

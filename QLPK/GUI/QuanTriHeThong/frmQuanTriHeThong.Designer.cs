@@ -48,14 +48,14 @@ namespace QLPK.GUI.QuanTriHeThong
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnDatLaiMatKhau);
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnDoiMatKhau);
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongTinTaiKhoan);
-            this.pnlNutQuanTriHeThong.Location = new System.Drawing.Point(-5, -8);
+            this.pnlNutQuanTriHeThong.Location = new System.Drawing.Point(-46, -8);
             this.pnlNutQuanTriHeThong.Name = "pnlNutQuanTriHeThong";
-            this.pnlNutQuanTriHeThong.Size = new System.Drawing.Size(160, 530);
+            this.pnlNutQuanTriHeThong.Size = new System.Drawing.Size(201, 588);
             this.pnlNutQuanTriHeThong.TabIndex = 0;
             // 
             // btnPhanQuyen
             // 
-            this.btnPhanQuyen.Location = new System.Drawing.Point(10, 276);
+            this.btnPhanQuyen.Location = new System.Drawing.Point(58, 290);
             this.btnPhanQuyen.Name = "btnPhanQuyen";
             this.btnPhanQuyen.Size = new System.Drawing.Size(133, 70);
             this.btnPhanQuyen.TabIndex = 3;
@@ -65,7 +65,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnTaoTaiKhoan
             // 
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(10, 185);
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(58, 199);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.Size = new System.Drawing.Size(133, 70);
             this.btnTaoTaiKhoan.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnDatLaiMatKhau
             // 
-            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(10, 366);
+            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(58, 380);
             this.btnDatLaiMatKhau.Name = "btnDatLaiMatKhau";
             this.btnDatLaiMatKhau.Size = new System.Drawing.Size(133, 70);
             this.btnDatLaiMatKhau.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(10, 93);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(58, 107);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(133, 70);
             this.btnDoiMatKhau.TabIndex = 1;
@@ -95,7 +95,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnThongTinTaiKhoan
             // 
-            this.btnThongTinTaiKhoan.Location = new System.Drawing.Point(10, 9);
+            this.btnThongTinTaiKhoan.Location = new System.Drawing.Point(58, 23);
             this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
             this.btnThongTinTaiKhoan.Size = new System.Drawing.Size(133, 70);
             this.btnThongTinTaiKhoan.TabIndex = 0;
@@ -107,7 +107,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             this.pnlXemQuanTriHeThong.Location = new System.Drawing.Point(176, 3);
             this.pnlXemQuanTriHeThong.Name = "pnlXemQuanTriHeThong";
-            this.pnlXemQuanTriHeThong.Size = new System.Drawing.Size(966, 508);
+            this.pnlXemQuanTriHeThong.Size = new System.Drawing.Size(966, 522);
             this.pnlXemQuanTriHeThong.TabIndex = 1;
             // 
             // panel1
@@ -122,7 +122,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 515);
+            this.ClientSize = new System.Drawing.Size(1179, 528);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlXemQuanTriHeThong);
             this.Controls.Add(this.pnlNutQuanTriHeThong);
