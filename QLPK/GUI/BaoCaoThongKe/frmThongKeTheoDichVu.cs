@@ -21,20 +21,10 @@ namespace QLPK.GUI.BaoCaoThongKe
             InitializeComponent();
             NguoiDung = nguoiDung;
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            ThongKeADO.Instance.thongKeDichVu(dateTimePicker1.Value, dateTimePicker2.Value);
-        }
-
-        private void frmThongKeDichVu_Load(object sender, EventArgs e)
-        {
-
+            dgvThongKeDichVu.DataSource = ThongKeADO.Instance.thongKeDichVu(dtpTuNgay.Value, dtpDenNgay.Value);
+            lblTongTien1.Text = ThongKeADO.Instance.thongKeTongTienDichVu(dtpTuNgay.Value, dtpDenNgay.Value).ToString();
         }
     }
 }
