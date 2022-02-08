@@ -238,7 +238,7 @@
             this.dgvDanhMucNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhMucNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhMucNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMucNhanVien.Location = new System.Drawing.Point(163, 311);
+            this.dgvDanhMucNhanVien.Location = new System.Drawing.Point(154, 311);
             this.dgvDanhMucNhanVien.Name = "dgvDanhMucNhanVien";
             this.dgvDanhMucNhanVien.ReadOnly = true;
             this.dgvDanhMucNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -254,7 +254,7 @@
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(163, 194);
+            this.panel1.Location = new System.Drawing.Point(154, 194);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(699, 52);
             this.panel1.TabIndex = 51;
@@ -333,7 +333,7 @@
             this.groupBox1.Controls.Add(this.chkHienThiTatCa);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(163, 252);
+            this.groupBox1.Location = new System.Drawing.Point(154, 252);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(699, 53);
             this.groupBox1.TabIndex = 60;
@@ -357,7 +357,7 @@
             this.groupBox2.Controls.Add(this.lblHoTen);
             this.groupBox2.Controls.Add(this.lblMaNhanVien);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(163, 12);
+            this.groupBox2.Location = new System.Drawing.Point(153, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(700, 167);
             this.groupBox2.TabIndex = 61;

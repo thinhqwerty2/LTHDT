@@ -88,7 +88,7 @@ namespace QLPK.GUI.KhamBenh
             this.dgvDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(157, 256);
+            this.dgvDichVu.Location = new System.Drawing.Point(153, 255);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.ReadOnly = true;
             this.dgvDichVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -98,7 +98,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(483, 301);
+            this.button3.Location = new System.Drawing.Point(479, 300);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(42, 35);
             this.button3.TabIndex = 53;
@@ -108,7 +108,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(483, 392);
+            this.button4.Location = new System.Drawing.Point(479, 391);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(42, 35);
             this.button4.TabIndex = 53;
@@ -136,18 +136,18 @@ namespace QLPK.GUI.KhamBenh
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(636, 476);
+            this.button5.Location = new System.Drawing.Point(632, 475);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 35);
+            this.button5.Size = new System.Drawing.Size(89, 35);
             this.button5.TabIndex = 53;
-            this.button5.Text = "Đồng ý (hiển thị ra form tạm ứng)";
+            this.button5.Text = "Đăng ký";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(845, 476);
+            this.button6.Location = new System.Drawing.Point(778, 475);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 35);
             this.button6.TabIndex = 53;
@@ -161,7 +161,7 @@ namespace QLPK.GUI.KhamBenh
             this.dgvDichVuDuocChon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDichVuDuocChon.BackgroundColor = System.Drawing.Color.White;
             this.dgvDichVuDuocChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVuDuocChon.Location = new System.Drawing.Point(557, 256);
+            this.dgvDichVuDuocChon.Location = new System.Drawing.Point(553, 255);
             this.dgvDichVuDuocChon.Name = "dgvDichVuDuocChon";
             this.dgvDichVuDuocChon.ReadOnly = true;
             this.dgvDichVuDuocChon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -225,7 +225,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.txtDichVu.Location = new System.Drawing.Point(79, 22);
             this.txtDichVu.Name = "txtDichVu";
-            this.txtDichVu.Size = new System.Drawing.Size(264, 22);
+            this.txtDichVu.Size = new System.Drawing.Size(215, 22);
             this.txtDichVu.TabIndex = 71;
             this.txtDichVu.TextChanged += new System.EventHandler(this.txtDichVu_TextChanged);
             // 
@@ -242,21 +242,21 @@ namespace QLPK.GUI.KhamBenh
             this.groupBox1.Controls.Add(this.txtHoTen);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(157, 25);
+            this.groupBox1.Location = new System.Drawing.Point(153, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 167);
+            this.groupBox1.Size = new System.Drawing.Size(700, 157);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Thông tin";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtDichVu);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(157, 200);
+            this.groupBox2.Location = new System.Drawing.Point(153, 199);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 50);
+            this.groupBox2.Size = new System.Drawing.Size(300, 50);
             this.groupBox2.TabIndex = 74;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";

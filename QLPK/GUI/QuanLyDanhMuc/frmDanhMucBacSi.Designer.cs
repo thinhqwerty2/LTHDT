@@ -99,7 +99,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.pnlDanhMucBacSi.Controls.Add(this.btnSua);
             this.pnlDanhMucBacSi.Controls.Add(this.btnThem);
             this.pnlDanhMucBacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlDanhMucBacSi.Location = new System.Drawing.Point(161, 184);
+            this.pnlDanhMucBacSi.Location = new System.Drawing.Point(153, 184);
             this.pnlDanhMucBacSi.Name = "pnlDanhMucBacSi";
             this.pnlDanhMucBacSi.Size = new System.Drawing.Size(700, 68);
             this.pnlDanhMucBacSi.TabIndex = 78;
@@ -189,7 +189,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.dgvDanhMucBacSi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhMucBacSi.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhMucBacSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMucBacSi.Location = new System.Drawing.Point(161, 311);
+            this.dgvDanhMucBacSi.Location = new System.Drawing.Point(153, 311);
             this.dgvDanhMucBacSi.Name = "dgvDanhMucBacSi";
             this.dgvDanhMucBacSi.ReadOnly = true;
             this.dgvDanhMucBacSi.RowHeadersWidth = 51;
@@ -341,7 +341,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.groupBox1.Controls.Add(this.lblDiaChi);
             this.groupBox1.Controls.Add(this.lblTrinhDo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(161, 12);
+            this.groupBox1.Location = new System.Drawing.Point(153, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(700, 153);
             this.groupBox1.TabIndex = 81;
@@ -355,7 +355,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.groupBox2.Controls.Add(this.txtTimKiemBacSi);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(161, 257);
+            this.groupBox2.Location = new System.Drawing.Point(153, 257);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(700, 48);
             this.groupBox2.TabIndex = 82;

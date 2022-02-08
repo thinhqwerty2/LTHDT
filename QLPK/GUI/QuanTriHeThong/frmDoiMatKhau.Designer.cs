@@ -48,7 +48,7 @@
             // btnCapNhat
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(414, 331);
+            this.btnCapNhat.Location = new System.Drawing.Point(448, 346);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(82, 33);
@@ -60,7 +60,7 @@
             // txtNhapLaiMatKhau
             // 
             this.txtNhapLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(447, 285);
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(481, 300);
             this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(189, 22);
@@ -71,7 +71,7 @@
             // 
             this.lblNhapLai.AutoSize = true;
             this.lblNhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhapLai.Location = new System.Drawing.Point(279, 288);
+            this.lblNhapLai.Location = new System.Drawing.Point(313, 303);
             this.lblNhapLai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhapLai.Name = "lblNhapLai";
             this.lblNhapLai.Size = new System.Drawing.Size(143, 16);
@@ -81,7 +81,7 @@
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(447, 247);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(481, 262);
             this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(189, 22);
@@ -91,7 +91,7 @@
             // 
             this.lblMatKhauMoi.AutoSize = true;
             this.lblMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMatKhauMoi.Location = new System.Drawing.Point(279, 250);
+            this.lblMatKhauMoi.Location = new System.Drawing.Point(313, 265);
             this.lblMatKhauMoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatKhauMoi.Name = "lblMatKhauMoi";
             this.lblMatKhauMoi.Size = new System.Drawing.Size(90, 16);
@@ -101,7 +101,7 @@
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauCu.Location = new System.Drawing.Point(447, 209);
+            this.txtMatKhauCu.Location = new System.Drawing.Point(481, 224);
             this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(189, 22);
@@ -111,7 +111,7 @@
             // 
             this.lblMatKhauCu.AutoSize = true;
             this.lblMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMatKhauCu.Location = new System.Drawing.Point(279, 212);
+            this.lblMatKhauCu.Location = new System.Drawing.Point(313, 227);
             this.lblMatKhauCu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatKhauCu.Name = "lblMatKhauCu";
             this.lblMatKhauCu.Size = new System.Drawing.Size(82, 16);
@@ -121,7 +121,7 @@
             // txtHoVaTen
             // 
             this.txtHoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoVaTen.Location = new System.Drawing.Point(447, 168);
+            this.txtHoVaTen.Location = new System.Drawing.Point(481, 183);
             this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoVaTen.Name = "txtHoVaTen";
             this.txtHoVaTen.ReadOnly = true;
@@ -132,7 +132,7 @@
             // 
             this.lblHoVaTen.AutoSize = true;
             this.lblHoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoVaTen.Location = new System.Drawing.Point(279, 168);
+            this.lblHoVaTen.Location = new System.Drawing.Point(313, 183);
             this.lblHoVaTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoVaTen.Name = "lblHoVaTen";
             this.lblHoVaTen.Size = new System.Drawing.Size(68, 16);
@@ -142,7 +142,7 @@
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.Location = new System.Drawing.Point(447, 129);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(481, 144);
             this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.ReadOnly = true;
@@ -153,7 +153,7 @@
             // 
             this.lblTenDangNhap.AutoSize = true;
             this.lblTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDangNhap.Location = new System.Drawing.Point(279, 129);
+            this.lblTenDangNhap.Location = new System.Drawing.Point(313, 144);
             this.lblTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
             this.lblTenDangNhap.Size = new System.Drawing.Size(102, 16);
@@ -164,7 +164,7 @@
             // 
             this.lblThayDoiMatKhau.AutoSize = true;
             this.lblThayDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThayDoiMatKhau.Location = new System.Drawing.Point(335, 65);
+            this.lblThayDoiMatKhau.Location = new System.Drawing.Point(369, 80);
             this.lblThayDoiMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThayDoiMatKhau.Name = "lblThayDoiMatKhau";
             this.lblThayDoiMatKhau.Size = new System.Drawing.Size(218, 24);

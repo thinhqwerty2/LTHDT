@@ -126,6 +126,7 @@ namespace QLPK
             this.Controls.Add(this.lblTenDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
+            this.MaximizeBox = false;
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập hệ thống";

@@ -102,7 +102,7 @@
             this.dgvDanhMucBenhNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhMucBenhNhan.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhMucBenhNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhMucBenhNhan.Location = new System.Drawing.Point(169, 311);
+            this.dgvDanhMucBenhNhan.Location = new System.Drawing.Point(154, 310);
             this.dgvDanhMucBenhNhan.Name = "dgvDanhMucBenhNhan";
             this.dgvDanhMucBenhNhan.ReadOnly = true;
             this.dgvDanhMucBenhNhan.RowHeadersWidth = 51;
@@ -234,7 +234,7 @@
             this.groupBox1.Controls.Add(this.txtTimKiemBenhNhan);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(169, 255);
+            this.groupBox1.Location = new System.Drawing.Point(154, 254);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(700, 50);
             this.groupBox1.TabIndex = 81;
@@ -256,7 +256,7 @@
             this.groupBox2.Controls.Add(this.lblHoTen);
             this.groupBox2.Controls.Add(this.lblMaBenhNhan);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(169, 12);
+            this.groupBox2.Location = new System.Drawing.Point(153, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(700, 146);
             this.groupBox2.TabIndex = 82;
@@ -267,7 +267,7 @@
             // 
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Location = new System.Drawing.Point(169, 165);
+            this.panel1.Location = new System.Drawing.Point(154, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(699, 80);
             this.panel1.TabIndex = 83;

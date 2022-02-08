@@ -36,7 +36,7 @@ namespace QLPK.GUI.ThanhToan
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(926, 223);
             this.dataGridView1.TabIndex = 0;

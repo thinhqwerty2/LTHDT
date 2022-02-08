@@ -31,5 +31,10 @@ namespace QLPK.GUI.BaoCaoThongKe
         {
 
         }
+
+        private void frmThongKeDichVu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
