@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPK.DAO;
 
 namespace QLPK.GUI.BaoCaoThongKe
 {
@@ -37,7 +38,7 @@ namespace QLPK.GUI.BaoCaoThongKe
 
         private void txtTimKiemBenhNhan_TextChanged(object sender, EventArgs e)
         {
-            
+            dataGridView1.DataSource= ThongKeADO.Instance.thongKeBenhAn(txtTimKiemBenhNhan.Text);
         }
     }
 }

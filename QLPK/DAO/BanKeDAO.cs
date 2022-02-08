@@ -34,6 +34,11 @@ namespace QLPK.DAO
             object[] parameter = { maBenhNhan};
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
-       
+        public bool timBanKe(DateTime ngayLapBanKe, string maBenhNhan)
+        {
+            string query = "select * from BanKe where NgayLapBanKe= @ngayLapBanKe and MaBenhNhan = @maBenhNhan ";
+            object[] parameter = { ngayLapBanKe, maBenhNhan };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

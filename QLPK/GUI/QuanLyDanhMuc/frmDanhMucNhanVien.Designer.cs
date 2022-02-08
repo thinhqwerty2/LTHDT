@@ -48,13 +48,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.chkHienThiTatCa = new System.Windows.Forms.CheckBox();
             this.txtTimKiemNhanVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbTrangThai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.lblChucVu.Location = new System.Drawing.Point(379, 60);
             this.lblChucVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(58, 16);
+            this.lblChucVu.Size = new System.Drawing.Size(57, 16);
             this.lblChucVu.TabIndex = 47;
             this.lblChucVu.Text = "Chức vụ:";
             // 
@@ -183,7 +183,7 @@
             this.lblDiaChi.Location = new System.Drawing.Point(379, 92);
             this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(50, 16);
             this.lblDiaChi.TabIndex = 32;
             this.lblDiaChi.Text = "Địa chỉ:";
             // 
@@ -194,7 +194,7 @@
             this.lblGioiTinh.Location = new System.Drawing.Point(35, 92);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(58, 16);
+            this.lblGioiTinh.Size = new System.Drawing.Size(57, 16);
             this.lblGioiTinh.TabIndex = 31;
             this.lblGioiTinh.Text = "Giới tính:";
             // 
@@ -205,7 +205,7 @@
             this.lblSDT.Location = new System.Drawing.Point(379, 23);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(38, 16);
+            this.lblSDT.Size = new System.Drawing.Size(37, 16);
             this.lblSDT.TabIndex = 29;
             this.lblSDT.Text = "SĐT:";
             // 
@@ -216,7 +216,7 @@
             this.lblHoTen.Location = new System.Drawing.Point(35, 60);
             this.lblHoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(50, 16);
+            this.lblHoTen.Size = new System.Drawing.Size(49, 16);
             this.lblHoTen.TabIndex = 33;
             this.lblHoTen.Text = "Họ tên:";
             // 
@@ -227,7 +227,7 @@
             this.lblMaNhanVien.Location = new System.Drawing.Point(35, 23);
             this.lblMaNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaNhanVien.Name = "lblMaNhanVien";
-            this.lblMaNhanVien.Size = new System.Drawing.Size(90, 16);
+            this.lblMaNhanVien.Size = new System.Drawing.Size(89, 16);
             this.lblMaNhanVien.TabIndex = 28;
             this.lblMaNhanVien.Text = "Mã nhân viên:";
             // 
@@ -261,8 +261,12 @@
             // 
             // cmbGioiTinh
             // 
+            this.cmbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGioiTinh.FormattingEnabled = true;
+            this.cmbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cmbGioiTinh.Location = new System.Drawing.Point(143, 92);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.Size = new System.Drawing.Size(174, 24);
@@ -276,26 +280,16 @@
             this.label1.Location = new System.Drawing.Point(35, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 32;
             this.label1.Text = "Trạng thái";
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(143, 129);
-            this.txtTrangThai.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(174, 22);
-            this.txtTrangThai.TabIndex = 39;
-            this.txtTrangThai.Validated += new System.EventHandler(this.txtDiaChi_Validated);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(584, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 59;
             this.label2.Text = "Hiển thị tất cả";
             // 
@@ -322,7 +316,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 56;
             this.label3.Text = "Từ khoá";
             // 
@@ -342,11 +336,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbTrangThai);
             this.groupBox2.Controls.Add(this.cmbGioiTinh);
             this.groupBox2.Controls.Add(this.txtChucVu);
             this.groupBox2.Controls.Add(this.lblChucVu);
             this.groupBox2.Controls.Add(this.txtDiaChi);
-            this.groupBox2.Controls.Add(this.txtTrangThai);
             this.groupBox2.Controls.Add(this.txtHoTen);
             this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.label1);
@@ -363,6 +357,19 @@
             this.groupBox2.TabIndex = 61;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
+            // 
+            // cmbTrangThai
+            // 
+            this.cmbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTrangThai.FormattingEnabled = true;
+            this.cmbTrangThai.Items.AddRange(new object[] {
+            "Đang làm việc",
+            "Nghỉ việc"});
+            this.cmbTrangThai.Location = new System.Drawing.Point(143, 132);
+            this.cmbTrangThai.Name = "cmbTrangThai";
+            this.cmbTrangThai.Size = new System.Drawing.Size(174, 24);
+            this.cmbTrangThai.TabIndex = 53;
             // 
             // frmDanhMucNhanVien
             // 
@@ -410,12 +417,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbGioiTinh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTrangThai;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkHienThiTatCa;
         private System.Windows.Forms.TextBox txtTimKiemNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cmbTrangThai;
     }
 }

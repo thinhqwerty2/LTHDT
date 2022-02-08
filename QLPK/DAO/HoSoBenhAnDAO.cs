@@ -21,19 +21,10 @@ namespace QLPK.DAO
         }
         public bool themHoSoBenhAn(string maBenhNhan,DateTime ngayKham,string chanDoan,string maBenh,string maBacSi)
         {
-            string query = "insert into HoSoBenhAn (SoBenhAn,NgayKham,ChanDoan,MaBenh,MaBacSi,MaBenhNhan) values ( @SoBenhBan , @NgayKham , @ChanDoan , @MaBenh , @MaBacSi , @MaBenhNhan )";
-            string soBenhAn = maBenhNhan.Substring(0, 2) + (int.Parse(maBenhNhan.Substring(2)) + 1).ToString();
-            object[] parameter = { soBenhAn,ngayKham,chanDoan,maBenh ,maBacSi};
+            string query = "insert into HoSoBenhAn (NgayKham,ChanDoan,MaBenh,MaBacSi,MaBenhNhan) values ( @NgayKham , @ChanDoan , @MaBenh , @MaBacSi , @MaBenhNhan )";
+            object[] parameter = { ngayKham,chanDoan,maBenh ,maBacSi,maBenhNhan};
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }
-        public DataTable xemHoSoBenhAn(string maBenhNhan)
-        {
-            string query = "select * from HoSoBenhAn,BenhNhan,MaBenh,BacSi where" +
-                "HoSoBenhAn.MaBenhNhan=BenhNhan.MaBenhNhan and HoSoBenhAn.MaBacSi=BacSi.MaBacSi" +
-                "HoSoBenhAn.MaBenh=Benh.MaBenh and (MaBenhNhan= @MaBenhNhan )";
-            
-            object[] parameter = { maBenhNhan };
-            return DataProvider.Instance.ExecuteQuery(query, parameter);
-        }
+
     }
 }

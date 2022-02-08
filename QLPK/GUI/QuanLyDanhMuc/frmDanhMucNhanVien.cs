@@ -16,12 +16,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
         public frmDanhMucNhanVien()
         {
             InitializeComponent();
-
-
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
         }
         bool batLoi()
         {
-            if (txtMaNhanVien.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || txtTrangThai.Text == "")
+            if (txtMaNhanVien.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
             {
                 return false;
             }
@@ -29,6 +29,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 return true;
             }
+        }
+        void xoaThongTin()
+        {
+            txtMaNhanVien.Text = "";
+            txtHoTen.Text = "";
+            cmbGioiTinh.SelectedItem = null;
+            txtChucVu.Text = "";
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+            cmbTrangThai.SelectedItem = null;
         }
         void hienThiDS()
         {
@@ -61,12 +71,20 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                NhanVienDAO.Instance.themNhanVien(txtMaNhanVien.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtChucVu.Text);
-                hienThiDS();
+                if (!NhanVienDAO.Instance.timNhanVien(txtMaNhanVien.Text))
+                {
+                    NhanVienDAO.Instance.themNhanVien(txtMaNhanVien.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtChucVu.Text);
+                    hienThiDS();
+                    xoaThongTin();
+                }
+                else
+                {
+                    MessageBox.Show("Mã nhân viên bị trùng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -78,8 +96,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 NhanVienDAO.Instance.suaNhanVien(txtDiaChi.Text, txtSDT.Text, txtChucVu.Text, txtMaNhanVien.Text);
             }
             hienThiDS();
-
-
+            MessageBox.Show("Cập nhật thông tin thành công!");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -91,7 +108,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 NhanVienDAO.Instance.xoaNhanVien(txtMaNhanVien.Text);
             }
             hienThiDS();
-
+            btnXoa.Enabled = false;
+            xoaThongTin();
         }
 
         int indexRow = -1;
@@ -100,6 +118,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             try
             {
                 btnSua.Enabled = false;
+                btnXoa.Enabled = true;
                 dgvDanhMucNhanVien.Rows[e.RowIndex].Selected = true;
                 indexRow = e.RowIndex;
                 txtMaNhanVien.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -108,7 +127,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 txtChucVu.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDiaChi.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtSDT.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtTrangThai.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cmbTrangThai.Text = dgvDanhMucNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
 
             }
             catch (Exception ex)
@@ -119,13 +138,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
-            txtMaNhanVien.Text = "";
-            txtHoTen.Text = "";
-            cmbGioiTinh.Text = "";
-            txtChucVu.Text = "";
-            txtDiaChi.Text = "";
-            txtSDT.Text = "";
-            txtTrangThai.Text = "";
+            xoaThongTin();
         }
 
         private void chkHienThiTatCa_CheckedChanged(object sender, EventArgs e)

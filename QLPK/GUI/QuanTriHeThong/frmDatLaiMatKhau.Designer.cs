@@ -68,7 +68,7 @@
             this.lblHoVaTen.Location = new System.Drawing.Point(293, 207);
             this.lblHoVaTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoVaTen.Name = "lblHoVaTen";
-            this.lblHoVaTen.Size = new System.Drawing.Size(68, 16);
+            this.lblHoVaTen.Size = new System.Drawing.Size(67, 16);
             this.lblHoVaTen.TabIndex = 20;
             this.lblHoVaTen.Text = "Họ và tên:";
             // 
@@ -79,7 +79,7 @@
             this.lblTenDangNhap.Location = new System.Drawing.Point(293, 165);
             this.lblTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(102, 16);
+            this.lblTenDangNhap.Size = new System.Drawing.Size(101, 16);
             this.lblTenDangNhap.TabIndex = 21;
             this.lblTenDangNhap.Text = "Tên đăng nhập:";
             // 

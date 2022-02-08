@@ -18,11 +18,14 @@ namespace QLPK.GUI.QuanLyDanhMuc
             InitializeComponent();
             txtSoLanSuDung.ReadOnly = true;
             btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            txtSoLanSuDung.Text = "0";
+            txtMaDichVu.ReadOnly = false;
         }
 
         bool batLoi()
         {
-            if (txtMaDichVu.Text == "" || txtTenDichVu.Text == "" || txtDonGia.Text == "" || txtDonViTinh.Text == "" || txtGhiChu.Text == "" ) 
+            if (txtMaDichVu.Text == "" || txtTenDichVu.Text == "" || txtDonGia.Text == "" || txtDonViTinh.Text == "" || txtGhiChu.Text == "")
             {
                 return false;
             }
@@ -30,6 +33,19 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 return true;
             }
+        }
+        void xoaThongTin()
+        {
+            txtMaDichVu.Text = "";
+            txtTenDichVu.Text = "";
+            txtDonGia.Text = "";
+            txtDonViTinh.Text = "";
+            txtGhiChu.Text = "";
+            txtSoLanSuDung.Text = "";
+            txtSoLanSuDung.Text = "0";
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            txtMaDichVu.ReadOnly = false;
         }
         void hienThiDS()
         {
@@ -49,7 +65,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void frmDanhMucDichVu_Load(object sender, EventArgs e)
         {
             hienThiDS();
-            
+
             dgvDanhMucDichVu.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
             dgvDanhMucDichVu.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
             dgvDanhMucDichVu.Columns["DonGia"].HeaderText = "Đơn giá";
@@ -63,25 +79,46 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                DichVuDAO.Instance.themDichVu(txtMaDichVu.Text, txtTenDichVu.Text, txtDonGia.Text,  txtDonViTinh.Text,txtGhiChu.Text);
-                hienThiDS();
+                if (!DichVuDAO.Instance.timDichVu(txtMaDichVu.Text))
+                {
+                    if (double.TryParse(txtDonGia.Text, out double result))
+                    {
+                        DichVuDAO.Instance.themDichVu(txtMaDichVu.Text, txtTenDichVu.Text, txtDonGia.Text, txtDonViTinh.Text, txtGhiChu.Text);
+                        hienThiDS();
+                        xoaThongTin();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đơn giá phải là số!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã dịch vụ bị trùng! Xin nhập lại.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (kq == DialogResult.OK)
+            if (kq == DialogResult.OK && DichVuDAO.Instance.timDichVu(txtMaDichVu.Text))
             {
-                DichVuDAO.Instance.suaDichVu(txtTenDichVu.Text,txtDonGia.Text,txtDonViTinh.Text,txtGhiChu.Text,txtMaDichVu.Text);
+                if (double.TryParse(txtDonGia.Text, out double result))
+                {
+                    DichVuDAO.Instance.suaDichVu(txtTenDichVu.Text, txtDonGia.Text, txtDonViTinh.Text, txtGhiChu.Text, txtMaDichVu.Text);
+                    hienThiDS();
+                    btnSua.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Đơn giá phải là số!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            hienThiDS();
-            btnSua.Enabled = false;
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -93,7 +130,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 DichVuDAO.Instance.xoaDichVu(txtMaDichVu.Text);
             }
             hienThiDS();
-
+            xoaThongTin();
         }
 
         int indexRow = -1;
@@ -101,6 +138,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             try
             {
+                txtMaDichVu.ReadOnly = true;
+                btnXoa.Enabled = true;
                 btnSua.Enabled = false;
                 dgvDanhMucDichVu.Rows[e.RowIndex].Selected = true;
                 indexRow = e.RowIndex;
@@ -110,8 +149,6 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 txtDonViTinh.Text = dgvDanhMucDichVu.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtGhiChu.Text = dgvDanhMucDichVu.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtSoLanSuDung.Text = dgvDanhMucDichVu.Rows[e.RowIndex].Cells[5].Value.ToString();
-
-
             }
             catch (Exception ex)
             {
@@ -121,19 +158,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
-            txtMaDichVu.Text = "";
-            txtTenDichVu.Text = "";
-            txtDonGia.Text = "";
-            txtDonViTinh.Text = "";
-            txtGhiChu.Text = "";
-            txtSoLanSuDung.Text = "";
+            xoaThongTin();
         }
-
-        private void txtGhiChu_Validated(object sender, EventArgs e)
-        {
-            this.btnSua.Enabled = true;
-        }
-
         private void txtTimKiemDichVu_TextChanged(object sender, EventArgs e)
         {
             dgvDanhMucDichVu.DataSource = DichVuDAO.Instance.timKiemDichVu(txtTimKiemDichVu.Text, chkHienThiTatCa.Checked);
@@ -148,8 +174,15 @@ namespace QLPK.GUI.QuanLyDanhMuc
             }
             else
             {
-                dgvDanhMucDichVu.DataSource = NhanVienDAO.Instance.timKiemNhanVien(txtTimKiemDichVu.Text, chkHienThiTatCa.Checked);
+                dgvDanhMucDichVu.DataSource = DichVuDAO.Instance.timKiemDichVu(txtTimKiemDichVu.Text, chkHienThiTatCa.Checked);
+            }
+        }
 
+        private void txt_Validated(object sender, EventArgs e)
+        {
+            if (batLoi() & DichVuDAO.Instance.timDichVu(txtMaDichVu.Text))
+            {
+                this.btnSua.Enabled = true;
             }
         }
     }

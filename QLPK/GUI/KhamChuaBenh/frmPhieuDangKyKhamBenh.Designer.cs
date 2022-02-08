@@ -39,7 +39,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@ namespace QLPK.GUI.KhamBenh
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 16);
+            this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã bệnh nhân:";
             // 
@@ -95,7 +95,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblDiaChi.Location = new System.Drawing.Point(385, 27);
             this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(50, 16);
             this.lblDiaChi.TabIndex = 32;
             this.lblDiaChi.Text = "Địa chỉ:";
             // 
@@ -105,7 +105,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblNgaySinh.Location = new System.Drawing.Point(385, 65);
             this.lblNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(71, 16);
+            this.lblNgaySinh.Size = new System.Drawing.Size(70, 16);
             this.lblNgaySinh.TabIndex = 31;
             this.lblNgaySinh.Text = "Ngày sinh:";
             // 
@@ -115,7 +115,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblSDT.Location = new System.Drawing.Point(385, 108);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(38, 16);
+            this.lblSDT.Size = new System.Drawing.Size(37, 16);
             this.lblSDT.TabIndex = 30;
             this.lblSDT.Text = "SĐT:";
             // 
@@ -125,7 +125,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblGioiTinh.Location = new System.Drawing.Point(17, 108);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(58, 16);
+            this.lblGioiTinh.Size = new System.Drawing.Size(57, 16);
             this.lblGioiTinh.TabIndex = 33;
             this.lblGioiTinh.Text = "Giới tính:";
             // 
@@ -135,7 +135,7 @@ namespace QLPK.GUI.KhamBenh
             this.label2.Location = new System.Drawing.Point(17, 158);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 32;
             this.label2.Text = "Lý do khám:";
             // 
@@ -147,15 +147,15 @@ namespace QLPK.GUI.KhamBenh
             this.textBox1.Size = new System.Drawing.Size(653, 200);
             this.textBox1.TabIndex = 46;
             // 
-            // button2
+            // btnIn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(656, 452);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 34);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "In phiếu đăng ký";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Location = new System.Drawing.Point(656, 452);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(111, 34);
+            this.btnIn.TabIndex = 48;
+            this.btnIn.Text = "In phiếu đăng ký";
+            this.btnIn.UseVisualStyleBackColor = true;
             // 
             // txtTimKiemBenhNhan
             // 
@@ -170,7 +170,7 @@ namespace QLPK.GUI.KhamBenh
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ tên:";
             // 
@@ -239,7 +239,7 @@ namespace QLPK.GUI.KhamBenh
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnThem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhieuDangKyKhamBenh";
@@ -262,7 +262,7 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtHoTen;

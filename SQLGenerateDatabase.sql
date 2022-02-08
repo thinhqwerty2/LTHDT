@@ -88,7 +88,7 @@ CREATE TABLE ChiTietBanKe
 
 CREATE TABLE HoSoBenhAn
 (
-  SoBenhAn VARCHAR(10) NOT NULL,
+  SoBenhAn INT IDENTITY(1,1) NOT NULL,
   MaBenhNhan VARCHAR(7) NOT NULL,
   MaBenh VARCHAR(7) NOT NULL,
   MaBacSi VARCHAR(7) NOT NULL,
@@ -140,47 +140,50 @@ INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
 VALUES ('admin','123',0,N'Đang làm việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('BS001','123',1,N'Đang làm việc');
+VALUES ('BS1','123',1,N'Đang làm việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('BS002','123',1,N'Đang làm việc');
+VALUES ('BS2','123',1,N'Đang làm việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('BS003','123',1,N'Nghỉ việc');
+VALUES ('BS3','123',1,N'Nghỉ việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('NV001','123',2,N'Đang làm việc');
+VALUES ('NV1','123',2,N'Đang làm việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('NV002','123',2,N'Đang làm việc');
+VALUES ('NV2','123',2,N'Đang làm việc');
 
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, QuyenTruyCap, TrangThai)
-VALUES ('NV003','123',2,N'Nghỉ việc');
+VALUES ('NV3','123',2,N'Nghỉ việc');
 
 INSERT INTO BacSi (MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT)
-VALUES ('BS001',N'Vũ Đinh Trường An',N'Nam',N'Thạc sĩ',N'Làm thêm',N'Hai Bà Trưng, Hà Nội','01234567');
+VALUES ('BS1',N'Vũ Đinh Trường An',N'Nam',N'Thạc sĩ',N'Làm thêm',N'Hai Bà Trưng, Hà Nội','01234567');
 
 INSERT INTO BacSi (MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT)
-VALUES ('BS002',N'Hoàng Trung Chiến',N'Nam',N'PGS',N'Phó',N'Hà Nam','987654');
+VALUES ('BS2',N'Hoàng Trung Chiến',N'Nam',N'PGS',N'Phó',N'Hà Nam','987654');
 
 INSERT INTO BacSi (MaBacSi,HoTen,GioiTinh,TrinhDo,ChucVu,DiaChi,SDT)
-VALUES ('BS003',N'Nguyễn Thị Hường',N'Nữ',N'Thạc sĩ',N'Làm thêm',N'Ba Đình, Hà Nội','1029384756');
+VALUES ('BS3',N'Nguyễn Thị Hường',N'Nữ',N'Thạc sĩ',N'Làm thêm',N'Ba Đình, Hà Nội','1029384756');
 
 INSERT INTO NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT)
-VALUES ('NV001',N'Chu Thị Ngân',N'Nữ',N'Thu ngân',N'Hoài Đức','20394874')
+VALUES ('NV1',N'Chu Thị Ngân',N'Nữ',N'Thu ngân',N'Hoài Đức','20394874')
 
 INSERT INTO NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT)
-VALUES ('NV002',N'Nguyễn Đình Nhật',N'Nam',N'Tiếp đón',N'Nghệ An','20194923')
+VALUES ('NV2',N'Nguyễn Đình Nhật',N'Nam',N'Tiếp đón',N'Nghệ An','20194923')
 
 INSERT INTO NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT)
-VALUES ('NV003',N'Phạm Nhật Quang',N'Nam',N'Thu ngân',N'Hưng Yên','21394874')
+VALUES ('admin',N'admin',N'admin',N'admin',N'admin','admin')
+
+INSERT INTO NhanVien (MaNhanVien,HoTen,GioiTinh,ChucVu,DiaChi,SDT)
+VALUES ('NV3',N'Phạm Nhật Quang',N'Nam',N'Thu ngân',N'Hưng Yên','21394874')
 
 INSERT INTO BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT)
-VALUES ('BN001',N'Vũ Hoài Nam',N'Nam','2001-10-10',N'KTX Mỹ Đình Hà Nội','01929404')
+VALUES ('BN1',N'Vũ Hoài Nam',N'Nam','2001-10-10',N'KTX Mỹ Đình Hà Nội','01929404')
 
 INSERT INTO BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT)
-VALUES ('BN002',N'Bùi Tiến Thành',N'Nam','2005-10-12',N'KTX Bách khoa, Hà Nội','0638404')
+VALUES ('BN2',N'Bùi Tiến Thành',N'Nam','2005-10-12',N'KTX Bách khoa, Hà Nội','0638404')
 
 INSERT INTO BenhNhan (MaBenhNhan,HoTen,GioiTinh,NgaySinh,DiaChi,SDT)
-VALUES ('BN003',N'Ngô Thị Hương',N'Nữ','1997-12-10',N'Hai Bà Trưng, Hà Nội','12352132')
+VALUES ('BN3',N'Ngô Thị Hương',N'Nữ','1997-12-10',N'Hai Bà Trưng, Hà Nội','12352132')
 

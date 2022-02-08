@@ -29,17 +29,11 @@ namespace QLPK.GUI.BaoCaoThongKe
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTuoi = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiemBenhNhan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,15 +42,15 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtTuoi
+            // label
             // 
-            this.txtTuoi.AutoSize = true;
-            this.txtTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuoi.Location = new System.Drawing.Point(364, 54);
-            this.txtTuoi.Name = "txtTuoi";
-            this.txtTuoi.Size = new System.Drawing.Size(35, 16);
-            this.txtTuoi.TabIndex = 78;
-            this.txtTuoi.Text = "Tuổi";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(364, 54);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(35, 16);
+            this.label.TabIndex = 78;
+            this.label.Text = "Tuổi";
             // 
             // label1
             // 
@@ -68,14 +62,14 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.label1.TabIndex = 79;
             this.label1.Text = "Tên";
             // 
-            // textBox2
+            // txtTuoi
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(455, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(188, 22);
-            this.textBox2.TabIndex = 75;
+            this.txtTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuoi.Location = new System.Drawing.Point(455, 51);
+            this.txtTuoi.Name = "txtTuoi";
+            this.txtTuoi.ReadOnly = true;
+            this.txtTuoi.Size = new System.Drawing.Size(188, 22);
+            this.txtTuoi.TabIndex = 75;
             // 
             // txtHoTen
             // 
@@ -93,48 +87,12 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(153, 142);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(700, 324);
             this.dataGridView1.TabIndex = 80;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số bệnh án";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Chẩn đoán";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ngày khám";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tên bác sĩ";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Tên bệnh";
-            this.Column6.Name = "Column6";
             // 
             // txtTimKiemBenhNhan
             // 
@@ -160,9 +118,9 @@ namespace QLPK.GUI.BaoCaoThongKe
             // 
             this.groupBox1.Controls.Add(this.txtTimKiemBenhNhan);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTuoi);
+            this.groupBox1.Controls.Add(this.label);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTuoi);
             this.groupBox1.Controls.Add(this.txtHoTen);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(153, 12);
@@ -202,17 +160,11 @@ namespace QLPK.GUI.BaoCaoThongKe
         }
 
         #endregion
-        private System.Windows.Forms.Label txtTuoi;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTuoi;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;

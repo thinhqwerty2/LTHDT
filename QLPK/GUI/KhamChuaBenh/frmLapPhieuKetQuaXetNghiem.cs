@@ -59,13 +59,13 @@ namespace QLPK.GUI.KhamBenh
 
         private void frmLapPhieuKetQuaXetNghiem_Load(object sender, EventArgs e)
         {
-
+            txtNgayKham.Text = DateTime.Now.ToString();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            KetQuaXetNghiemDAO.Instance.themKetQuaXetNghiem(cmbMaBanKe.Text, txtDichVu.Text, NguoiDung.TenDangNhap, DateTime.Now, txtKetLuan.Text);
+            KetQuaXetNghiemDAO.Instance.themKetQuaXetNghiem(cmbMaBanKe.Text, QuanLyDanhMuc.frmTimKiemDichVu.dichVu.MaDichVu, NguoiDung.TenDangNhap, DateTime.Now, txtKetLuan.Text);
         }
     }
 }

@@ -10,11 +10,28 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             InitializeComponent();
             btnSua.Enabled = false;
-            
+            btnXoa.Enabled = false;
+            txtMaBacSi.ReadOnly = false;
+            txtHoTen.ReadOnly = false;
+        }
+        public void xoaThongTin()
+        {
+            txtMaBacSi.Text = "";
+            txtHoTen.Text = "";
+            txtTrinhDo.Text = "";
+            txtChucVu.Text = "";
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+            cmbTrangThai.Enabled = true;
+            cmbGioiTinh.Enabled = true;
+            cmbGioiTinh.SelectedItem = null;
+            cmbTrangThai.SelectedItem = null;
+            txtMaBacSi.ReadOnly = false;
+            txtHoTen.ReadOnly = false;
         }
         bool batLoi()
         {
-            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == ""||txtTrangThai.Text=="")
+            if (txtMaBacSi.Text == "" || txtHoTen.Text == "" || cmbGioiTinh.Text == "" || txtTrinhDo.Text == "" || txtChucVu.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cmbTrangThai.Text == "")
             {
                 return false;
             }
@@ -55,26 +72,45 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             if (batLoi())
             {
-                BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
-                hienThiDS();
-                MessageBox.Show("Thêm bác sĩ mới thành công!");
+                if (!TaiKhoanDAO.Instance.kiemTraTaiKhoan(txtMaBacSi.Text))
+                {
+                    BacSiDAO.Instance.themBacSi(txtMaBacSi.Text, txtHoTen.Text, cmbGioiTinh.Text, txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text);
+                    hienThiDS();
+                    MessageBox.Show("Thêm bác sĩ mới thành công!");
+                    xoaThongTin();
+                }
+                else
+                {
+                    MessageBox.Show("Mã bác sĩ bị trùng!");
+                }
+
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ thông tin!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (kq == DialogResult.OK)
+            if (!BacSiDAO.Instance.timBacSi(txtMaBacSi.Text))
             {
-                BacSiDAO.Instance.suaBacSi(txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text, txtMaBacSi.Text);
-                MessageBox.Show("Thay đổi thông tin mới thành công!");
+                MessageBox.Show("Mã bác sĩ không hợp lệ! Vui lòng kiểm tra lại.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            hienThiDS();
-
+            else if (!batLoi())
+            {
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (kq == DialogResult.OK)
+                {
+                    BacSiDAO.Instance.suaBacSi(txtDiaChi.Text, txtSDT.Text, txtTrinhDo.Text, txtChucVu.Text, txtMaBacSi.Text);
+                    MessageBox.Show("Thay đổi thông tin mới thành công!");
+                }
+                hienThiDS();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -85,6 +121,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 BacSiDAO.Instance.xoaBacSi(txtMaBacSi.Text);
                 MessageBox.Show("Xoá thành công!");
+                btnXoa.Enabled = false;
+                xoaThongTin();
             }
             hienThiDS();
 
@@ -95,7 +133,12 @@ namespace QLPK.GUI.QuanLyDanhMuc
         {
             try
             {
+                txtHoTen.ReadOnly = true;
+                txtMaBacSi.ReadOnly = true;
                 btnSua.Enabled = false;
+                btnXoa.Enabled = true;
+                cmbTrangThai.Enabled = false;
+                cmbGioiTinh.Enabled = false;
                 dgvDanhMucBacSi.Rows[e.RowIndex].Selected = true;
                 indexRow = e.RowIndex;
                 txtMaBacSi.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -105,7 +148,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 txtChucVu.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtDiaChi.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtSDT.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtTrangThai.Text= dgvDanhMucBacSi.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cmbTrangThai.Text = dgvDanhMucBacSi.Rows[e.RowIndex].Cells[7].Value.ToString();
 
             }
             catch (Exception ex)
@@ -116,14 +159,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
-            txtMaBacSi.Text = "";
-            txtHoTen.Text = "";
-            cmbGioiTinh.Text = "";
-            txtTrinhDo.Text = "";
-            txtChucVu.Text = "";
-            txtDiaChi.Text = "";
-            txtSDT.Text = "";
-            txtTrangThai.Text = "";
+            xoaThongTin();
         }
 
         private void chkHienThiTatCa_CheckedChanged(object sender, EventArgs e)
@@ -140,7 +176,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             }
         }
 
-        private void txtDiaChi_Validated(object sender, EventArgs e)
+        private void txt_Validated(object sender, EventArgs e)
         {
             this.btnSua.Enabled = true;
         }

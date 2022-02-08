@@ -47,6 +47,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.dataGridView1.Size = new System.Drawing.Size(960, 418);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // textBox1
             // 
@@ -65,6 +66,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Name = "frmTimKiemLoaiBenh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tìm kiếm loại bệnh";
             this.Load += new System.EventHandler(this.frmTimKiemLoaiBenh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

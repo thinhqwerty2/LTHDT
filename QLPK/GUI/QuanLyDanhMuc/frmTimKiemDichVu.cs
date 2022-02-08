@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QLPK.DAO;
+﻿using QLPK.DAO;
 using QLPK.DTO;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace QLPK.GUI.QuanLyDanhMuc
 {
@@ -27,12 +21,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView gridView = (DataGridView)sender;
-            if (e.RowIndex != gridView.RowCount - 1)
-            {
-                dichVu = new DichVuDTO(((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
-                this.Close();
-            }
+
         }
 
 
@@ -52,6 +41,16 @@ namespace QLPK.GUI.QuanLyDanhMuc
             dataGridView1.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
             dataGridView1.Columns["GhiChu"].HeaderText = "Ghi chú";
             dataGridView1.Columns["SoLanSuDung"].HeaderText = "Số lần sử dụng";
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView gridView = (DataGridView)sender;
+
+
+            dichVu = new DichVuDTO(((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
+            this.Close();
+
         }
     }
 }

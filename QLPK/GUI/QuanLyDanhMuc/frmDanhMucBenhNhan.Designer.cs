@@ -48,6 +48,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNhapLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMucBenhNhan)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // cmbGioiTinh
             // 
+            this.cmbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGioiTinh.FormattingEnabled = true;
             this.cmbGioiTinh.Items.AddRange(new object[] {
             "Nam",
@@ -140,6 +142,7 @@
             // 
             // txtMaBenhNhan
             // 
+            this.txtMaBenhNhan.Enabled = false;
             this.txtMaBenhNhan.Location = new System.Drawing.Point(140, 26);
             this.txtMaBenhNhan.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaBenhNhan.Name = "txtMaBenhNhan";
@@ -220,7 +223,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(72, 30);
+            this.btnThem.Location = new System.Drawing.Point(79, 29);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 80;
@@ -265,12 +268,25 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnNhapLai);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Location = new System.Drawing.Point(154, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(699, 80);
             this.panel1.TabIndex = 83;
+            // 
+            // btnNhapLai
+            // 
+            this.btnNhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhapLai.Location = new System.Drawing.Point(242, 31);
+            this.btnNhapLai.Name = "btnNhapLai";
+            this.btnNhapLai.Size = new System.Drawing.Size(75, 23);
+            this.btnNhapLai.TabIndex = 80;
+            this.btnNhapLai.Text = "Nhập lại";
+            this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Visible = false;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // frmDanhMucBenhNhan
             // 
@@ -296,25 +312,26 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txtTimKiemBenhNhan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbGioiTinh;
         private System.Windows.Forms.DataGridView dgvDanhMucBenhNhan;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtMaBenhNhan;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblMaBenhNhan;
         private System.Windows.Forms.Label lblNgaySinh;
-        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         public System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnSua;
+        public System.Windows.Forms.Button btnNhapLai;
+        public System.Windows.Forms.ComboBox cmbGioiTinh;
+        public System.Windows.Forms.TextBox txtDiaChi;
+        public System.Windows.Forms.TextBox txtHoTen;
+        public System.Windows.Forms.TextBox txtSDT;
+        public System.Windows.Forms.TextBox txtMaBenhNhan;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.DateTimePicker dtpNgaySinh;
     }
 }

@@ -65,5 +65,11 @@ namespace QLPK.DAO
             object[] parameter = { key, key, key };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
+        public bool timNhanVien(string maNhanVien)
+        {
+            string query = "select * from NhanVien where MaNhanVien = @manhanvien ";
+            object[] parameter = { maNhanVien };
+            return DataProvider.Instance.ExecuteQuery(query, parameter).Rows.Count > 0;
+        }
     }
 }

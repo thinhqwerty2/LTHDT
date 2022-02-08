@@ -20,12 +20,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView gridView = (DataGridView)sender;
-            if (e.RowIndex != gridView.RowCount - 1)
-            {
-            benhNhan = new BenhNhanDTO(((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
-            this.Close();
-            }
+            
         }
         
 
@@ -45,6 +40,14 @@ namespace QLPK.GUI.QuanLyDanhMuc
             dataGridView1.Columns["NgaySinh"].HeaderText = "Ngày sinh";
             dataGridView1.Columns["DiaChi"].HeaderText = "Địa chỉ";
             dataGridView1.Columns["SDT"].HeaderText = "Số điện thoại";
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView gridView = (DataGridView)sender;
+                benhNhan = new BenhNhanDTO(((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem).Row);
+                this.Close();
+
         }
     }
 }
