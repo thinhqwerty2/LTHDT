@@ -1,4 +1,5 @@
 ﻿using QLPK.DAO;
+using QLPK.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,18 @@ namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmDanhMucNhanVien : Form
     {
-        public frmDanhMucNhanVien()
+        private static NguoiDungDTO NguoiDung;
+
+        public frmDanhMucNhanVien(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
+            NguoiDung = nguoiDung;
+            if(NguoiDung.QuyenTruyCap!=0)
+            {
+                btnThem.Visible = false;
+            }   
         }
         bool batLoi()
         {

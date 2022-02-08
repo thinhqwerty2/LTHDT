@@ -24,7 +24,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucNhanVien fDanhMucNhanVien = new frmDanhMucNhanVien();
+            frmDanhMucNhanVien fDanhMucNhanVien = new frmDanhMucNhanVien(NguoiDung);
             fDanhMucNhanVien.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucNhanVien);
             fDanhMucNhanVien.Show();
@@ -33,7 +33,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void btnDichVu_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucDichVu fDanhMucDichVu = new frmDanhMucDichVu();
+            frmDanhMucDichVu fDanhMucDichVu = new frmDanhMucDichVu(NguoiDung);
             fDanhMucDichVu.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucDichVu);
             fDanhMucDichVu.Show();
@@ -42,7 +42,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void btnBacSi_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucBacSi fDanhMucBacSi = new frmDanhMucBacSi();
+            frmDanhMucBacSi fDanhMucBacSi = new frmDanhMucBacSi(NguoiDung);
             fDanhMucBacSi.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBacSi);
             fDanhMucBacSi.Show();
@@ -51,7 +51,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void btnBenhNhan_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucBenhNhan fDanhMucBenhNhan = new frmDanhMucBenhNhan();
+            frmDanhMucBenhNhan fDanhMucBenhNhan = new frmDanhMucBenhNhan(NguoiDung);
             fDanhMucBenhNhan.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBenhNhan);
             fDanhMucBenhNhan.Show();
@@ -60,7 +60,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void frmQuanLyDanhMuc_Load(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucBenhNhan fDanhMucBenhNhan = new frmDanhMucBenhNhan();
+            frmDanhMucBenhNhan fDanhMucBenhNhan = new frmDanhMucBenhNhan(NguoiDung);
             fDanhMucBenhNhan.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBenhNhan);
             fDanhMucBenhNhan.Show();
@@ -69,7 +69,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
         private void btnBenh_Click(object sender, EventArgs e)
         {
             this.pnlXemQuanLyDanhMuc.Controls.Clear();
-            frmDanhMucBenh fDanhMucBenh = new frmDanhMucBenh();
+            frmDanhMucBenh fDanhMucBenh = new frmDanhMucBenh(NguoiDung);
             fDanhMucBenh.TopLevel = false;
             this.pnlXemQuanLyDanhMuc.Controls.Add(fDanhMucBenh);
             fDanhMucBenh.Show();

@@ -55,7 +55,7 @@ namespace QLPK.GUI.KhamBenh
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(95, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã bệnh nhân:";
             // 
@@ -65,7 +65,7 @@ namespace QLPK.GUI.KhamBenh
             this.btnThem.Location = new System.Drawing.Point(783, 449);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(71, 37);
+            this.btnThem.Size = new System.Drawing.Size(71, 49);
             this.btnThem.TabIndex = 42;
             this.btnThem.Text = "Đăng ký";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblDiaChi.Location = new System.Drawing.Point(385, 27);
             this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(50, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
             this.lblDiaChi.TabIndex = 32;
             this.lblDiaChi.Text = "Địa chỉ:";
             // 
@@ -105,7 +105,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblNgaySinh.Location = new System.Drawing.Point(385, 65);
             this.lblNgaySinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(70, 16);
+            this.lblNgaySinh.Size = new System.Drawing.Size(71, 16);
             this.lblNgaySinh.TabIndex = 31;
             this.lblNgaySinh.Text = "Ngày sinh:";
             // 
@@ -115,7 +115,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblSDT.Location = new System.Drawing.Point(385, 108);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(37, 16);
+            this.lblSDT.Size = new System.Drawing.Size(38, 16);
             this.lblSDT.TabIndex = 30;
             this.lblSDT.Text = "SĐT:";
             // 
@@ -125,7 +125,7 @@ namespace QLPK.GUI.KhamBenh
             this.lblGioiTinh.Location = new System.Drawing.Point(17, 108);
             this.lblGioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(57, 16);
+            this.lblGioiTinh.Size = new System.Drawing.Size(58, 16);
             this.lblGioiTinh.TabIndex = 33;
             this.lblGioiTinh.Text = "Giới tính:";
             // 
@@ -135,7 +135,7 @@ namespace QLPK.GUI.KhamBenh
             this.label2.Location = new System.Drawing.Point(17, 158);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 32;
             this.label2.Text = "Lý do khám:";
             // 
@@ -150,9 +150,9 @@ namespace QLPK.GUI.KhamBenh
             // btnIn
             // 
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Location = new System.Drawing.Point(656, 452);
+            this.btnIn.Location = new System.Drawing.Point(656, 449);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(111, 34);
+            this.btnIn.Size = new System.Drawing.Size(111, 49);
             this.btnIn.TabIndex = 48;
             this.btnIn.Text = "In phiếu đăng ký";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@ namespace QLPK.GUI.KhamBenh
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ tên:";
             // 

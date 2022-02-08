@@ -29,6 +29,7 @@ namespace QLPK
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnKhamChuaBenh = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@ namespace QLPK
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlXinChao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -58,6 +60,7 @@ namespace QLPK
             // btnBaoCao
             // 
             this.btnBaoCao.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.Location = new System.Drawing.Point(796, 3);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(150, 102);
@@ -71,6 +74,7 @@ namespace QLPK
             // btnKhamChuaBenh
             // 
             this.btnKhamChuaBenh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKhamChuaBenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhamChuaBenh.Location = new System.Drawing.Point(625, 3);
             this.btnKhamChuaBenh.Name = "btnKhamChuaBenh";
             this.btnKhamChuaBenh.Size = new System.Drawing.Size(150, 102);
@@ -84,6 +88,7 @@ namespace QLPK
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.Location = new System.Drawing.Point(966, 3);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(150, 102);
@@ -154,6 +159,7 @@ namespace QLPK
             // 
             this.btnHeThong.BackColor = System.Drawing.SystemColors.Control;
             this.btnHeThong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeThong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeThong.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnHeThong.Location = new System.Drawing.Point(295, 3);
             this.btnHeThong.Name = "btnHeThong";
@@ -168,6 +174,7 @@ namespace QLPK
             // 
             this.btnDanhMuc.BackColor = System.Drawing.SystemColors.Control;
             this.btnDanhMuc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDanhMuc.Location = new System.Drawing.Point(467, 3);
             this.btnDanhMuc.Name = "btnDanhMuc";
             this.btnDanhMuc.Size = new System.Drawing.Size(150, 102);
@@ -249,6 +256,12 @@ namespace QLPK
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 500;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +307,6 @@ namespace QLPK
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

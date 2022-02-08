@@ -1,4 +1,5 @@
 ﻿using QLPK.DAO;
+using QLPK.DTO;
 using System;
 using System.Windows.Forms;
 
@@ -6,13 +7,20 @@ namespace QLPK.GUI.QuanLyDanhMuc
 {
     public partial class frmDanhMucBacSi : Form
     {
-        public frmDanhMucBacSi()
+        private static NguoiDungDTO NguoiDung;
+        public frmDanhMucBacSi(NguoiDungDTO nguoiDung)
         {
             InitializeComponent();
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             txtMaBacSi.ReadOnly = false;
             txtHoTen.ReadOnly = false;
+            NguoiDung = nguoiDung;
+            if(nguoiDung.QuyenTruyCap!=0)
+            {
+                btnThem.Visible = false;
+            }    
+            
         }
         public void xoaThongTin()
         {

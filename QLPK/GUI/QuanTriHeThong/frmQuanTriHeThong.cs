@@ -20,6 +20,12 @@ namespace QLPK.GUI.QuanTriHeThong
         {
             InitializeComponent();
             NguoiDung = nguoiDung;
+            if(NguoiDung.QuyenTruyCap!=0)
+            {
+                btnDatLaiMatKhau.Visible = false;
+                btnPhanQuyen.Visible = false;
+                btnTaoTaiKhoan.Visible = false;
+            }    
         }
 
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
