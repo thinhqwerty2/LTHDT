@@ -50,14 +50,15 @@ namespace QLPK.GUI.QuanTriHeThong
             this.pnlNutQuanTriHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.pnlNutQuanTriHeThong.Location = new System.Drawing.Point(-46, -8);
             this.pnlNutQuanTriHeThong.Name = "pnlNutQuanTriHeThong";
-            this.pnlNutQuanTriHeThong.Size = new System.Drawing.Size(201, 588);
+            this.pnlNutQuanTriHeThong.Size = new System.Drawing.Size(201, 548);
             this.pnlNutQuanTriHeThong.TabIndex = 0;
             // 
             // btnPhanQuyen
             // 
-            this.btnPhanQuyen.Location = new System.Drawing.Point(58, 290);
+            this.btnPhanQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanQuyen.Location = new System.Drawing.Point(51, 218);
             this.btnPhanQuyen.Name = "btnPhanQuyen";
-            this.btnPhanQuyen.Size = new System.Drawing.Size(133, 70);
+            this.btnPhanQuyen.Size = new System.Drawing.Size(140, 60);
             this.btnPhanQuyen.TabIndex = 3;
             this.btnPhanQuyen.Text = "Phân quyền";
             this.btnPhanQuyen.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnTaoTaiKhoan
             // 
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(58, 199);
+            this.btnTaoTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(51, 152);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
-            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(133, 70);
+            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(140, 60);
             this.btnTaoTaiKhoan.TabIndex = 2;
             this.btnTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnDatLaiMatKhau
             // 
-            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(58, 380);
+            this.btnDatLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatLaiMatKhau.Location = new System.Drawing.Point(51, 284);
             this.btnDatLaiMatKhau.Name = "btnDatLaiMatKhau";
-            this.btnDatLaiMatKhau.Size = new System.Drawing.Size(133, 70);
+            this.btnDatLaiMatKhau.Size = new System.Drawing.Size(140, 60);
             this.btnDatLaiMatKhau.TabIndex = 1;
             this.btnDatLaiMatKhau.Text = "Đặt lại mật khẩu";
             this.btnDatLaiMatKhau.UseVisualStyleBackColor = true;
@@ -85,9 +88,10 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(58, 107);
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(51, 86);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(133, 70);
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(140, 60);
             this.btnDoiMatKhau.TabIndex = 1;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
@@ -95,9 +99,10 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             // btnThongTinTaiKhoan
             // 
-            this.btnThongTinTaiKhoan.Location = new System.Drawing.Point(58, 23);
+            this.btnThongTinTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTinTaiKhoan.Location = new System.Drawing.Point(51, 20);
             this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
-            this.btnThongTinTaiKhoan.Size = new System.Drawing.Size(133, 70);
+            this.btnThongTinTaiKhoan.Size = new System.Drawing.Size(140, 60);
             this.btnThongTinTaiKhoan.TabIndex = 0;
             this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
             this.btnThongTinTaiKhoan.UseVisualStyleBackColor = true;
@@ -107,7 +112,7 @@ namespace QLPK.GUI.QuanTriHeThong
             // 
             this.pnlXemQuanTriHeThong.Location = new System.Drawing.Point(176, 3);
             this.pnlXemQuanTriHeThong.Name = "pnlXemQuanTriHeThong";
-            this.pnlXemQuanTriHeThong.Size = new System.Drawing.Size(966, 522);
+            this.pnlXemQuanTriHeThong.Size = new System.Drawing.Size(1000, 523);
             this.pnlXemQuanTriHeThong.TabIndex = 1;
             // 
             // panel1

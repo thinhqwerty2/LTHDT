@@ -48,12 +48,14 @@ namespace QLPK.GUI.KhamBenh
             this.txtMaBenh = new System.Windows.Forms.TextBox();
             this.txtLoaiBenh = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(229, 83);
+            this.label7.Location = new System.Drawing.Point(39, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 69;
@@ -62,7 +64,7 @@ namespace QLPK.GUI.KhamBenh
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(579, 83);
+            this.label4.Location = new System.Drawing.Point(389, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 70;
@@ -71,7 +73,7 @@ namespace QLPK.GUI.KhamBenh
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(579, 44);
+            this.label1.Location = new System.Drawing.Point(389, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 71;
@@ -79,7 +81,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtNgayKham
             // 
-            this.txtNgayKham.Location = new System.Drawing.Point(320, 80);
+            this.txtNgayKham.Location = new System.Drawing.Point(130, 67);
             this.txtNgayKham.Name = "txtNgayKham";
             this.txtNgayKham.ReadOnly = true;
             this.txtNgayKham.Size = new System.Drawing.Size(160, 20);
@@ -87,7 +89,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtTuoi
             // 
-            this.txtTuoi.Location = new System.Drawing.Point(670, 76);
+            this.txtTuoi.Location = new System.Drawing.Point(480, 63);
             this.txtTuoi.Name = "txtTuoi";
             this.txtTuoi.ReadOnly = true;
             this.txtTuoi.Size = new System.Drawing.Size(100, 20);
@@ -95,7 +97,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(670, 41);
+            this.txtHoTen.Location = new System.Drawing.Point(480, 28);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(100, 20);
@@ -104,23 +106,23 @@ namespace QLPK.GUI.KhamBenh
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 136);
+            this.label3.Location = new System.Drawing.Point(160, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 72;
-            this.label3.Text = "Chẩn đoán";
+            this.label3.Text = "Chẩn đoán:";
             // 
             // txtChanDoan
             // 
-            this.txtChanDoan.Location = new System.Drawing.Point(209, 165);
+            this.txtChanDoan.Location = new System.Drawing.Point(163, 199);
             this.txtChanDoan.Multiline = true;
             this.txtChanDoan.Name = "txtChanDoan";
-            this.txtChanDoan.Size = new System.Drawing.Size(561, 117);
+            this.txtChanDoan.Size = new System.Drawing.Size(700, 117);
             this.txtChanDoan.TabIndex = 74;
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(656, 473);
+            this.btnLuu.Location = new System.Drawing.Point(648, 488);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 75;
@@ -130,7 +132,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(430, 473);
+            this.btnHuy.Location = new System.Drawing.Point(847, 488);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 75;
@@ -139,7 +141,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(547, 473);
+            this.button4.Location = new System.Drawing.Point(751, 488);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 75;
@@ -149,23 +151,23 @@ namespace QLPK.GUI.KhamBenh
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(206, 299);
+            this.label5.Location = new System.Drawing.Point(160, 340);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 76;
-            this.label5.Text = "Phác đồ điều trị";
+            this.label5.Text = "Phác đồ điều trị:";
             // 
             // txtPhacDo
             // 
-            this.txtPhacDo.Location = new System.Drawing.Point(209, 324);
+            this.txtPhacDo.Location = new System.Drawing.Point(163, 367);
             this.txtPhacDo.Multiline = true;
             this.txtPhacDo.Name = "txtPhacDo";
-            this.txtPhacDo.Size = new System.Drawing.Size(561, 123);
+            this.txtPhacDo.Size = new System.Drawing.Size(700, 100);
             this.txtPhacDo.TabIndex = 74;
             // 
             // txtTimKiemBenhNhan
             // 
-            this.txtTimKiemBenhNhan.Location = new System.Drawing.Point(320, 41);
+            this.txtTimKiemBenhNhan.Location = new System.Drawing.Point(130, 28);
             this.txtTimKiemBenhNhan.Name = "txtTimKiemBenhNhan";
             this.txtTimKiemBenhNhan.Size = new System.Drawing.Size(165, 20);
             this.txtTimKiemBenhNhan.TabIndex = 78;
@@ -174,7 +176,7 @@ namespace QLPK.GUI.KhamBenh
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(234, 44);
+            this.label6.Location = new System.Drawing.Point(44, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 77;
@@ -183,7 +185,7 @@ namespace QLPK.GUI.KhamBenh
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(229, 109);
+            this.label2.Location = new System.Drawing.Point(39, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 77;
@@ -191,7 +193,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtMaBenh
             // 
-            this.txtMaBenh.Location = new System.Drawing.Point(315, 106);
+            this.txtMaBenh.Location = new System.Drawing.Point(125, 93);
             this.txtMaBenh.Name = "txtMaBenh";
             this.txtMaBenh.Size = new System.Drawing.Size(165, 20);
             this.txtMaBenh.TabIndex = 78;
@@ -199,7 +201,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // txtLoaiBenh
             // 
-            this.txtLoaiBenh.Location = new System.Drawing.Point(670, 109);
+            this.txtLoaiBenh.Location = new System.Drawing.Point(480, 96);
             this.txtLoaiBenh.Name = "txtLoaiBenh";
             this.txtLoaiBenh.ReadOnly = true;
             this.txtLoaiBenh.Size = new System.Drawing.Size(100, 20);
@@ -208,21 +210,39 @@ namespace QLPK.GUI.KhamBenh
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(579, 112);
+            this.label8.Location = new System.Drawing.Point(389, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
             this.label8.TabIndex = 70;
             this.label8.Text = "Loại bệnh";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtMaBenh);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtTimKiemBenhNhan);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtNgayKham);
+            this.groupBox1.Controls.Add(this.txtLoaiBenh);
+            this.groupBox1.Controls.Add(this.txtTuoi);
+            this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Location = new System.Drawing.Point(163, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(700, 134);
+            this.groupBox1.TabIndex = 79;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frmPhieuChanDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 508);
-            this.Controls.Add(this.txtMaBenh);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTimKiemBenhNhan);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1000, 523);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnHuy);
@@ -230,17 +250,11 @@ namespace QLPK.GUI.KhamBenh
             this.Controls.Add(this.txtPhacDo);
             this.Controls.Add(this.txtChanDoan);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNgayKham);
-            this.Controls.Add(this.txtLoaiBenh);
-            this.Controls.Add(this.txtTuoi);
-            this.Controls.Add(this.txtHoTen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhieuChanDoan";
             this.Text = "frmPhieuChanDoan";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +281,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.TextBox txtMaBenh;
         private System.Windows.Forms.TextBox txtLoaiBenh;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

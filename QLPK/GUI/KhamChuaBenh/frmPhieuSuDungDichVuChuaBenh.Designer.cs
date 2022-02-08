@@ -47,7 +47,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(580, 395);
+            this.button6.Location = new System.Drawing.Point(779, 488);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 63;
@@ -56,7 +56,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(472, 395);
+            this.button5.Location = new System.Drawing.Point(656, 477);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 64;
@@ -83,10 +83,15 @@ namespace QLPK.GUI.KhamBenh
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 196);
+            this.dataGridView1.Location = new System.Drawing.Point(140, 271);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(699, 181);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(700, 200);
             this.dataGridView1.TabIndex = 62;
             // 
             // label4
@@ -162,7 +167,7 @@ namespace QLPK.GUI.KhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 508);
+            this.ClientSize = new System.Drawing.Size(1000, 523);
             this.Controls.Add(this.txtTimKiemBenhNhan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button6);
