@@ -22,12 +22,15 @@ namespace QLPK.GUI.BaoCaoThongKe
             NguoiDung = nguoiDung;
         }
 
-        private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
             dgvThongKeBenhNhan.DataSource = ThongKeADO.Instance.thongKeBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
             DataTable dt = ThongKeADO.Instance.thongKeThongTinChiTietBenhNhan(dtpTuNgay.Value, dtpDenNgay.Value);
+            lblTongSoBenhNhan1.Text = dt.Rows[0][0].ToString();
+            lblNam1.Text = dt.Rows[0][1].ToString();
+            lblNu1.Text = dt.Rows[0][2].ToString();
+            lblTongDoanhThu1.Text = dt.Rows[0][3].ToString();
+            lblSoBenhNhanMoi1.Text = ThongKeADO.Instance.thongKeBenhNhanMoi(dtpTuNgay.Value).ToString();
         }
-
-
     }
 }

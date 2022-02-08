@@ -60,7 +60,6 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(200, 22);
             this.dtpTuNgay.TabIndex = 1;
-            this.dtpTuNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged);
             // 
             // dtpDenNgay
             // 
@@ -71,7 +70,6 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(200, 22);
             this.dtpDenNgay.TabIndex = 1;
-            this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged);
             // 
             // label2
             // 
@@ -219,6 +217,7 @@ namespace QLPK.GUI.BaoCaoThongKe
             this.btnThongKe.TabIndex = 3;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // grpThongKeBenhNhan
             // 

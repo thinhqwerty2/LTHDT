@@ -22,7 +22,7 @@ namespace QLPK.DAO
 
         public DataTable thongKeBenhNhan(DateTime tuNgay,DateTime denNgay)
         {
-            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,BacSi.HoTen,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
+            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
             object[] parameter = { tuNgay.ToString("yyyy-MM-dd"), denNgay.ToString("yyyy-MM-dd") };
             return DataProvider.Instance.ExecuteQuery(query, parameter) ;
         }
@@ -46,14 +46,14 @@ namespace QLPK.DAO
         }
         public DataTable thongKeThongTinChiTietBenhNhan(DateTime tuNgay, DateTime denNgay)
         {
-            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,BacSi.HoTen,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
+            string query = "select count(*),sum(case when BenhNhan.GioiTinh=N'Nam' then 1 else 0 end), sum(case when BenhNhan.GioiTinh=N'Nữ' then 1 else 0 end),sum(ThanhTien) from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan and TongHopChiPhi.NgayThanhToan = HoSoBenhAn.NgayKham";
             object[] parameter = { tuNgay.ToString("yyyy-MM-dd"), denNgay.ToString("yyyy-MM-dd") };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
-        public DataTable thongKeBenhNhanMoi(DateTime tuNgay, DateTime denNgay)
+        public DataTable thongKeBenhNhanMoi(DateTime tuNgay)
         {
-            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,BacSi.HoTen,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham between @TuNgay and @DenNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan ";
-            object[] parameter = { tuNgay.ToString("yyyy-MM-dd"), denNgay.ToString("yyyy-MM-dd") };
+            string query = "select HoSoBenhAn.MaBenhNhan,BenhNhan.HoTen,GioiTinh,NgayKham,ThanhTien from BenhNhan,HoSoBenhAn,TongHopChiPhi where BenhNhan.MaBenhNhan NOT IN (select BenhNhan.MaBenhNhan from BenhNhan,HoSoBenhAn,TongHopChiPhi where NgayKham < @TuNgay and BenhNhan.MaBenhNhan=HoSoBenhAn.MaBenhNhan)";
+            object[] parameter = { tuNgay.ToString("yyyy-MM-dd")};
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
     }
