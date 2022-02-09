@@ -37,11 +37,14 @@ namespace QLPK.GUI.KhamBenh
             this.btnLapPhieuDangKyXetNghiem = new System.Windows.Forms.Button();
             this.btnLapPhieuDangKiKhamBenh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlXemKhamChuaBenh.SuspendLayout();
             this.pnlNutKhamChuaBenh.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlXemKhamChuaBenh
             // 
+            this.pnlXemKhamChuaBenh.Controls.Add(this.label1);
             this.pnlXemKhamChuaBenh.Location = new System.Drawing.Point(176, 3);
             this.pnlXemKhamChuaBenh.Name = "pnlXemKhamChuaBenh";
             this.pnlXemKhamChuaBenh.Size = new System.Drawing.Size(1000, 523);
@@ -124,6 +127,19 @@ namespace QLPK.GUI.KhamBenh
             this.panel1.Size = new System.Drawing.Size(20, 572);
             this.panel1.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(164, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "abc";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmKhamChuaBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +152,8 @@ namespace QLPK.GUI.KhamBenh
             this.Name = "frmKhamChuaBenh";
             this.Text = "frmKhamBenh";
             this.Load += new System.EventHandler(this.frmKhamChuaBenh_Load);
+            this.pnlXemKhamChuaBenh.ResumeLayout(false);
+            this.pnlXemKhamChuaBenh.PerformLayout();
             this.pnlNutKhamChuaBenh.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -151,5 +169,6 @@ namespace QLPK.GUI.KhamBenh
         private System.Windows.Forms.Button btnChanDoan;
         private System.Windows.Forms.Button btnLapPhieuSuDungDichVu;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

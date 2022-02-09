@@ -19,11 +19,17 @@ namespace QLPK.GUI.KhamBenh
         {
             InitializeComponent();
             NguoiDung = nguoiDung;
+            if(!NguoiDung.TenDangNhap.Contains("BS") && !NguoiDung.TenDangNhap.Contains("NV"))
+            {
+                label1.Text = "Nhân viên và bác sĩ  \n mới được sử dụng tính năng này";
+                label1.Visible = true;
+
+            }    
         }
 
         private void btnLapPhieuDangKiKhamBenh_Click(object sender, EventArgs e)
         {
-            if(NguoiDung.QuyenTruyCap!=1)
+            if(NguoiDung.TenDangNhap.Contains("NV"))
             {
 
                 this.pnlXemKhamChuaBenh.Controls.Clear();
@@ -41,7 +47,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnLapPhieuDangKyXetNghiem_Click(object sender, EventArgs e)
         {
-            if (NguoiDung.QuyenTruyCap != 1)
+            if (NguoiDung.TenDangNhap.Contains("NV"))
             {
                 this.pnlXemKhamChuaBenh.Controls.Clear();
             frmPhieuSuDungXetNghiem fPhieuSuDungXetNghiem = new frmPhieuSuDungXetNghiem(NguoiDung);
@@ -58,7 +64,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnLapPhieuKetQuaXetNghiem_Click(object sender, EventArgs e)
         {
-            if(NguoiDung.QuyenTruyCap==1)
+            if(NguoiDung.TenDangNhap.Contains("BS"))
             {
 
             this.pnlXemKhamChuaBenh.Controls.Clear();
@@ -74,7 +80,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void btnChanDoan_Click(object sender, EventArgs e)
         {
-            if(NguoiDung.QuyenTruyCap==1)
+            if(NguoiDung.TenDangNhap.Contains("BS"))
             {
                 
             this.pnlXemKhamChuaBenh.Controls.Clear();
@@ -99,7 +105,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void frmKhamChuaBenh_Load(object sender, EventArgs e)
         {
-            if(NguoiDung.QuyenTruyCap!=1)
+            if(NguoiDung.TenDangNhap.Contains("NV"))
             {
 
             this.pnlXemKhamChuaBenh.Controls.Clear();
@@ -107,8 +113,9 @@ namespace QLPK.GUI.KhamBenh
             fPhieuDangKyKhamBenh.TopLevel = false;
             this.pnlXemKhamChuaBenh.Controls.Add(fPhieuDangKyKhamBenh);
             fPhieuDangKyKhamBenh.Show();
-            }   
+            }  
             else
+            if(NguoiDung.TenDangNhap.Contains("BS"))
             {
                 this.pnlXemKhamChuaBenh.Controls.Clear();
                 frmLapPhieuKetQuaXetNghiem fLapPhieuKetQuaXetNghiem = new frmLapPhieuKetQuaXetNghiem(NguoiDung);
@@ -116,6 +123,11 @@ namespace QLPK.GUI.KhamBenh
                 this.pnlXemKhamChuaBenh.Controls.Add(fLapPhieuKetQuaXetNghiem);
                 fLapPhieuKetQuaXetNghiem.Show();
             }    
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

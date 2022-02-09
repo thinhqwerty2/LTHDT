@@ -75,13 +75,13 @@
             this.cmbPhanQuyen.FormattingEnabled = true;
             this.cmbPhanQuyen.Items.AddRange(new object[] {
             "0",
-            "1",
-            "2"});
+            "1"});
             this.cmbPhanQuyen.Location = new System.Drawing.Point(486, 69);
             this.cmbPhanQuyen.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPhanQuyen.Name = "cmbPhanQuyen";
             this.cmbPhanQuyen.Size = new System.Drawing.Size(196, 24);
             this.cmbPhanQuyen.TabIndex = 7;
+            this.cmbPhanQuyen.SelectedIndexChanged += new System.EventHandler(this.cmbPhanQuyen_Validated);
             this.cmbPhanQuyen.Validated += new System.EventHandler(this.cmbPhanQuyen_Validated);
             // 
             // txtTenDangNhap

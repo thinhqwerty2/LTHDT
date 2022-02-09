@@ -50,7 +50,7 @@ namespace QLPK.DAO
             {
                 maNhanVien = "NV" + (Convert.ToInt32(maxMaNhanVien.Substring(2)) + 1);
             }
-            TaiKhoanDAO.Instance.themTaiKhoan(maNhanVien, "1", 2, "Đang làm việc");
+            TaiKhoanDAO.Instance.themTaiKhoan(maNhanVien, "1", 1, "Đang làm việc");
             string query = "insert into NhanVien (MaNhanVien,HoTen,GioiTinh,DiaChi,SDT,ChucVu) values ( @MaNhanVien , @HoTen , @GioiTinh , @DiaChi , @SDT  , @ChucVu )";
             object[] parameter = { maNhanVien, hoTen, gioiTinh, diaChi, sdt, chucVu };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
