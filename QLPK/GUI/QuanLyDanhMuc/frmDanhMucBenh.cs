@@ -13,7 +13,7 @@ namespace QLPK.GUI.QuanLyDanhMuc
             InitializeComponent();
             NguoiDung = nguoiDung;
             txtMaBenh.Enabled = false;
-            
+            btnXoa.Visible = false;
         }
         bool batLoi()
         {
@@ -40,6 +40,9 @@ namespace QLPK.GUI.QuanLyDanhMuc
                 LoaiBenhDAO.Instance.themLoaiBenh( txtLoaiBenh.Text, txtMoTaBenh.Text);
                 hienThiDS();
                 MessageBox.Show("Thêm loại bệnh mới thành công!");
+                txtMaBenh.Text = "";
+                txtMoTaBenh.Text = "";
+                txtLoaiBenh.Text = "";
             }
             else
             {

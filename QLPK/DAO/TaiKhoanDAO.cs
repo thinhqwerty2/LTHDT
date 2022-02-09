@@ -94,7 +94,7 @@ namespace QLPK.DAO
         }
         public bool datLaiMatKhau(string tenDangNhap)
         {
-            string query = "update TaiKhoan set MatKhau = 1 where TenDangNhap= @TenDangNhap ";
+            string query = "update TaiKhoan set MatKhau = '1' where TenDangNhap= @TenDangNhap ";
             object[] parameter2 = { tenDangNhap };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter2) > 0;
         }

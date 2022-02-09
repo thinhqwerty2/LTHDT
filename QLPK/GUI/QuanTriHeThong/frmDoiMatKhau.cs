@@ -59,6 +59,7 @@ namespace QLPK.GUI.QuanTriHeThong
                 if (MessageBox.Show("Xác nhận thay đổi mật khẩu?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     TaiKhoanDAO.Instance.capNhatMatKhauMoi(NguoiDung.TenDangNhap, txtMatKhauMoi.Text);
+                    MessageBox.Show("Thay đổi mật khẩu thành công!");
                 }
             }
         }

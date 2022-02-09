@@ -58,7 +58,7 @@ namespace QLPK.DAO
         }
         public bool xoaBacSi(string maBacSi)
         {
-            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai='Nghỉ việc' where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
+            return DataProvider.Instance.ExecuteNonQuery("update TaiKhoan set TrangThai=N'Nghỉ việc' where TenDangNhap= @MaBacSi", new object[] { maBacSi }) > 0;
         }
         public DataTable timKiemBacSi(string key, bool checkTatCa)
         {

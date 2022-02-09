@@ -72,5 +72,33 @@ namespace QLPK.GUI.QuanTriHeThong
                 errorProvider1.Clear();
             }
         }
+
+        private void ckbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbHienThiMatKhau.Checked)
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                this.txtMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                this.txtMatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void ckbHienThiXacNhanMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbHienThiXacNhanMatKhau.Checked)
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.HidePassword;
+                this.txtNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.ckbHienThiMatKhau.BackgroundImage = global::QLPK.Properties.Resources.ShowPassword;
+                this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

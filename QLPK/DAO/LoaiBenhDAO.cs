@@ -42,7 +42,7 @@ namespace QLPK.DAO
 
         public bool suaLoaiBenh(string loaiBenh, string moTa, string maBenh)
         {
-            string query = "update Benh set LoaiBenh= @LoaiBenh ,MoTa= @MoTa where MaBenh= @MaBenh";
+            string query = "update Benh set LoaiBenh= @LoaiBenh ,MoTaBenh= @MoTa where MaBenh= @MaBenh";
             object[] parameter = { loaiBenh, moTa, maBenh };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }

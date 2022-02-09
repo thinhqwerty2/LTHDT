@@ -77,6 +77,7 @@ namespace QLPK.GUI.QuanTriHeThong
             {
                 TaiKhoanDAO.Instance.capNhatQuyenTruyCap(txtTenDangNhap.Text, Int32.Parse(cmbPhanQuyen.Text));
                 hienThiDS();
+                MessageBox.Show("Thay đổi quyền truy cập thành công!");
             }
         }
     }

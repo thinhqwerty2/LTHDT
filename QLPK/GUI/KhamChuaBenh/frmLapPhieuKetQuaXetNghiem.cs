@@ -63,9 +63,13 @@ namespace QLPK.GUI.KhamBenh
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnDongY_Click(object sender, EventArgs e)
         {
-            KetQuaXetNghiemDAO.Instance.themKetQuaXetNghiem(cmbMaBanKe.Text, QuanLyDanhMuc.frmTimKiemDichVu.dichVu.MaDichVu, NguoiDung.TenDangNhap, DateTime.Now, txtKetLuan.Text);
+            if (MessageBox.Show("Xác nhận lưu?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                KetQuaXetNghiemDAO.Instance.themKetQuaXetNghiem(cmbMaBanKe.Text, QuanLyDanhMuc.frmTimKiemDichVu.dichVu.MaDichVu, NguoiDung.TenDangNhap, DateTime.Now, txtKetLuan.Text);
+                MessageBox.Show("Đã lưu kết quả xét nghiệm!");
+            }
         }
     }
 }

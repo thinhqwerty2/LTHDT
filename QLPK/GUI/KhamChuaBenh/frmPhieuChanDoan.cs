@@ -29,6 +29,7 @@ namespace QLPK.GUI.KhamBenh
             if(MessageBox.Show("Xác nhận lưu?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
             { 
             HoSoBenhAnDAO.Instance.themHoSoBenhAn(txtTimKiemBenhNhan.Text, DateTime.Now, txtChanDoan.Text, txtMaBenh.Text,NguoiDung.TenDangNhap);
+                MessageBox.Show("Đã lưu kết quả chẩn đoán!");
             }    
         }
 

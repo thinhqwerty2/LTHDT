@@ -21,8 +21,9 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 pnlDanhMucBacSi.Enabled = false;
 
-            }    
-            
+            }  
+            cmbTrangThai.Enabled = false;
+            cmbTrangThai.SelectedItem = "Đang làm việc";
         }
         public void xoaThongTin()
         {
@@ -32,10 +33,9 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtChucVu.Text = "";
             txtDiaChi.Text = "";
             txtSDT.Text = "";
-            cmbTrangThai.Enabled = true;
+            cmbTrangThai.SelectedItem = "Đang làm việc";
             cmbGioiTinh.Enabled = true;
             cmbGioiTinh.SelectedItem = null;
-            cmbTrangThai.SelectedItem = null;
             txtMaBacSi.ReadOnly = false;
             txtHoTen.ReadOnly = false;
         }

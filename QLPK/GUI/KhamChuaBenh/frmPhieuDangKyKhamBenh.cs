@@ -53,7 +53,6 @@ namespace QLPK.GUI.KhamBenh
             fDanhMucBenhNhan.btnNhapLai.Location = new System.Drawing.Point(470, 26);
             fDanhMucBenhNhan.btnThem.Location = new System.Drawing.Point(257, 26);
             fDanhMucBenhNhan.txtHoTen.Enabled = true;
-            fDanhMucBenhNhan.txtMaBenhNhan.Enabled = true;
             fDanhMucBenhNhan.txtDiaChi.Enabled = true;
             fDanhMucBenhNhan.txtSDT.Enabled = true;
             fDanhMucBenhNhan.dtpNgaySinh.Enabled = true;

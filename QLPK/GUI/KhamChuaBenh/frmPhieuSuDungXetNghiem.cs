@@ -59,7 +59,7 @@ namespace QLPK.GUI.KhamBenh
 
         private void frmPhieuSuDungXetNghiem_Load(object sender, EventArgs e)
         {
-            dgvDichVu.DataSource = DichVuDAO.Instance.hienThiDSDichVuXetNghiem();
+            dgvDichVu.DataSource = DichVuDAO.Instance.hienThiDSDichVu();
             dgvDichVuDuocChon.Columns.Add("MaDichVu", "Mã dịch vụ");
             dgvDichVuDuocChon.Columns.Add("TenDichVu", "Tên dịch vụ");
             dgvDichVuDuocChon.Columns.Add("DonGia", "Đơn giá");

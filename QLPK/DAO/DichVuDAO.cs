@@ -45,7 +45,7 @@ namespace QLPK.DAO
         internal bool themDichVu( string tenDichVu, string donGia, string donViTinh, string ghiChu)
         {
             string maDichVu;
-            string maxMaDichVu = DataProvider.Instance.ExecuteScalar("select max(MaBacSi) from BacSi").ToString();
+            string maxMaDichVu = DataProvider.Instance.ExecuteScalar("select max(MaDichVu) from DichVu").ToString();
             if (maxMaDichVu == "")
             {
                 maDichVu = "DV1";
@@ -60,7 +60,7 @@ namespace QLPK.DAO
         }
         public bool suaDichVu( string tenDichVu, string donGia, string donViTinh, string ghiChu,string maDichVu)
         {
-            string query = "update DichVu set MaDichVu= @MaDichVu ,TenDichVu= @TenDichVu  ,DonGia= @DonGia ,DonViTinh= @DonViTinh ,GhiChu= @GhiChu where MaDichVu= @MaDichVu";
+            string query = "update DichVu set TenDichVu= @TenDichVu  ,DonGia= @DonGia ,DonViTinh= @DonViTinh ,GhiChu= @GhiChu where MaDichVu= @MaDichVu";
             object[] parameter = {tenDichVu,donGia,donViTinh,ghiChu, maDichVu };
             return DataProvider.Instance.ExecuteNonQuery(query, parameter) > 0;
         }

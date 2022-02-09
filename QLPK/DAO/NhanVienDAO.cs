@@ -41,7 +41,7 @@ namespace QLPK.DAO
         public bool themNhanVien( string hoTen, string gioiTinh, string diaChi, string sdt, string chucVu)
         {
             string maNhanVien;
-            string maxMaNhanVien = DataProvider.Instance.ExecuteScalar("select max(MaNhanVien) from NhanVien").ToString();
+            string maxMaNhanVien = DataProvider.Instance.ExecuteScalar("select max(MaNhanVien) from NhanVien where MaNhanVien LIKE '%NV%'").ToString();
             if (maxMaNhanVien == "")
             {
                 maNhanVien = "NV1";

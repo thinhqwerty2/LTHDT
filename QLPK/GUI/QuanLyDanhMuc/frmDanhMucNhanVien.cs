@@ -27,6 +27,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
             {
                 pnlDanhMucNhanVien.Enabled = false;
             }   
+            cmbTrangThai.Enabled = false;
+            cmbTrangThai.SelectedItem = "Đang làm việc";
         }
         bool batLoi()
         {
@@ -47,7 +49,8 @@ namespace QLPK.GUI.QuanLyDanhMuc
             txtChucVu.Text = "";
             txtDiaChi.Text = "";
             txtSDT.Text = "";
-            cmbTrangThai.SelectedItem = null;
+            cmbTrangThai.Enabled = false;
+            cmbTrangThai.SelectedItem = "Đang làm việc";
         }
         void hienThiDS()
         {
@@ -99,13 +102,24 @@ namespace QLPK.GUI.QuanLyDanhMuc
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (kq == DialogResult.OK)
+            if (!NhanVienDAO.Instance.timNhanVien(txtMaNhanVien.Text))
             {
-                NhanVienDAO.Instance.suaNhanVien(txtDiaChi.Text, txtSDT.Text, txtChucVu.Text, txtMaNhanVien.Text);
+                MessageBox.Show("Mã nhân viên không hợp lệ! Vui lòng kiểm tra lại.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            hienThiDS();
-            MessageBox.Show("Cập nhật thông tin thành công!");
+            else if (!batLoi())
+            {
+                MessageBox.Show("Điền đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var kq = MessageBox.Show("Xác nhận sự thay đổi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (kq == DialogResult.OK)
+                {
+                    NhanVienDAO.Instance.suaNhanVien(txtDiaChi.Text, txtSDT.Text, txtChucVu.Text, txtMaNhanVien.Text);
+                }
+                hienThiDS();
+                MessageBox.Show("Cập nhật thông tin thành công!");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace QLPK.GUI.QuanTriHeThong
         }
         private void btnDatLai_Click(object sender, EventArgs e)
         {
-            if (TaiKhoanDAO.Instance.datLaiMatKhau(txtHoVaTen.Text))
+            if (TaiKhoanDAO.Instance.datLaiMatKhau(cmbTenDangNhap.Text))
             {
                 MessageBox.Show("Đặt lại mật khẩu thành công! Mật khẩu mới của tài khoản là 1");
             }

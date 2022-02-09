@@ -58,6 +58,7 @@ namespace QLPK.GUI.QuanTriHeThong
                 {
                     NhanVienDAO.Instance.suaNhanVien(txtDiaChi.Text, txtSDT.Text, txtChucVu.Text, txtTenDangNhap.Text);
                 }
+                MessageBox.Show("Cập nhật thông tin thành công!");
             }
         }
 
